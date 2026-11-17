@@ -58,41 +58,16 @@
   </head>
   <body class="h-full bg-slate-100 text-[#0f172a] antialiased selection:bg-[#0052cc]/10 selection:text-[#0052cc]">
     
-    <!-- Top Evaluation Jump Bar (Sticky helper for evaluating screens) -->
-    <nav aria-label="Prototype Navigation Bar" class="sticky top-0 z-50 bg-[#0c0d1c] text-white border-b border-slate-800 px-4 py-2 text-xs flex items-center justify-between shadow-md">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span class="font-semibold text-slate-200">PolyU SD Prototype</span>
-        <span class="text-slate-500 hidden sm:inline">| Exercise 1 (SPA Flow)</span>
-      </div>
-      <div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
-        <span class="text-slate-400 mr-1 hidden md:inline">Jump to:</span>
-        <button type="button" onclick="goToScreen(1)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors bg-[#0052cc] text-white shrink-0" data-screen="1">1. Home</button>
-        <button type="button" onclick="goToScreen(9)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="9">9. Competitions</button>
-        <button type="button" onclick="goToScreen(10)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="10">10. Detail</button>
-        <button type="button" onclick="goToScreen(11)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="11">11. Recommend</button>
-        <button type="button" onclick="goToScreen(12)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="12">12. Login</button>
-        <button type="button" onclick="goToScreen(13)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="13">13. Dashboard</button>
-        <button type="button" onclick="goToScreen(14)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="14">14. Forum</button>
-        <button type="button" onclick="goToScreen(2)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="2">Step 1</button>
-        <button type="button" onclick="goToScreen(3)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="3">Step 2</button>
-        <button type="button" onclick="goToScreen(4)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="4">Step 3</button>
-        <button type="button" onclick="goToScreen(5)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="5">Step 4</button>
-        <button type="button" onclick="goToScreen(6)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="6">Step 5</button>
-        <button type="button" onclick="goToScreen(7)" class="nav-jump-btn px-2 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800 shrink-0" data-screen="7">Success Hub</button>
-      </div>
-    </nav>
-
     <!-- Mobile/Desktop Frame Canvas Center Container -->
-    <main class="w-full h-[calc(100dvh-41px)] md:py-4 flex justify-center items-center overflow-hidden">
-      <div class="w-full max-w-[440px] md:max-w-7xl h-full md:h-[94vh] bg-white shadow-2xl md:rounded-[24px] overflow-hidden relative flex flex-col border border-slate-200/85">
+    <main class="w-full h-[100dvh] flex justify-center items-stretch overflow-hidden bg-slate-100 md:bg-white">
+      <div class="w-full max-w-[440px] md:max-w-none h-full bg-white shadow-2xl md:shadow-none overflow-hidden relative flex flex-col border-x border-slate-200/85 md:border-0">
 
         <!-- ========================================== -->
         <!-- SCREEN 1: 1_Main_Page (Default Visible)    -->
         <!-- ========================================== -->
         <section id="screen-1" class="screen-container h-full flex-1 flex flex-col overflow-hidden relative bg-white">
           <!-- Top Header (Stay in place, matching Desktop_main_page.png layout) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <div class="w-8 h-8 rounded-lg bg-[#0c0d1c] text-white flex items-center justify-center shadow-sm shrink-0">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -163,7 +138,7 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="px-5 md:px-10 py-6 md:py-8 space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-12">
+          <div class="px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-6 md:py-10 space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
             <!-- Hero Title & Scheme Intro -->
             <div class="space-y-4">
               <h1 class="text-[28px] md:text-[44px] leading-[34px] md:leading-[52px] font-extrabold text-[#0f172a] tracking-tight">
@@ -228,7 +203,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               <!-- Card 1: Red Dot (Direct to Red Dot Competition Detail) -->
-              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-category="product interaction">
+              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="reddot" data-category="product interaction">
                 <!-- Photo Container (Clicking photo opens Screen 10 Competition Detail directly) -->
                 <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" id="btn-reddot-photo" onclick="openCompetitionDetail('reddot')" title="Click to view Red Dot competition details">
                   <img src="/src/assets/images/comp_reddot_gallery_1794853915729.jpg" alt="Red Dot Design Concept Exhibition" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -275,7 +250,7 @@
               </article>
 
               <!-- Card 2: iF Student Design Award (Direct to iF Competition Detail) -->
-              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-category="product interaction">
+              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="if-award" data-category="product interaction">
                 <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="openCompetitionDetail('if-award')" title="Click to view iF Student Design Award details">
                   <img src="/src/assets/images/comp_if_studio_1794853916789.jpg" alt="iF Student Design Award Workstation" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
@@ -314,7 +289,7 @@
               </article>
 
               <!-- Card 3: Tokyo TDC Annual Awards (Direct to Tokyo TDC Competition Detail) -->
-              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-category="visual">
+              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="tokyo-tdc" data-category="visual">
                 <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="openCompetitionDetail('tokyo-tdc')" title="Click to view Tokyo TDC competition details">
                   <img src="/src/assets/images/comp_tdc_posters_1794853916546.jpg" alt="Tokyo TDC Typography Gallery" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
@@ -467,7 +442,7 @@
           </div>
 
           <!-- Floating AI Bot Assistant Button (Stay in place) -->
-          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
             <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
             <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
           </button>
@@ -521,7 +496,7 @@
         <!-- ========================================== -->
         <section id="screen-2" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -635,8 +610,8 @@
             </div>
 
             <!-- Step 1 Content -->
-            <div class="px-5 pt-1 pb-6 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 pt-1 pb-6 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
               <!-- Student Verified Card -->
               <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center justify-between">
                 <div class="flex items-center gap-3.5 md:gap-6">
@@ -853,7 +828,7 @@
         <!-- ========================================== -->
         <section id="screen-3" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(2)" aria-label="Back to Step 1" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -967,8 +942,8 @@
             </div>
 
             <!-- Step 2 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
               <!-- Reimbursement Pathway -->
               <div class="space-y-3 md:space-y-4">
                 <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Reimbursement Pathway</h2>
@@ -1166,7 +1141,7 @@
         <!-- ========================================== -->
         <section id="screen-4" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(3)" aria-label="Back to Step 2" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -1280,8 +1255,8 @@
             </div>
 
             <!-- Step 3 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
               <!-- Research Origin -->
               <div class="space-y-3 md:space-y-4">
                 <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Research Origin</h2>
@@ -1391,21 +1366,22 @@
                   <div id="dynamic-teammates" class="space-y-2 md:space-y-3"></div>
 
                   <!-- Add Member Input Form Box (Dashed) -->
-                  <div class="p-3 md:p-5 border-2 border-dashed border-slate-200 rounded-xl md:rounded-2xl bg-slate-50/50 space-y-2.5 md:space-y-3.5">
-                    <div class="flex items-center justify-between text-[11px] md:text-xs font-bold text-[#0052cc]">
-                      <span class="flex items-center gap-1.5">
-                        <svg class="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
-                        Add Member Details
-                      </span>
-                      <span class="text-slate-400 font-normal">PolyU NetID / Student ID</span>
+                  <div class="p-3.5 md:p-5 border-2 border-dashed border-slate-200 rounded-xl md:rounded-2xl bg-slate-50/50 flex items-center justify-between gap-3 md:gap-4">
+                    <div class="flex-1 min-w-0 space-y-2.5 md:space-y-3.5">
+                      <div class="flex items-center text-[11px] md:text-xs font-bold text-[#0052cc]">
+                        <span class="flex items-center gap-1.5">
+                          <svg class="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+                          Add Member Details
+                        </span>
+                      </div>
+                      <div class="flex flex-col md:flex-row gap-2 md:gap-3">
+                        <input type="text" id="input-team-name" aria-label="Full Name" placeholder="Full Name" class="w-full md:flex-1 bg-white border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
+                        <input type="text" id="input-team-id" aria-label="Student ID" placeholder="Student ID (e.g. 2109...)" class="w-full md:flex-1 bg-white border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-mono text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
+                      </div>
                     </div>
-                    <div class="flex items-center gap-2 md:gap-3">
-                      <input type="text" id="input-team-id" placeholder="Student ID (e.g. 2109...)" class="flex-1 bg-white border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-mono text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
-                      <input type="text" id="input-team-name" placeholder="Full Name" class="flex-1 bg-white border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
-                      <button type="button" aria-label="Clear inputs" onclick="clearTeammateInputs()" class="p-2 md:p-3 text-slate-400 hover:text-slate-600">
-                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-                      </button>
-                    </div>
+                    <button type="button" aria-label="Clear inputs" onclick="clearTeammateInputs()" class="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-xl flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                      <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                    </button>
                   </div>
 
                   <!-- Add Teammate Action Button -->
@@ -1497,7 +1473,7 @@
         <!-- ========================================== -->
         <section id="screen-5" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(4)" aria-label="Back to Step 3" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -1611,8 +1587,8 @@
             </div>
 
             <!-- Step 4 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
               <!-- Vertical flow matching mobile layout -->
               <div class="flex flex-col gap-6 md:gap-9">
                 <!-- Grant Subsidy Quota Box -->
@@ -1871,7 +1847,7 @@
         <!-- ========================================== -->
         <section id="screen-6" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(5)" aria-label="Back to Step 4" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -1985,8 +1961,8 @@
             </div>
 
             <!-- Step 5 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
               <!-- Vertical flow matching mobile layout -->
               <div class="space-y-6 md:space-y-9">
                 <!-- Approved Payout Card -->
@@ -2167,7 +2143,7 @@
         <!-- ========================================== -->
         <section id="screen-7" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-white md:bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(6)" aria-label="Back to Step 5" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -2243,7 +2219,7 @@
           </header>
 
           <!-- Centered Success Canvas (Scrollable between header and footer) -->
-          <div class="flex-1 flex flex-col justify-between px-6 py-12 md:px-10 md:py-12 overflow-y-auto overscroll-contain">
+          <div class="flex-1 flex flex-col justify-between px-6 py-12 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-12 overflow-y-auto overscroll-contain">
             <div class="my-auto w-full md:max-w-[680px] md:mx-auto md:bg-white md:border md:border-slate-200/80 md:rounded-3xl md:p-12 md:shadow-sm flex flex-col items-center text-center">
               <!-- Animated Rosette / Checkmark Badge -->
               <div class="relative w-28 h-28 flex items-center justify-center">
@@ -2348,7 +2324,7 @@
         <!-- ========================================== -->
         <section id="screen-9" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-white">
           <!-- Top Header (Stay in place, matching Desktop_main_page.png layout) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" id="btn-screen9-back" onclick="goToScreen(1)" aria-label="Back to Home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none md:hidden">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -2418,7 +2394,7 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="px-5 md:px-10 lg:px-12 py-5 md:py-8 space-y-5 md:space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-12 bg-white md:bg-[#fafbfd]">
+          <div class="px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-5 md:py-10 space-y-5 md:space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14 bg-white md:bg-[#fafbfd]">
             <h1 class="text-[26px] md:text-[34px] font-extrabold text-[#0f172a] tracking-tight">Competitions</h1>
 
             <!-- Search Bar & Filter Toggle -->
@@ -2450,7 +2426,7 @@
             <!-- Competitions Grid (2 cols on mobile, 4 cols x 2 rows initially on desktop) -->
             <div id="competitions-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 pt-1">
               <!-- Card 1: Red Dot Award -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('reddot')" data-stream="Product" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('reddot')" data-comp-id="reddot" data-stream="Product" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_reddot_desk_1794853918158.jpg" alt="Red Dot Award: Design Concept 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2471,7 +2447,7 @@
               </div>
 
               <!-- Card 2: iF Design Student Award -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('if-award')" data-stream="Interaction" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('if-award')" data-comp-id="if-award" data-stream="Interaction" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_if_interaction_1794853918248.jpg" alt="iF Design Student Award 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2492,7 +2468,7 @@
               </div>
 
               <!-- Card 3: D&AD New Blood Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Communication" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="dad-new-blood" data-stream="Communication" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_dad_exhibition_1794853919326.jpg" alt="D&AD New Blood Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2513,7 +2489,7 @@
               </div>
 
               <!-- Card 4: IDEA -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Product">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="idea-2026" data-stream="Product">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_idea_product_1794853918911.jpg" alt="IDEA (Intl Design Excellence Awards)" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2534,7 +2510,7 @@
               </div>
 
               <!-- Card 5: Core77 Design Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Spatial">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="core77-2026" data-stream="Spatial">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_core77_spatial_1794853920107.jpg" alt="Core77 Design Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2555,7 +2531,7 @@
               </div>
 
               <!-- Card 6: Braun Prize International -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Product">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="braun-2026" data-stream="Product">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_braun_device_1794853920349.jpg" alt="Braun Prize International 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2576,7 +2552,7 @@
               </div>
 
               <!-- Card 7 (New #1, completes Desktop Row 2): DFA Design for Asia Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Product" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="dfa-asia-2026" data-stream="Product" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_dfa_asia_1794860502931.jpg" alt="DFA Design for Asia Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2597,7 +2573,7 @@
               </div>
 
               <!-- Card 8 (New #2, completes Desktop Row 2): A&D Trophy Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Spatial">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="ad-trophy-2026" data-stream="Spatial">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_ad_trophy_1794860503419.jpg" alt="A&D Trophy Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2618,7 +2594,7 @@
               </div>
 
               <!-- Card 9 (New #3, Expandable): Architecture MasterPrize -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Spatial">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="arch-master-2026" data-stream="Spatial">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_arch_master_1794860504331.jpg" alt="Architecture MasterPrize 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2639,7 +2615,7 @@
               </div>
 
               <!-- Card 10 (New #4, Expandable): Good Design Award -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Product">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="good-design-2026" data-stream="Product">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_good_design_1794860503309.jpg" alt="Good Design Award (G-Mark) 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2660,7 +2636,7 @@
               </div>
 
               <!-- Card 11 (New #5, Expandable): HKICT Awards -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Interaction" data-past-eligible="true">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="hkict-2026" data-stream="Interaction" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_hkict_1794860506616.jpg" alt="HKICT Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2681,7 +2657,7 @@
               </div>
 
               <!-- Card 12 (New #6, Expandable): Digicon Asia -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Interaction">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="digicon-asia-2026" data-stream="Interaction">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_digicon_asia_1794860505390.jpg" alt="Digicon Asia 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2702,7 +2678,7 @@
               </div>
 
               <!-- Card 13 (New #7, Expandable): HK International Poster Triennial -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Communication">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="hk-poster-2026" data-stream="Communication">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_hk_poster_1794860505965.jpg" alt="Hong Kong International Poster Triennial" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2723,7 +2699,7 @@
               </div>
 
               <!-- Card 14 (New #8, Expandable): Cannes Young Lions -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-stream="Communication">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="cannes-lions-2026" data-stream="Communication">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_cannes_lion_1794860506157.jpg" alt="Cannes Young Lions 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2863,7 +2839,7 @@
           </div>
 
           <!-- Floating AI Bot Assistant Button (Stay in place) -->
-          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
             <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
             <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
           </button>
@@ -2917,7 +2893,7 @@
         <!-- ========================================== -->
         <section id="screen-10" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-white">
           <!-- Top Header (Stay in place, matching Desktop_main_page.png layout) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goBackFromDetail()" aria-label="Go Back" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none shrink-0">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -2982,24 +2958,25 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="flex-1 overflow-y-auto overscroll-contain pb-28">
+          <div class="flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-8">
+            <div class="md:max-w-[1160px] md:mx-auto">
             <!-- Hero Architecture Gallery Image with Actions -->
-            <div class="relative w-full aspect-[4/3] bg-slate-900 overflow-hidden">
+            <div class="relative w-full aspect-[4/3] md:aspect-[21/9] md:max-h-[440px] md:rounded-3xl bg-slate-900 overflow-hidden">
               <img id="detail-hero-img" src="/src/assets/images/detail_hero_exhibition_1794853920185.jpg" alt="Exhibition Gallery" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
               <!-- Floating Action Buttons: Apply for Subsidy (hides Screen 10, reveals Screen 12) -->
-              <div class="absolute bottom-4 left-4 right-4 flex items-center gap-2.5">
+              <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 flex items-center gap-2.5">
                 <button type="button" id="btn-apply-subsidy" onclick="applySubsidyFromDetail()" class="flex-1 py-3 px-4 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-full font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 focus-visible:outline-none">
                   <svg class="w-4 h-4 transform rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                   <span>Apply for Subsidy</span>
                 </button>
-                <button type="button" onclick="toggleHeart(this)" class="py-3 px-4 bg-white/95 hover:bg-white text-slate-800 rounded-full font-bold text-xs flex items-center justify-center gap-1.5 shadow-md backdrop-blur-sm transition-colors focus-visible:outline-none">
-                  <svg class="w-4 h-4 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                  <span>Save Competition</span>
+                <button type="button" id="detail-bookmark-btn" onclick="toggleHeart(this)" class="py-3 px-4 bg-white/95 hover:bg-white text-slate-800 rounded-full font-bold text-xs flex items-center justify-center gap-1.5 shadow-md backdrop-blur-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  <svg class="w-4 h-4 fill-none text-slate-700" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                  <span id="detail-bookmark-label">Save Competition</span>
                 </button>
               </div>
             </div>
 
-            <div class="px-5 py-5 space-y-6">
+            <div class="px-5 py-5 md:px-0 md:pt-8 space-y-6">
               <!-- Competition Header Title -->
               <div class="space-y-2">
                 <h1 id="detail-title" class="text-[24px] font-extrabold text-[#0f172a] leading-tight">
@@ -3116,10 +3093,11 @@
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </button>
             </div>
+            </div>
           </div>
 
           <!-- Floating AI Bot Assistant Button (Stay in place) -->
-          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
             <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
             <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
           </button>
@@ -3172,7 +3150,7 @@
         <!-- ========================================== -->
         <section id="screen-11" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc] text-[#0f172a]">
           <!-- Top Header (Stay in place, matching Desktop_main_page.png layout) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" id="btn-screen11-back" onclick="goToScreen(1)" aria-label="Go back to Home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none md:hidden">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -3242,7 +3220,8 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="p-5 space-y-5 flex-1 overflow-y-auto overscroll-contain pb-28">
+          <div class="p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 space-y-5 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
+            <div class="md:max-w-[960px] md:mx-auto space-y-5">
             <!-- Header Title -->
             <div class="space-y-1.5">
               <h1 class="text-2xl font-extrabold text-[#0f172a] tracking-tight">Recommend Competition</h1>
@@ -3355,16 +3334,22 @@
                 </label>
               </div>
 
-              <!-- Submit Recommendation Button -->
-              <button type="submit" class="w-full py-3.5 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition-all active:scale-95 focus-visible:outline-none">
-                <span>Submit Recommendation</span>
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </button>
+              <!-- Save Draft & Submit Recommendation Buttons -->
+              <div class="flex items-center gap-3 pt-1">
+                <button type="button" onclick="saveRecommendDraft()" class="flex-1 md:flex-none md:min-w-[140px] py-3.5 px-6 bg-[#dbeafe] hover:bg-[#bfdbfe] text-[#0052cc] rounded-full font-bold text-sm flex items-center justify-center gap-2 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  <span>Save</span>
+                </button>
+                <button type="submit" class="flex-1 py-3.5 px-6 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-full font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  <span>Submit<span class="hidden md:inline"> Recommendation</span></span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
             </form>
+            </div>
           </div>
 
           <!-- Floating AI Bot Assistant Button (Stay in place) -->
-          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
             <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
             <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
           </button>
@@ -3417,7 +3402,7 @@
         <!-- ========================================== -->
         <section id="screen-12" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-slate-100 text-[#0f172a]">
           <!-- Top Header (Stay in place, matching Desktop_main_page.png layout on desktop) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
               <button type="button" onclick="goToScreen(1)" aria-label="Go back to Home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] shrink-0">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
@@ -3482,7 +3467,7 @@
           </header>
 
           <!-- Main Scrollable Area -->
-          <div class="p-4 sm:p-6 flex-1 overflow-y-auto overscroll-contain flex flex-col justify-start items-center pb-28">
+          <div class="p-4 sm:p-6 md:px-12 lg:px-20 xl:px-32 md:py-12 flex-1 overflow-y-auto overscroll-contain flex flex-col justify-start md:justify-center items-center pb-28 md:pb-12">
             <div class="w-full max-w-sm bg-white rounded-3xl p-6 shadow-xl border border-slate-100 space-y-5">
               <!-- Card Top Row -->
               <div class="flex items-center justify-between">
@@ -3496,6 +3481,12 @@
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   </button>
                 </div>
+              </div>
+
+              <!-- Pending Bookmark Notice (Shown when redirected from pre-login bookmark) -->
+              <div id="login-bookmark-notice" class="hidden bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-2.5 text-[11px] font-semibold text-[#0052cc]">
+                <svg class="w-4 h-4 shrink-0 fill-red-500 text-red-500" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                <span id="login-bookmark-notice-text">Sign in to save this competition to your Grant Watchlist.</span>
               </div>
 
               <!-- Welcome Heading -->
@@ -3598,7 +3589,7 @@
           </div>
 
           <!-- Floating AI Bot Assistant Button (Stay in place) -->
-          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
             <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
             <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
           </button>
@@ -3651,18 +3642,14 @@
         <!-- ========================================== -->
         <section id="screen-13" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-slate-100 text-[#0f172a]">
           <!-- Top Header (Stay in place, matching Desktop_main_page.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
+          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="showToast('Menu: Applications, Grants, Notifications, Profile')" aria-label="Toggle navigation menu" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              <button type="button" onclick="handleLogout()" aria-label="Logout" title="Logout" class="h-8 px-2 md:px-3 flex items-center justify-center gap-1.5 text-slate-700 hover:text-red-600 bg-slate-100 hover:bg-red-50 border border-slate-200/80 hover:border-red-200 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] shrink-0">
+                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
                 </svg>
+                <span class="hidden md:inline text-xs font-bold">Logout</span>
               </button>
-              <div class="w-8 h-8 rounded-lg bg-[#0c0d1c] text-white hidden md:flex items-center justify-center shadow-sm shrink-0">
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
-              </div>
               <div class="hidden md:block leading-tight text-left min-w-0">
                 <div class="text-[14px] font-extrabold text-[#0f172a] tracking-tight truncate">Grants Portal</div>
                 <div class="text-[10px] font-bold text-slate-500 tracking-wider">POLYU DESIGN</div>
@@ -3734,7 +3721,8 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="p-5 space-y-6 flex-1 overflow-y-auto overscroll-contain pb-28">
+          <div class="p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 space-y-6 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
+            <div class="md:max-w-[1160px] md:mx-auto space-y-6">
             <!-- Greeting Row -->
             <div class="flex items-center justify-between pt-2">
               <div class="space-y-0.5">
@@ -3861,19 +3849,13 @@
 
                 <!-- Faculty Review Box -->
                 <div class="bg-slate-50 rounded-2xl p-3.5 border border-slate-100 space-y-2">
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2.5">
-                      <div class="w-7 h-7 rounded-full bg-[#0c0d1c] text-white flex items-center justify-center font-bold text-[10px]">
-                        ML
-                      </div>
-                      <div class="text-xs font-extrabold text-[#0f172a]">Under Faculty Review: Prof. Michael Lin</div>
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 aspect-square shrink-0 rounded-full bg-[#0c0d1c] text-white flex items-center justify-center font-bold text-[10px]">
+                      ML
                     </div>
-                    <button type="button" onclick="sendFacultyNudge(this)" class="px-2.5 py-1 bg-white hover:bg-slate-50 border border-slate-200 rounded-full text-[10px] font-bold text-slate-700 flex items-center gap-1 shadow-2xs transition-colors focus-visible:outline-none">
-                      <svg class="w-3 h-3 text-[#0052cc]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-                      <span>Send Nudge</span>
-                    </button>
+                    <div class="text-xs font-extrabold text-[#0f172a] leading-snug">Under Faculty Review: Prof. Michael Lin</div>
                   </div>
-                  <p class="text-[11px] text-slate-500 pl-9">
+                  <p class="text-[11px] text-slate-500 pl-10.5">
                     Submitted 18 hours ago. Faculty average turnaround: 24 hours.
                   </p>
                 </div>
@@ -3941,9 +3923,9 @@
                 <h2 class="text-2xl font-black text-[#0f172a] tracking-tight">Grant Watchlist</h2>
               </div>
 
-              <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+              <div id="grant-watchlist-list" class="bg-white rounded-3xl p-4 shadow-sm border border-slate-200/80 divide-y divide-slate-100">
                 <!-- Item 1: Core77 -->
-                <div onclick="openWatchlistCompetition('Core77 Design Awards 2025', '01 Mar 2026', 'Up to HK$ 3,000', 'SPATIAL & INDUSTRIAL DESIGN', 'Core77 Design Awards 2026')" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
+                <div onclick="openWatchlistCompetition('Core77 Design Awards 2025', '01 Mar 2026', 'Up to HK$ 3,000', 'SPATIAL & INDUSTRIAL DESIGN', 'Core77 Design Awards 2026', 'core77-2026')" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
                   <div class="space-y-0.5">
                     <div class="text-[13px] font-extrabold text-[#0f172a]">Core77 Design Awards 2025</div>
                     <div class="text-[11px] text-slate-500 font-medium">Subsidy: Up to HK$ 3,000</div>
@@ -3955,7 +3937,7 @@
                 </div>
 
                 <!-- Item 2: BraunPrize -->
-                <div onclick="openWatchlistCompetition('BraunPrize 2025', '15 Mar 2026', 'Up to HK$ 5,000', 'PRODUCT & INDUSTRIAL DESIGN', 'Braun Prize International 2026')" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
+                <div onclick="openWatchlistCompetition('BraunPrize 2025', '15 Mar 2026', 'Up to HK$ 5,000', 'PRODUCT & INDUSTRIAL DESIGN', 'Braun Prize International 2026', 'braun-2026')" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
                   <div class="space-y-0.5">
                     <div class="text-[13px] font-extrabold text-[#0f172a]">BraunPrize 2025</div>
                     <div class="text-[11px] text-slate-500 font-medium">Subsidy: Up to HK$ 5,000</div>
@@ -3967,7 +3949,7 @@
                 </div>
 
                 <!-- Item 3: Golden Pin -->
-                <div onclick="openWatchlistCompetition('Golden Pin Design Award', '29 Mar 2026', 'Up to HK$ 2,500', 'COMMUNICATION & PRODUCT DESIGN', 'Good Design Award (G-Mark) 2026')" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
+                <div onclick="openWatchlistCompetition('Golden Pin Design Award', '29 Mar 2026', 'Up to HK$ 2,500', 'COMMUNICATION & PRODUCT DESIGN', 'Good Design Award (G-Mark) 2026', 'golden-pin-2025')" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
                   <div class="space-y-0.5">
                     <div class="text-[13px] font-extrabold text-[#0f172a]">Golden Pin Design Award</div>
                     <div class="text-[11px] text-slate-500 font-medium">Subsidy: Up to HK$ 2,500</div>
@@ -3979,10 +3961,11 @@
                 </div>
               </div>
             </div>
+            </div>
           </div>
 
           <!-- Floating AI Bot Assistant Button (Stay in place) -->
-          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+          <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
             <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
             <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
           </button>
@@ -4040,7 +4023,7 @@
           <!-- ============================================== -->
           <div id="forum-feed-view" class="h-full flex-1 flex flex-col overflow-hidden relative">
             <!-- Top Header (Stay in place, matching Desktop_main_page.png layout on desktop) -->
-            <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
+            <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
               <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
                 <div class="w-8 h-8 rounded-lg bg-[#0c0d1c] text-white flex items-center justify-center shadow-sm shrink-0">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -4111,7 +4094,7 @@
             </header>
 
             <!-- Main Scrollable Content -->
-            <div class="p-4 sm:p-5 md:px-10 md:py-8 space-y-4 md:space-y-6 pb-28 md:pb-12 flex-1 overflow-y-auto overscroll-contain">
+            <div class="p-4 sm:p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 space-y-4 md:space-y-6 pb-28 md:pb-14 flex-1 overflow-y-auto overscroll-contain">
               <!-- Page Title -->
               <h1 class="text-2xl md:text-[32px] font-black text-[#0f172a] tracking-tight">Community Discussion</h1>
 
@@ -4453,7 +4436,7 @@
             </div>
 
             <!-- Floating Chatbot FAB (Stay in place above nav bar) -->
-            <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+            <button type="button" onclick="showModal('bot-modal')" aria-label="Open AI Assistant" class="absolute right-5 md:right-10 lg:right-14 bottom-24 md:bottom-8 z-40 w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
               <img src="/assets/aistudio/Button_AiBot_de951670.png" alt="AI Bot" class="w-full h-full object-cover rounded-full" />
               <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#38bdf8] ring-2 ring-white"></span>
             </button>
@@ -4516,7 +4499,7 @@
           <!-- ============================================== -->
           <div id="forum-composer-view" class="hidden h-full flex-1 flex flex-col overflow-hidden relative bg-slate-50">
             <!-- Top Header: Back Arrow, New Discussion, POLYU DESIGN, Bell, Avatar (Stay in place, matching Desktop_main_page.png layout on desktop) -->
-            <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
+            <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-200 bg-white/95 backdrop-blur-md z-30">
               <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
                 <button type="button" onclick="closeNewPostView()" aria-label="Back to Discussion Forum" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] shrink-0">
                   <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -4587,7 +4570,8 @@
             </header>
 
             <!-- Composer Body (Scrollable between header and bottom buttons) -->
-            <div class="p-4 sm:p-5 space-y-4 pb-24 flex-1 overflow-y-auto overscroll-contain">
+            <div class="p-4 sm:p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 pb-24 md:pb-12 flex-1 overflow-y-auto overscroll-contain">
+              <div class="md:max-w-[960px] md:mx-auto space-y-4">
               <!-- New Post Subheader with Blue Plus Icon -->
               <div class="flex items-center gap-3 pt-2">
                 <div class="w-7 h-7 rounded-full bg-[#bfdbfe]/60 text-[#0052cc] flex items-center justify-center font-bold shadow-2xs">
@@ -4647,16 +4631,19 @@
                   </button>
                 </div>
               </div>
+              </div>
             </div>
 
-            <!-- Action Buttons Row: Save & Post (Stay in place at bottom, matching Image 3) -->
-            <div class="shrink-0 p-4 bg-white/95 backdrop-blur-md border-t border-slate-200 z-30 flex items-center gap-3">
-              <button type="button" onclick="saveDraftPost()" class="flex-1 py-3.5 bg-[#dbeafe] hover:bg-[#bfdbfe] text-[#0052cc] rounded-2xl font-bold text-base transition-colors shadow-xs active:scale-98 focus-visible:outline-none">
-                Save
-              </button>
-              <button type="button" onclick="publishNewPost()" class="flex-1 py-3.5 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-2xl font-bold text-base transition-colors shadow-md active:scale-98 focus-visible:outline-none">
-                Post
-              </button>
+            <!-- Action Buttons Row: Save & Post (Compact comfortable proportions) -->
+            <div class="shrink-0 px-4 py-3 md:px-12 lg:px-20 xl:px-32 2xl:px-48 bg-white/95 backdrop-blur-md border-t border-slate-200 z-30">
+              <div class="md:max-w-[960px] md:mx-auto flex items-center justify-end gap-2.5">
+                <button type="button" onclick="saveDraftPost()" class="flex-1 md:flex-none md:min-w-[112px] py-2.5 px-5 bg-[#dbeafe] hover:bg-[#bfdbfe] text-[#0052cc] rounded-xl font-bold text-sm transition-colors shadow-xs active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  Save
+                </button>
+                <button type="button" onclick="publishNewPost()" class="flex-1 md:flex-none md:min-w-[112px] py-2.5 px-5 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-xl font-bold text-sm transition-colors shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  Post
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -4891,6 +4878,47 @@
       let totalClaimedHKD = 1850;
       let loginDestination = 2; // Default: Screen 2 (Step 1)
       let isLoggedIn = false;   // User login session state tracker
+      let pendingBookmarkComp = null;
+      let pendingBookmarkSourceScreen = 1;
+      let currentDetailComp = null;
+
+      // Bookmarked competitions & Grant Watchlist state
+      const bookmarkedCompetitions = new Map();
+      const DEFAULT_WATCHLIST_ITEMS = [
+        {
+          id: 'core77-2026',
+          title: 'Core77 Design Awards 2025',
+          deadline: '01 Mar 2026',
+          shortClose: 'Closes Mar 01',
+          subsidyText: 'Up to HK$ 3,000',
+          badge: 'SPATIAL & INDUSTRIAL DESIGN',
+          daysLeftText: '4 Days Left',
+          daysBadgeClass: 'bg-[#fef2f2] text-[#ef4444]',
+          imgAltMatch: 'Core77 Design Awards 2026'
+        },
+        {
+          id: 'braun-2026',
+          title: 'BraunPrize 2025',
+          deadline: '15 Mar 2026',
+          shortClose: 'Closes Mar 15',
+          subsidyText: 'Up to HK$ 5,000',
+          badge: 'PRODUCT & INDUSTRIAL DESIGN',
+          daysLeftText: '18 Days Left',
+          daysBadgeClass: 'bg-[#e0f2fe] text-[#0284c7]',
+          imgAltMatch: 'Braun Prize International 2026'
+        },
+        {
+          id: 'golden-pin-2025',
+          title: 'Golden Pin Design Award',
+          deadline: '29 Mar 2026',
+          shortClose: 'Closes Mar 29',
+          subsidyText: 'Up to HK$ 2,500',
+          badge: 'COMMUNICATION & PRODUCT DESIGN',
+          daysLeftText: '32 Days Left',
+          daysBadgeClass: 'bg-slate-100 text-slate-600',
+          imgAltMatch: 'Good Design Award (G-Mark) 2026'
+        }
+      ];
 
       function syncAuthUI() {
         const s9Back = document.getElementById('btn-screen9-back');
@@ -4950,6 +4978,9 @@
         if (isLoggedIn) {
           goToScreen(13);
         } else {
+          pendingBookmarkComp = null;
+          const notice = document.getElementById('login-bookmark-notice');
+          if (notice) notice.classList.add('hidden');
           loginDestination = 13;
           goToScreen(12);
         }
@@ -4970,12 +5001,16 @@
 
       const COMPETITION_DETAILS = {
         reddot: {
+          id: 'reddot',
           heroSelector: '',
           heroAlt: 'Red Dot Design Concept Exhibition Gallery',
+          titleText: 'Red Dot: Design Concept 2026',
           titleHtml: 'Red Dot Award:<br />Design Concept 2026',
           organizer: 'Organized by Design Zentrum Nordrhein Westfalen • Endorsed under PolyU SD Subsidy Framework',
           badge: 'PRODUCT & INDUSTRIAL DESIGN',
           subsidyCap: 'HK$ 5,000 Subsidy Cap • 100% Entry & Model Reimbursement',
+          subsidyShort: 'Up to HK$ 5,000',
+          daysLeftText: '18 Days Left',
           overview: 'The Red Dot Award: Design Concept represents the premier international benchmark for discovering nascent design possibilities, imaginative student prototypes, and research grade physical innovations. Established in 2005 and headquartered in Singapore, the award acknowledges ideas that demonstrate exceptional foresight, ergonomic utility, ecological consciousness, and transformative technological integration.',
           categories: ['Mobility & Autonomous Transportation', 'Consumer Technology & Wearables'],
           timelineIntro: 'Please strictly adhere to both the global Red Dot submission deadlines and internal PolyU SD accounting cutoffs:',
@@ -4992,12 +5027,16 @@
           proofs: 'Official Tax Invoice & Entry PDF'
         },
         'if-award': {
+          id: 'if-award',
           heroSelector: '#screen-1 img[alt="iF Student Design Award Workstation"]',
           heroAlt: 'iF Student Design Award Workstation',
+          titleText: 'iF Student Design Award 2026',
           titleHtml: 'iF Student Design<br />Award 2026',
           organizer: 'Organized by iF International Forum Design GmbH • Endorsed under PolyU SD Subsidy Framework',
           badge: 'SOCIAL IMPACT & INTERACTION',
           subsidyCap: 'HK$ 5,000 Subsidy Cap • Zero Student Out-of-Pocket',
+          subsidyShort: 'Up to HK$ 5,000',
+          daysLeftText: '32 Days Left',
           overview: 'The iF Student Design Award recognizes visionary concepts by design students and recent graduates addressing UN Sustainable Development Goals, social equity, and future-ready product & digital interaction systems. Jury fees are directly waived or covered under the PolyU SD institutional subsidy framework.',
           categories: ['SDG & Social Impact Innovation', 'Human-Centered Digital & Service Design'],
           timelineIntro: 'Please follow both the iF Student Design Award jury schedule and PolyU SD reimbursement cutoffs:',
@@ -5014,12 +5053,16 @@
           proofs: 'iF Portal Receipt & Entry Deck PDF'
         },
         'tokyo-tdc': {
+          id: 'tokyo-tdc',
           heroSelector: '#screen-1 img[alt="Tokyo TDC Typography Gallery"]',
           heroAlt: 'Tokyo TDC Typography Gallery',
+          titleText: 'Tokyo TDC Annual Awards',
           titleHtml: 'Tokyo TDC<br />Annual Awards 2026',
           organizer: 'Organized by Tokyo Type Directors Club • Endorsed under PolyU SD Subsidy Framework',
           badge: 'VISUAL COMMUNICATION & TYPOGRAPHY',
           subsidyCap: 'HK$ 4,000 Subsidy Cap • Print & Entry Submission Fee',
+          subsidyShort: 'Up to HK$ 4,000',
+          daysLeftText: '45 Days Left',
           overview: 'The Tokyo TDC Annual Awards celebrate experimental typography, editorial layout, kinetic type, and visual communication excellence across Asia and internationally. PolyU Communication Design students receive subsidy coverage for registration, archival poster printing, and international courier dispatch to Tokyo.',
           categories: ['Experimental & Editorial Typography', 'Motion & Kinetic Identity Systems'],
           timelineIntro: 'Please coordinate physical poster printing and Tokyo TDC entry cutoffs with the PolyU SD accounting desk:',
@@ -5040,9 +5083,20 @@
       function renderCompetitionDetail(data) {
         detailReturnScreen = currentScreen === 10 ? detailReturnScreen : currentScreen;
 
+        const resolvedHeroImg = data.heroImg || resolveDomImageSrc(data.heroSelector, DEFAULT_DETAIL_HERO_SRC);
+        currentDetailComp = {
+          id: data.id || 'reddot',
+          title: data.titleText || (data.titleHtml ? data.titleHtml.replace(/<br\s*\/?>/gi, ' ') : 'Design Competition 2026'),
+          deadline: data.deadline || '15 Apr 2026',
+          subsidyText: data.subsidyShort || 'Up to HK$ 5,000',
+          badge: data.badge || 'DESIGN EXCELLENCE',
+          daysLeftText: data.daysLeftText || 'Bookmarked',
+          heroImg: resolvedHeroImg
+        };
+
         const heroImg = document.getElementById('detail-hero-img');
         if (heroImg) {
-          heroImg.src = data.heroImg || resolveDomImageSrc(data.heroSelector, DEFAULT_DETAIL_HERO_SRC);
+          heroImg.src = resolvedHeroImg;
           heroImg.alt = data.heroAlt || 'Competition Exhibition';
         }
         const titleEl = document.getElementById('detail-title');
@@ -5095,6 +5149,7 @@
         setElText('detail-meta-students', data.students);
         setElText('detail-meta-proofs', data.proofs);
 
+        syncBookmarkUI();
         goToScreen(10);
       }
 
@@ -5108,6 +5163,11 @@
           openCompetitionDetail('reddot');
           return;
         }
+        const compId = cardEl.getAttribute('data-comp-id') || '';
+        if (compId && COMPETITION_DETAILS[compId]) {
+          openCompetitionDetail(compId);
+          return;
+        }
         const title = (cardEl.querySelector('h3')?.textContent || '').trim() || 'Design Competition 2026';
         const deadline = (cardEl.querySelector('strong')?.textContent || '').trim() || '30 Jun 2026';
         const badge = (cardEl.querySelector('span.inline-block')?.textContent || '').trim() || 'DESIGN EXCELLENCE';
@@ -5116,12 +5176,15 @@
         const imgAlt = img ? img.getAttribute('alt') : title;
 
         renderCompetitionDetail({
+          id: compId || title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
           heroImg: imgSrc,
           heroAlt: imgAlt,
           titleText: title,
           organizer: `Endorsed International Competition • PolyU School of Design Subsidy Scheme`,
           badge: badge,
           subsidyCap: 'HK$ 5,000 Subsidy Cap • 100% Entry & Model Reimbursement',
+          subsidyShort: 'Up to HK$ 5,000',
+          daysLeftText: 'Saved',
           overview: `${title} is an approved Tier-1 / Tier-2 international design competition under the PolyU School of Design Competition & Award Subsidy Scheme. Eligible full-time BA, MDes, and PhD students can claim reimbursement for official entry fees, prototype production, and certified exhibition dispatch expenses.`,
           categories: [badge, 'Student Innovation & Conceptual Excellence'],
           timelineIntro: `Please follow both the ${title} international jury schedule and PolyU SD internal reimbursement cutoffs:`,
@@ -5139,17 +5202,31 @@
         });
       }
 
-      function openWatchlistCompetition(title, deadline, subsidyText, badge, imgAltMatch) {
+      function openWatchlistCompetition(title, deadline, subsidyText, badge, imgAltMatch, compId) {
+        if (compId && COMPETITION_DETAILS[compId]) {
+          openCompetitionDetail(compId);
+          return;
+        }
+        const matchedCard = compId
+          ? document.querySelector(`#screen-9 [data-comp-id="${compId}"]`)
+          : null;
+        if (matchedCard && !matchedCard.getAttribute('onclick')?.includes('openCompetitionDetail')) {
+          openCompetitionFromCard(matchedCard);
+          return;
+        }
         const matchedImg = imgAltMatch
           ? document.querySelector(`#screen-9 img[alt="${imgAltMatch}"]`)
           : null;
         renderCompetitionDetail({
+          id: compId || title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
           heroImg: matchedImg ? matchedImg.getAttribute('src') : DEFAULT_DETAIL_HERO_SRC,
           heroAlt: title,
           titleText: title,
           organizer: 'Saved in Grant Watchlist • Endorsed under PolyU SD Subsidy Framework',
           badge: badge,
           subsidyCap: `${subsidyText} • Entry & Model Reimbursement`,
+          subsidyShort: subsidyText,
+          daysLeftText: 'Saved',
           overview: `${title} is currently saved to your PolyU Grant Watchlist. Ensure your entry invoice and academic endorsement are submitted before the official deadline to qualify for direct FPS reimbursement.`,
           categories: [badge, 'Watchlist Priority Grant'],
           timelineIntro: `Track the upcoming submission window and accounting cutoff for ${title}:`,
@@ -5242,15 +5319,6 @@
           }
         }
 
-        // Update evaluation top jump-bar state
-        document.querySelectorAll('.nav-jump-btn').forEach(btn => {
-          if (parseInt(btn.getAttribute('data-screen'), 10) === screenNumber) {
-            btn.className = "nav-jump-btn px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors bg-[#0052cc] text-white";
-          } else {
-            btn.className = "nav-jump-btn px-2.5 py-1 rounded-md text-[11px] font-medium transition-colors text-slate-300 hover:text-white hover:bg-slate-800";
-          }
-        });
-
         // If on discussion forum, reset to main feed view
         if (screenNumber === 14) {
           const feedView = document.getElementById('forum-feed-view');
@@ -5301,19 +5369,176 @@
         if (modal) modal.classList.add('hidden');
       }
 
-      // 3. Heart Bookmark Toggle
+      // 3. Heart Bookmark Toggle & Watchlist Sync
+      function getCompetitionFromHeartButton(button) {
+        const cardEl = button.closest('[data-comp-id]');
+        if (cardEl) {
+          const compId = cardEl.getAttribute('data-comp-id');
+          if (COMPETITION_DETAILS[compId]) {
+            const preset = COMPETITION_DETAILS[compId];
+            return {
+              id: preset.id,
+              title: preset.titleText,
+              deadline: preset.deadline,
+              subsidyText: preset.subsidyShort,
+              badge: preset.badge,
+              daysLeftText: preset.daysLeftText || 'Bookmarked',
+              imgAltMatch: preset.heroAlt
+            };
+          }
+          const title = (cardEl.querySelector('h3')?.textContent || '').trim() || 'Design Competition 2026';
+          const deadline = (cardEl.querySelector('strong')?.textContent || '').trim() || '30 Jun 2026';
+          const badge = (cardEl.querySelector('span.inline-block')?.textContent || '').trim() || 'DESIGN EXCELLENCE';
+          const img = cardEl.querySelector('img');
+          return {
+            id: compId,
+            title,
+            deadline,
+            subsidyText: 'Up to HK$ 5,000',
+            badge,
+            daysLeftText: 'Bookmarked',
+            imgAltMatch: img ? img.getAttribute('alt') : title
+          };
+        }
+        if (currentDetailComp) {
+          return {
+            id: currentDetailComp.id,
+            title: currentDetailComp.title,
+            deadline: currentDetailComp.deadline,
+            subsidyText: currentDetailComp.subsidyText,
+            badge: currentDetailComp.badge,
+            daysLeftText: currentDetailComp.daysLeftText || 'Bookmarked',
+            imgAltMatch: currentDetailComp.title
+          };
+        }
+        const preset = COMPETITION_DETAILS.reddot;
+        return {
+          id: preset.id,
+          title: preset.titleText,
+          deadline: preset.deadline,
+          subsidyText: preset.subsidyShort,
+          badge: preset.badge,
+          daysLeftText: preset.daysLeftText,
+          imgAltMatch: preset.heroAlt
+        };
+      }
+
+      function syncBookmarkUI() {
+        document.querySelectorAll('[data-comp-id] .heart-btn').forEach(btn => {
+          const card = btn.closest('[data-comp-id]');
+          const compId = card ? card.getAttribute('data-comp-id') : '';
+          const svg = btn.querySelector('svg');
+          if (!svg) return;
+          const isSaved = bookmarkedCompetitions.has(compId);
+          svg.classList.toggle('fill-red-500', isSaved);
+          svg.classList.toggle('text-red-500', isSaved);
+          svg.classList.toggle('fill-none', !isSaved);
+          svg.classList.toggle('text-slate-700', !isSaved);
+          btn.setAttribute('aria-pressed', isSaved ? 'true' : 'false');
+        });
+
+        const detailBtn = document.getElementById('detail-bookmark-btn');
+        const detailLabel = document.getElementById('detail-bookmark-label');
+        if (detailBtn) {
+          const detailId = currentDetailComp ? currentDetailComp.id : 'reddot';
+          const isSaved = bookmarkedCompetitions.has(detailId);
+          const svg = detailBtn.querySelector('svg');
+          if (svg) {
+            svg.classList.toggle('fill-red-500', isSaved);
+            svg.classList.toggle('text-red-500', isSaved);
+            svg.classList.toggle('fill-none', !isSaved);
+            svg.classList.toggle('text-slate-700', !isSaved);
+          }
+          detailBtn.classList.toggle('text-red-600', isSaved);
+          detailBtn.classList.toggle('text-slate-800', !isSaved);
+          detailBtn.setAttribute('aria-pressed', isSaved ? 'true' : 'false');
+          if (detailLabel) {
+            detailLabel.textContent = 'Save Competition';
+          }
+        }
+      }
+
+      function openWatchlistById(compId) {
+        const item = bookmarkedCompetitions.get(compId) || DEFAULT_WATCHLIST_ITEMS.find(w => w.id === compId);
+        if (item) {
+          openWatchlistCompetition(item.title, item.deadline, item.subsidyText, item.badge, item.imgAltMatch || '', item.id);
+        } else {
+          openCompetitionDetail('reddot');
+        }
+      }
+
+      function renderWatchlist() {
+        const container = document.getElementById('grant-watchlist-list');
+        if (!container) return;
+
+        const merged = [];
+        const seenIds = new Set();
+
+        // Newly bookmarked competitions appear first at the top of Grant Watchlist
+        Array.from(bookmarkedCompetitions.values()).reverse().forEach(item => {
+          if (!seenIds.has(item.id)) {
+            seenIds.add(item.id);
+            merged.push({
+              ...item,
+              shortClose: 'Closes ' + item.deadline,
+              daysBadgeClass: 'bg-blue-50 text-[#0052cc]',
+              isUserSaved: true
+            });
+          }
+        });
+
+        DEFAULT_WATCHLIST_ITEMS.forEach(item => {
+          if (!seenIds.has(item.id)) {
+            seenIds.add(item.id);
+            merged.push(item);
+          }
+        });
+
+        container.innerHTML = merged.map(item => `
+          <div data-watchlist-id="${escapeHtml(item.id)}" onclick="openWatchlistById(this.getAttribute('data-watchlist-id'))" class="py-3 first:pt-1 last:pb-1 flex items-center justify-between gap-3 cursor-pointer hover:bg-slate-50/60 -mx-2 px-2 rounded-xl transition-colors">
+            <div class="space-y-0.5 min-w-0">
+              <div class="flex items-center gap-1.5">
+                <div class="text-[13px] font-extrabold text-[#0f172a] truncate">${escapeHtml(item.title)}</div>
+                ${item.isUserSaved ? '<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-red-50 text-red-600 text-[9px] font-bold shrink-0">Saved</span>' : ''}
+              </div>
+              <div class="text-[11px] text-slate-500 font-medium">Subsidy: ${escapeHtml(item.subsidyText)}</div>
+            </div>
+            <div class="text-right space-y-0.5 shrink-0">
+              <span class="inline-block px-2.5 py-0.5 ${item.daysBadgeClass} rounded-md text-[10px] font-extrabold">${escapeHtml(item.daysLeftText)}</span>
+              <div class="text-[10px] text-slate-400">${escapeHtml(item.shortClose)}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
       function toggleHeart(button) {
-        const svg = button.querySelector('svg');
-        const isFilled = svg.classList.contains('fill-red-500');
-        if (isFilled) {
-          svg.classList.remove('fill-red-500', 'text-red-500');
-          svg.classList.add('fill-none', 'text-slate-700');
+        const comp = getCompetitionFromHeartButton(button);
+        if (!isLoggedIn) {
+          pendingBookmarkComp = comp;
+          pendingBookmarkSourceScreen = currentScreen;
+          loginDestination = currentScreen === 1 ? 10 : currentScreen;
+
+          const notice = document.getElementById('login-bookmark-notice');
+          const noticeText = document.getElementById('login-bookmark-notice-text');
+          if (notice && noticeText) {
+            noticeText.textContent = `Sign in to bookmark "${comp.title}" to your Grant Watchlist.`;
+            notice.classList.remove('hidden');
+          }
+
+          showToast('Please sign in first to bookmark competitions');
+          goToScreen(12);
+          return;
+        }
+
+        if (bookmarkedCompetitions.has(comp.id)) {
+          bookmarkedCompetitions.delete(comp.id);
           showToast('Removed from saved competitions');
         } else {
-          svg.classList.remove('fill-none', 'text-slate-700');
-          svg.classList.add('fill-red-500', 'text-red-500');
-          showToast('Bookmarked to PolyU Student Hub');
+          bookmarkedCompetitions.set(comp.id, comp);
+          showToast(`Saved "${comp.title}" to Grant Watchlist`);
         }
+        syncBookmarkUI();
+        renderWatchlist();
       }
 
       // 4. FAQ Accordion Toggle
@@ -5669,23 +5894,61 @@
         }, 600);
       }
 
-      // 16. Login Functions (Screen 12)
-      function handleNetIDLogin() {
+      // 16. Login & Logout Functions (Screens 12 & 13)
+      function completeLoginRedirect(toastMessage) {
         setLoggedInState(true);
-        const targetName = loginDestination === 13 ? 'Chloe (Student Portal)' : 'Chloe';
-        showToast(`PolyU Single Sign-On Verified: Welcome ${targetName}!`);
+        const notice = document.getElementById('login-bookmark-notice');
+        if (notice) notice.classList.add('hidden');
+
+        if (pendingBookmarkComp) {
+          const compToSave = pendingBookmarkComp;
+          const sourceScreen = pendingBookmarkSourceScreen;
+          pendingBookmarkComp = null;
+
+          bookmarkedCompetitions.set(compToSave.id, compToSave);
+          syncBookmarkUI();
+          renderWatchlist();
+          showToast(`Bookmarked "${compToSave.title}" to your Grant Watchlist!`);
+
+          setTimeout(() => {
+            if (sourceScreen === 1) {
+              if (COMPETITION_DETAILS[compToSave.id]) {
+                openCompetitionDetail(compToSave.id);
+              } else {
+                openCompetitionDetail('reddot');
+              }
+              detailReturnScreen = 9;
+            } else {
+              goToScreen(loginDestination);
+            }
+          }, 500);
+          return;
+        }
+
+        showToast(toastMessage);
         setTimeout(() => {
           goToScreen(loginDestination);
         }, 700);
       }
 
+      function handleNetIDLogin() {
+        const targetName = loginDestination === 13 ? 'Chloe (Student Portal)' : 'Chloe';
+        completeLoginRedirect(`PolyU Single Sign-On Verified: Welcome ${targetName}!`);
+      }
+
       function handleManualLogin() {
-        setLoggedInState(true);
         const email = document.getElementById('login-email').value;
-        showToast(`Authenticated as ${email}`);
-        setTimeout(() => {
-          goToScreen(loginDestination);
-        }, 700);
+        completeLoginRedirect(`Authenticated as ${email}`);
+      }
+
+      function handleLogout() {
+        setLoggedInState(false);
+        pendingBookmarkComp = null;
+        loginDestination = 13;
+        const notice = document.getElementById('login-bookmark-notice');
+        if (notice) notice.classList.add('hidden');
+        showToast('Logged out of PolyU Student Hub');
+        goToScreen(12);
       }
 
       function togglePasswordVisibility() {
@@ -5720,6 +5983,13 @@
         }
       }
 
+      function saveRecommendDraft() {
+        const compName = (document.getElementById('rec-comp-name')?.value || '').trim();
+        showToast(compName
+          ? `Saved draft recommendation for "${compName}"`
+          : 'Recommendation draft saved to your portal');
+      }
+
       function handleRecommendSubmit(e) {
         if (e && e.preventDefault) e.preventDefault();
         const modal = document.getElementById('recommend-modal');
@@ -5737,16 +6007,6 @@
       }
 
       // 18. Dashboard Functions (Screen 13)
-      function sendFacultyNudge(btn) {
-        btn.innerHTML = `
-          <svg class="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          <span class="text-emerald-700">Nudge Sent</span>
-        `;
-        btn.classList.add('bg-emerald-50', 'border-emerald-200');
-        btn.disabled = true;
-        showToast('Faculty review reminder notification sent to Prof. Michael Lin');
-      }
-
       function triggerTaxInvoiceUpload() {
         showToast('Official VAT tax receipt (EUR 410.00) attached! Transmitted to Finance Office for audit.');
       }
