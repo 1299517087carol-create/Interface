@@ -138,11 +138,11 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-6 md:py-10 space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
+          <div class="px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-6 md:py-12 space-y-10 md:space-y-14 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14 md:bg-[radial-gradient(ellipse_at_top_right,rgba(219,234,254,0.45),transparent_55%)]">
             <!-- Hero Title & Scheme Intro -->
             <div class="space-y-4">
               <h1 class="text-[28px] md:text-[44px] leading-[34px] md:leading-[52px] font-extrabold text-[#0f172a] tracking-tight">
-                School of Design<br class="hidden md:inline" /> Competition & Award<br class="hidden md:inline" /> Subsidy Scheme.
+                School of Design Competition &amp;<br class="hidden md:inline" /> Award Subsidy Scheme.
               </h1>
               <div class="flex items-center gap-3 pt-1">
                 <button type="button" id="btn-hero-explore" onclick="goToScreen(9)" class="bg-[#0052cc] hover:bg-[#0047b3] text-white text-[13px] font-bold px-5 py-3 rounded-full flex items-center gap-2 transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] active:scale-95">
@@ -156,12 +156,12 @@
               </div>
             </div>
 
-            <!-- Key Metrics Strip (2 Columns) -->
-            <div class="grid grid-cols-2 gap-4 pt-1 pb-1">
+            <!-- Mobile Key Metrics Strip (2 Columns) -->
+            <div class="grid grid-cols-2 gap-4 pt-1 pb-1 md:hidden">
               <div class="space-y-1">
                 <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">ANNUAL CAP PER STUDENT</div>
                 <div class="text-[20px] font-extrabold text-[#0f172a] tracking-tight">HK$ 25,000</div>
-                <div class="text-[11px] text-slate-500 leading-tight">Eligible for entry & shipping • Cumulative</div>
+                <div class="text-[11px] text-slate-500 leading-tight">Eligible for entry &amp; shipping • Cumulative</div>
               </div>
               <div class="space-y-1">
                 <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">TIER-1 PRE-APPROVED</div>
@@ -173,8 +173,86 @@
               </div>
             </div>
 
+            <!-- Desktop Upper Split Showcase (Matches Desktop_main_page.png: Left PolyU Block V Image Card + Right Vertical Metrics Stack) -->
+            <div class="hidden md:grid md:grid-cols-12 md:gap-8 md:items-stretch pt-1">
+              <!-- Left: PolyU Block V Architectural Card -->
+              <div class="md:col-span-7 relative rounded-[24px] overflow-hidden shadow-md border border-slate-200/80 bg-slate-900 min-h-[320px] flex flex-col justify-between">
+                <img src="/src/assets/images/polyu_block_v_tower_1794927338476.jpg" alt="Jockey Club Innovation Tower (Block V), PolyU School of Design" referrerpolicy="no-referrer" class="absolute inset-0 w-full h-full object-cover" />
+                <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(9,13,22,0.90)_0%,rgba(9,13,22,0.45)_45%,rgba(9,13,22,0.08)_100%)]"></div>
+
+                <!-- Top Left Badges -->
+                <div class="relative z-10 p-5 flex flex-col items-start gap-2">
+                  <span class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-[#0f172a] text-[10px] font-extrabold px-3 py-1 rounded-full shadow-xs tracking-wide uppercase">
+                    <svg class="w-3.5 h-3.5 text-[#0052cc] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    <span>Jockey Club Innovation Tower (Block V)</span>
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 bg-[#4f46e5]/90 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-xs">
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>100% Registration Fee Coverage / Verified Tier-1 Only</span>
+                  </span>
+                </div>
+
+                <!-- Bottom Institutional Caption -->
+                <div class="relative z-10 p-6 space-y-1.5">
+                  <div class="text-[10px] font-bold uppercase tracking-widest text-blue-300">INSTITUTIONAL ENDORSEMENT</div>
+                  <h2 class="text-[24px] font-extrabold text-white leading-tight tracking-tight">Accelerating Visionary Work to World Stages</h2>
+                  <p class="text-xs text-slate-200 leading-relaxed max-w-lg">Direct institutional backing for registered School of Design students, studio cohorts, and interdisciplinary labs.</p>
+                </div>
+              </div>
+
+              <!-- Right: Stacked Key Metric Cards -->
+              <div class="md:col-span-5 flex flex-col justify-between gap-5">
+                <!-- Card 1: ANNUAL CAP PER STUDENT -->
+                <div class="bg-white rounded-[20px] p-5 border border-slate-200/80 shadow-xs flex-1 flex flex-col justify-between">
+                  <div class="flex items-start justify-between gap-3">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">ANNUAL CAP PER STUDENT</div>
+                    <div class="w-9 h-9 rounded-xl bg-[#0f172a] text-white flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                  </div>
+                  <div class="text-[30px] font-extrabold text-[#0f172a] tracking-tight leading-none py-1">HK$ 25,000</div>
+                  <div class="flex items-center justify-between text-[11px] text-slate-500 pt-1">
+                    <span class="flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+                      <span>Eligible for entry &amp; shipping • Cumulative</span>
+                    </span>
+                    <span class="font-bold text-slate-700 shrink-0">Per Year</span>
+                  </div>
+                </div>
+
+                <!-- Card 2: TIER-1 PRE-APPROVED -->
+                <div class="bg-white rounded-[20px] p-5 border border-slate-200/80 shadow-xs flex-1 flex flex-col justify-between">
+                  <div class="flex items-start justify-between gap-3">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">TIER-1 PRE-APPROVED</div>
+                    <div class="w-9 h-9 rounded-xl bg-[#ede9fe] text-[#6d28d9] flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                  </div>
+                  <div class="text-[30px] font-extrabold text-[#0052cc] tracking-tight leading-none py-1">48+ Awards</div>
+                  <div class="space-y-1.5 pt-1">
+                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-[#0052cc] h-full w-[75%] rounded-full"></div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] text-slate-500">
+                      <span>Global coverage rate • Instant sign-off</span>
+                      <button type="button" onclick="goToScreen(9)" class="font-bold text-[#0052cc] hover:underline shrink-0">Fast-track</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom Autopay Strip -->
+                <div class="bg-white rounded-2xl px-4 py-3 border border-slate-200/80 shadow-xs flex items-center justify-between text-[11px]">
+                  <span class="flex items-center gap-1.5 text-slate-700 font-semibold">
+                    <svg class="w-3.5 h-3.5 text-[#0052cc] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Reimbursement dispatched within 14 working days</span>
+                  </span>
+                  <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider shrink-0">NETID AUTOPAY</span>
+                </div>
+              </div>
+            </div>
+
             <!-- Competitions Header & Filter Tabs -->
-            <div class="space-y-3 pt-2">
+            <div class="space-y-4 md:space-y-5 pt-2">
               <div class="flex items-center justify-between">
                 <h2 class="text-[20px] font-bold text-[#0f172a]">Competitions</h2>
                 <div class="relative">
@@ -190,20 +268,21 @@
                 </div>
               </div>
 
-              <!-- Filter Tabs -->
-              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1">
+              <!-- Filter Tabs (Official PolyU School of Design Subjects) -->
+              <div class="flex items-center gap-2.5 md:gap-3.5 overflow-x-auto no-scrollbar pb-1.5">
                 <button type="button" onclick="filterDiscipline('all', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-[#0052cc] text-white shrink-0">All Disciplines</button>
-                <button type="button" onclick="filterDiscipline('product', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Product</button>
-                <button type="button" onclick="filterDiscipline('interaction', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Interaction</button>
-                <button type="button" onclick="filterDiscipline('visual', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Visual</button>
+                <button type="button" onclick="filterDiscipline('communication', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Communication Design</button>
+                <button type="button" onclick="filterDiscipline('environment', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Environment Design</button>
+                <button type="button" onclick="filterDiscipline('product', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Product Experience Design</button>
+                <button type="button" onclick="filterDiscipline('service', this)" class="comp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">Service Design</button>
               </div>
             </div>
 
             <!-- Competition Cards (3-column grid on desktop matching Desktop_main_page.png) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               
               <!-- Card 1: Red Dot (Direct to Red Dot Competition Detail) -->
-              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="reddot" data-category="product interaction">
+              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="reddot" data-category="product environment service">
                 <!-- Photo Container (Clicking photo opens Screen 10 Competition Detail directly) -->
                 <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" id="btn-reddot-photo" onclick="openCompetitionDetail('reddot')" title="Click to view Red Dot competition details">
                   <img src="/src/assets/images/comp_reddot_gallery_1794853915729.jpg" alt="Red Dot Design Concept Exhibition" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -240,7 +319,7 @@
                     <span class="text-slate-500">(428 Alumni Entries)</span>
                   </div>
                   <div class="text-[12px] text-slate-500">
-                    Singapore / Essen • Industrial &amp; Interaction
+                    Singapore / Essen • Product Experience &amp; Environment
                   </div>
                   <div class="pt-1 flex items-center gap-1.5 text-[11px] font-semibold text-[#0284c7]">
                     <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -250,7 +329,7 @@
               </article>
 
               <!-- Card 2: iF Student Design Award (Direct to iF Competition Detail) -->
-              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="if-award" data-category="product interaction">
+              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="if-award" data-category="service product">
                 <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="openCompetitionDetail('if-award')" title="Click to view iF Student Design Award details">
                   <img src="/src/assets/images/comp_if_studio_1794853916789.jpg" alt="iF Student Design Award Workstation" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
@@ -280,7 +359,7 @@
                     <span class="font-bold text-[#0f172a]">4.9</span>
                     <span class="text-slate-500">(310 Alumni Entries)</span>
                   </div>
-                  <div class="text-[12px] text-slate-500">Hanover, Germany • Social Impact &amp; SDG</div>
+                  <div class="text-[12px] text-slate-500">Hanover, Germany • Service &amp; Product Experience</div>
                   <div class="pt-1 flex items-center gap-1.5 text-[11px] font-semibold text-[#0284c7]">
                     <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                     <span>HK$ 5,000 Subsidy Cap • Zero Student Out-of-Pocket</span>
@@ -289,7 +368,7 @@
               </article>
 
               <!-- Card 3: Tokyo TDC Annual Awards (Direct to Tokyo TDC Competition Detail) -->
-              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="tokyo-tdc" data-category="visual">
+              <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-comp-id="tokyo-tdc" data-category="communication">
                 <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="openCompetitionDetail('tokyo-tdc')" title="Click to view Tokyo TDC competition details">
                   <img src="/src/assets/images/comp_tdc_posters_1794853916546.jpg" alt="Tokyo TDC Typography Gallery" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
@@ -351,9 +430,9 @@
             </div>
 
             <!-- FAQs Section -->
-            <div class="space-y-3 pt-2">
+            <div class="space-y-4 md:space-y-5 pt-2">
               <h2 class="text-[18px] font-extrabold text-[#0f172a]">Frequently Answered Protocols</h2>
-              <div class="space-y-2">
+              <div class="space-y-3">
                 <!-- FAQ 1 (Expanded by default) -->
                 <div class="border border-slate-200 rounded-xl overflow-hidden bg-white">
                   <button type="button" onclick="toggleFaq(this)" class="w-full p-4 text-left flex items-center justify-between font-bold text-[13px] text-[#0f172a] hover:bg-slate-50 focus-visible:outline-none">
@@ -610,8 +689,8 @@
             </div>
 
             <!-- Step 1 Content -->
-            <div class="px-5 pt-1 pb-6 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 pt-2 pb-6 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-4 md:pb-14 space-y-8 md:space-y-12">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-8 md:space-y-12">
               <!-- Student Verified Card -->
               <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center justify-between">
                 <div class="flex items-center gap-3.5 md:gap-6">
@@ -625,7 +704,7 @@
                       <span class="bg-[#bae6fd]/60 md:bg-[#e0f2fe] text-[#0284c7] font-bold text-[11px] md:text-xs px-2.5 md:px-3 py-0.5 md:py-1 rounded-full">Verified</span>
                     </div>
                     <div class="text-[12px] md:text-[20px] font-medium text-slate-500 md:text-slate-600 font-mono">ID #21049281D</div>
-                    <div class="text-[12px] font-semibold text-[#0052cc]">BA Interaction Design • Yr 4</div>
+                    <div class="text-[12px] font-semibold text-[#0052cc]">BA Product Experience Design • Year 2</div>
                   </div>
                 </div>
                 <button type="button" title="Refresh Registry Credentials" onclick="showToast('Registry credentials up-to-date (AY 2024/25)')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#eef2f6] hover:bg-slate-200 text-slate-600 flex items-center justify-center focus-visible:outline-none">
@@ -634,114 +713,114 @@
               </div>
 
               <!-- Academic Status Cards -->
-              <div class="space-y-3 md:space-y-4">
+              <div class="space-y-4 md:space-y-5">
                 <div class="flex items-center justify-between">
                   <h3 class="text-[22px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">
                     Academic Status <span class="hidden md:inline">(AY 2024/25)</span>
                   </h3>
                   <span class="text-xs font-semibold text-slate-600 md:hidden">AY 2024/25</span>
                 </div>
-                <div class="grid grid-cols-3 gap-3 md:gap-6">
+                <div class="grid grid-cols-3 gap-4 md:gap-6">
                   <!-- Status 1 (Enrolled BA - Selected) -->
-                  <button type="button" onclick="selectAcademicStatus(this)" class="academic-status-btn p-4 md:p-6 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] text-center md:text-left flex flex-col items-center md:items-start justify-center md:justify-between min-h-[126px] md:min-h-[172px] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
-                    <div class="acad-icon w-10 h-10 rounded-full bg-[#dbeafe] text-[#0052cc] flex items-center justify-center mb-2.5 md:mb-0">
+                  <button type="button" onclick="selectAcademicStatus(this)" class="academic-status-btn p-3.5 sm:p-4 md:p-6 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] text-center md:text-left flex flex-col items-center md:items-start justify-start min-h-[126px] md:min-h-[172px] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <div class="acad-icon w-10 h-10 rounded-full bg-[#dbeafe] text-[#0052cc] flex items-center justify-center mb-3 md:mb-5 shrink-0">
                       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
                     </div>
-                    <div class="md:mt-4">
-                      <div class="acad-title text-[13px] md:text-[16px] font-bold text-[#0f172a]">Enrolled BA</div>
-                      <div class="acad-sub text-[11px] md:text-[12px] font-semibold text-[#0052cc] mt-0.5">Eligible 100%</div>
+                    <div class="w-full flex flex-col items-center md:items-start">
+                      <div class="acad-title text-[13px] md:text-[16px] font-bold text-[#0f172a] leading-snug whitespace-nowrap">Enrolled BA</div>
+                      <div class="acad-sub text-[11px] md:text-[12px] font-semibold text-[#0052cc] mt-1 whitespace-nowrap">Eligible 100%</div>
                       <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Full-time undergraduate enrolled in School of Design.</p>
                     </div>
                   </button>
                   <!-- Status 2 (Recent Grad) -->
-                  <button type="button" onclick="selectAcademicStatus(this)" class="academic-status-btn p-4 md:p-6 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] text-center md:text-left flex flex-col items-center md:items-start justify-center md:justify-between min-h-[126px] md:min-h-[172px] hover:border-slate-200 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
-                    <div class="acad-icon w-10 h-10 rounded-full bg-[#eef2f6] text-slate-500 flex items-center justify-center mb-2.5 md:mb-0">
+                  <button type="button" onclick="selectAcademicStatus(this)" class="academic-status-btn p-3.5 sm:p-4 md:p-6 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] text-center md:text-left flex flex-col items-center md:items-start justify-start min-h-[126px] md:min-h-[172px] hover:border-slate-200 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <div class="acad-icon w-10 h-10 rounded-full bg-[#eef2f6] text-slate-500 flex items-center justify-center mb-3 md:mb-5 shrink-0">
                       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     </div>
-                    <div class="md:mt-4">
-                      <div class="acad-title text-[13px] md:text-[16px] font-bold text-slate-600 md:text-slate-700">Recent Grad</div>
-                      <div class="acad-sub text-[11px] md:text-[12px] font-medium text-slate-400 md:text-slate-500 mt-0.5">Class '24</div>
+                    <div class="w-full flex flex-col items-center md:items-start">
+                      <div class="acad-title text-[13px] md:text-[16px] font-bold text-slate-600 md:text-slate-700 leading-snug whitespace-nowrap">Recent Grad</div>
+                      <div class="acad-sub text-[11px] md:text-[12px] font-medium text-slate-400 md:text-slate-500 mt-1 whitespace-nowrap">Class '24</div>
                       <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Up to 70% support for projects conceived during study.</p>
                     </div>
                   </button>
                   <!-- Status 3 (MDes / PhD) -->
-                  <button type="button" onclick="selectAcademicStatus(this)" class="academic-status-btn p-4 md:p-6 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] text-center md:text-left flex flex-col items-center md:items-start justify-center md:justify-between min-h-[126px] md:min-h-[172px] hover:border-slate-200 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
-                    <div class="acad-icon w-10 h-10 rounded-full bg-[#eef2f6] text-slate-500 flex items-center justify-center mb-2.5 md:mb-0">
+                  <button type="button" onclick="selectAcademicStatus(this)" class="academic-status-btn p-3.5 sm:p-4 md:p-6 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] text-center md:text-left flex flex-col items-center md:items-start justify-start min-h-[126px] md:min-h-[172px] hover:border-slate-200 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <div class="acad-icon w-10 h-10 rounded-full bg-[#eef2f6] text-slate-500 flex items-center justify-center mb-3 md:mb-5 shrink-0">
                       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
                     </div>
-                    <div class="md:mt-4">
-                      <div class="acad-title text-[13px] md:text-[16px] font-bold text-slate-600 md:text-slate-700">MDes / PhD</div>
-                      <div class="acad-sub text-[11px] md:text-[12px] font-medium text-slate-400 md:text-slate-500 mt-0.5">Co-funded</div>
+                    <div class="w-full flex flex-col items-center md:items-start">
+                      <div class="acad-title text-[13px] md:text-[16px] font-bold text-slate-600 md:text-slate-700 leading-snug whitespace-nowrap">MDes / PhD</div>
+                      <div class="acad-sub text-[11px] md:text-[12px] font-medium text-slate-400 md:text-slate-500 mt-1 whitespace-nowrap">Co-funded</div>
                       <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Postgraduate competition track with faculty supervisor sign-off.</p>
                     </div>
                   </button>
                 </div>
               </div>
 
-              <!-- Discipline Stream Selection -->
-              <div class="space-y-3 md:space-y-4">
+              <!-- Discipline Stream Selection (Official PolyU School of Design Subjects) -->
+              <div class="space-y-4 md:space-y-5">
                 <div class="flex items-center justify-between">
                   <h3 class="text-[22px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Discipline Stream</h3>
                   <span class="text-xs font-semibold text-[#0052cc] md:hidden">School of Design</span>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-                  <!-- Discipline 1: Interaction Design (Selected) -->
-                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-between min-h-[118px] md:min-h-[195px] relative transition-all">
-                    <div class="flex items-center justify-between">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                  <!-- Discipline 1: Product Experience (Selected) -->
+                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-start min-h-[126px] md:min-h-[195px] relative transition-all">
+                    <div class="flex items-center justify-between mb-3 md:mb-5 shrink-0">
                       <div class="disc-icon w-9 h-9 rounded-xl bg-[#dbeafe]/75 text-[#0052cc] flex items-center justify-center">
-                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L5 5l14 14H5z"/><path d="M9 15v-3.5l3.5 3.5H9z"/></svg>
                       </div>
                       <span class="check-badge w-5 h-5 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-[10px] font-bold">✓</span>
                     </div>
-                    <div class="mt-3 md:mt-4">
-                      <div class="disc-title text-[14px] md:text-[15px] font-bold text-[#0f172a]">Interaction Design</div>
-                      <div class="disc-sub text-[11px] font-semibold text-[#0052cc] mt-0.5">IxD &amp; Digital Media</div>
-                      <p class="hidden md:block text-[11px] text-slate-500 mt-3 leading-relaxed">Includes UX, interactive installations, XR, web &amp; algorithmic experiences.</p>
+                    <div class="w-full">
+                      <div class="disc-title text-[13px] sm:text-[14px] md:text-[15px] font-bold text-[#0f172a] leading-snug min-h-[38px] sm:min-h-[22px] md:min-h-[42px] xl:min-h-[24px]">Product Experience</div>
+                      <div class="disc-sub text-[11px] font-semibold text-[#0052cc] mt-1 leading-snug min-h-[30px] sm:min-h-[16px] md:min-h-[32px] xl:min-h-[18px]">Industrial, IxD &amp; Tech</div>
+                      <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Hardware, consumer tech devices, tangible UX, assistive systems &amp; sustainable prototypes.</p>
                     </div>
                   </div>
 
-                  <!-- Discipline 2: Product Design -->
-                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[118px] md:min-h-[195px] relative hover:border-slate-200 transition-all">
-                    <div class="flex items-center justify-between">
-                      <div class="disc-icon w-9 h-9 rounded-xl bg-[#eef2f6] text-slate-600 flex items-center justify-center">
-                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L5 5l14 14H5z"/><path d="M9 15v-3.5l3.5 3.5H9z"/></svg>
-                      </div>
-                      <span class="check-badge w-5 h-5 rounded-full bg-[#eef2f6]"></span>
-                    </div>
-                    <div class="mt-3 md:mt-4">
-                      <div class="disc-title text-[14px] md:text-[15px] font-bold text-[#0f172a]">Product Design</div>
-                      <div class="disc-sub text-[11px] text-slate-500 mt-0.5">Industrial &amp; Tech</div>
-                      <p class="hidden md:block text-[11px] text-slate-500 mt-3 leading-relaxed">Hardware, consumer tech devices, assistive systems &amp; sustainable packaging.</p>
-                    </div>
-                  </div>
-
-                  <!-- Discipline 3: Communication -->
-                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[118px] md:min-h-[195px] relative hover:border-slate-200 transition-all">
-                    <div class="flex items-center justify-between">
+                  <!-- Discipline 2: Communication -->
+                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-start min-h-[126px] md:min-h-[195px] relative hover:border-slate-200 transition-all">
+                    <div class="flex items-center justify-between mb-3 md:mb-5 shrink-0">
                       <div class="disc-icon w-9 h-9 rounded-xl bg-[#eef2f6] text-slate-600 flex items-center justify-center">
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
                       </div>
                       <span class="check-badge w-5 h-5 rounded-full bg-[#eef2f6]"></span>
                     </div>
-                    <div class="mt-3 md:mt-4">
-                      <div class="disc-title text-[14px] md:text-[15px] font-bold text-[#0f172a]">Communication</div>
-                      <div class="disc-sub text-[11px] text-slate-500 mt-0.5">Visual &amp; Branding</div>
-                      <p class="hidden md:block text-[11px] text-slate-500 mt-3 leading-relaxed">Brand systems, editorial typography, motion graphics &amp; campaign communication.</p>
+                    <div class="w-full">
+                      <div class="disc-title text-[13px] sm:text-[14px] md:text-[15px] font-bold text-[#0f172a] leading-snug min-h-[38px] sm:min-h-[22px] md:min-h-[42px] xl:min-h-[24px]">Communication</div>
+                      <div class="disc-sub text-[11px] text-slate-500 mt-1 leading-snug min-h-[30px] sm:min-h-[16px] md:min-h-[32px] xl:min-h-[18px]">Visual, Type &amp; Branding</div>
+                      <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Brand systems, editorial typography, motion graphics &amp; campaign communication.</p>
                     </div>
                   </div>
 
-                  <!-- Discipline 4: Env. & Interior -->
-                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[118px] md:min-h-[195px] relative hover:border-slate-200 transition-all">
-                    <div class="flex items-center justify-between">
+                  <!-- Discipline 3: Environment -->
+                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-start min-h-[126px] md:min-h-[195px] relative hover:border-slate-200 transition-all">
+                    <div class="flex items-center justify-between mb-3 md:mb-5 shrink-0">
                       <div class="disc-icon w-9 h-9 rounded-xl bg-[#eef2f6] text-slate-600 flex items-center justify-center">
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                       </div>
                       <span class="check-badge w-5 h-5 rounded-full bg-[#eef2f6]"></span>
                     </div>
-                    <div class="mt-3 md:mt-4">
-                      <div class="disc-title text-[14px] md:text-[15px] font-bold text-[#0f172a]">Env. &amp; Interior</div>
-                      <div class="disc-sub text-[11px] text-slate-500 mt-0.5">Spatial Architecture</div>
-                      <p class="hidden md:block text-[11px] text-slate-500 mt-3 leading-relaxed">Spatial staging, urban installations, public venues &amp; adaptive reuse interiors.</p>
+                    <div class="w-full">
+                      <div class="disc-title text-[13px] sm:text-[14px] md:text-[15px] font-bold text-[#0f172a] leading-snug min-h-[38px] sm:min-h-[22px] md:min-h-[42px] xl:min-h-[24px]">Environment</div>
+                      <div class="disc-sub text-[11px] text-slate-500 mt-1 leading-snug min-h-[30px] sm:min-h-[16px] md:min-h-[32px] xl:min-h-[18px]">Spatial &amp; Interior</div>
+                      <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Spatial staging, urban installations, public venues &amp; adaptive reuse interiors.</p>
+                    </div>
+                  </div>
+
+                  <!-- Discipline 4: Service -->
+                  <div onclick="selectDiscipline(this)" class="discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-start min-h-[126px] md:min-h-[195px] relative hover:border-slate-200 transition-all">
+                    <div class="flex items-center justify-between mb-3 md:mb-5 shrink-0">
+                      <div class="disc-icon w-9 h-9 rounded-xl bg-[#eef2f6] text-slate-600 flex items-center justify-center">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                      </div>
+                      <span class="check-badge w-5 h-5 rounded-full bg-[#eef2f6]"></span>
+                    </div>
+                    <div class="w-full">
+                      <div class="disc-title text-[13px] sm:text-[14px] md:text-[15px] font-bold text-[#0f172a] leading-snug min-h-[38px] sm:min-h-[22px] md:min-h-[42px] xl:min-h-[24px]">Service</div>
+                      <div class="disc-sub text-[11px] text-slate-500 mt-1 leading-snug min-h-[30px] sm:min-h-[16px] md:min-h-[32px] xl:min-h-[18px]">Systems &amp; Innovation</div>
+                      <p class="hidden md:block text-[11px] text-slate-500 mt-2.5 leading-relaxed">Service blueprints, public innovation, healthcare journeys &amp; human-centered ecosystems.</p>
                     </div>
                   </div>
                 </div>
@@ -942,12 +1021,12 @@
             </div>
 
             <!-- Step 2 Content -->
-            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-4 md:pb-14 space-y-8 md:space-y-12">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-8 md:space-y-12">
               <!-- Reimbursement Pathway -->
-              <div class="space-y-3 md:space-y-4">
+              <div class="space-y-4 md:space-y-5">
                 <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Reimbursement Pathway</h2>
-                <div class="grid grid-cols-2 gap-3 md:gap-6">
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
                   <!-- Pathway 1: Registered & Paid (Selected) -->
                   <div onclick="selectPathway(this)" class="pathway-card cursor-pointer p-4 md:p-6 rounded-2xl bg-white border-2 border-[#0052cc] shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-between min-h-[155px] md:min-h-[188px] relative transition-all">
                     <div class="flex items-center justify-between">
@@ -1255,12 +1334,12 @@
             </div>
 
             <!-- Step 3 Content -->
-            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-4 md:pb-14 space-y-8 md:space-y-12">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-8 md:space-y-12">
               <!-- Research Origin -->
-              <div class="space-y-3 md:space-y-4">
+              <div class="space-y-4 md:space-y-5">
                 <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Research Origin</h2>
-                <div class="grid grid-cols-2 gap-3 md:gap-6">
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
                   <!-- Independent -->
                   <div onclick="selectOrigin(this, 'independent')" class="origin-card cursor-pointer p-4 md:p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[105px] md:min-h-[168px] relative hover:border-slate-300 transition-all">
                     <div class="flex items-center justify-between">
@@ -1292,7 +1371,7 @@
               </div>
 
               <!-- Proof of Project Origin Section -->
-              <div class="space-y-3 md:space-y-4">
+              <div class="space-y-4 md:space-y-5">
                 <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Proof</h2>
                 <div id="step-3-board-item" class="bg-white rounded-2xl md:rounded-3xl p-3.5 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center justify-between">
                   <div class="flex items-center gap-3.5 md:gap-6">
@@ -1324,9 +1403,9 @@
               </div>
 
               <!-- Team Members Container -->
-              <div class="space-y-3 md:space-y-4">
+              <div class="space-y-4 md:space-y-5">
                 <h2 class="hidden md:block text-[24px] font-extrabold text-[#0f172a] tracking-tight">Team Members &amp; Co-Authors</h2>
-                <div id="teammates-section" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
+                <div id="teammates-section" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-4 md:space-y-6">
                   <!-- Lead Member -->
                   <div class="bg-slate-50 rounded-xl md:rounded-2xl p-3 md:p-5 flex items-center justify-between border border-slate-100">
                     <div class="flex items-center gap-3 md:gap-5">
@@ -1338,7 +1417,7 @@
                           <span class="text-[13px] md:text-[16px] font-extrabold text-[#0f172a]">Chloe</span>
                           <span class="bg-[#dbeafe] text-[#1d4ed8] font-bold text-[10px] md:text-xs px-2 md:px-2.5 py-0.5 rounded-full">Lead</span>
                         </div>
-                        <div class="text-[11px] md:text-[13px] text-slate-500 font-mono">Student ID: 21049281D</div>
+                        <div class="text-[11px] md:text-[13px] text-slate-500 font-mono">Student ID: 21049281D • Year 2</div>
                       </div>
                     </div>
                   </div>
@@ -1587,12 +1666,12 @@
             </div>
 
             <!-- Step 4 Content -->
-            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-4 md:pb-14 space-y-8 md:space-y-12">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-8 md:space-y-12">
               <!-- Vertical flow matching mobile layout -->
-              <div class="flex flex-col gap-6 md:gap-9">
+              <div class="flex flex-col gap-8 md:gap-12">
                 <!-- Grant Subsidy Quota Box -->
-                <div class="space-y-3 md:space-y-4">
+                <div class="space-y-4 md:space-y-5">
                   <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Grant Subsidy Quota</h2>
                   <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center gap-3.5 md:gap-6">
                     <div class="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#eff6ff] text-[#0052cc] flex items-center justify-center shrink-0">
@@ -1609,7 +1688,7 @@
                 </div>
 
                 <!-- Verified Slips Section -->
-                <div class="space-y-3 md:space-y-4">
+                <div class="space-y-4 md:space-y-5">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2 md:gap-3">
                       <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Verified Slips</h2>
@@ -1618,7 +1697,7 @@
                   </div>
 
                   <!-- List of Slips -->
-                  <div id="slips-container" class="space-y-3 md:space-y-4">
+                  <div id="slips-container" class="space-y-4 md:space-y-6">
                     <!-- Slip 1: Red Dot Student Entry -->
                     <div id="slip-item-1" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
                       <div class="flex items-start justify-between gap-4">
@@ -1683,7 +1762,7 @@
                   </button>
 
                   <!-- Expandable Form Container (Screen 4.1 - 6_Application_Form_Step4.1) -->
-                  <div id="expense-form-drawer" class="hidden bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-200/90 shadow-md space-y-4 md:space-y-6">
+                  <div id="expense-form-drawer" class="hidden bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-200/90 shadow-md space-y-5 md:space-y-7">
                     <div class="flex items-center justify-between border-b border-slate-100 pb-2 md:pb-3">
                       <div class="text-[14px] md:text-[18px] font-extrabold text-[#0f172a] flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-[#0052cc]"></span>
@@ -1961,10 +2040,10 @@
             </div>
 
             <!-- Step 5 Content -->
-            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-2 md:pb-14 space-y-6 md:space-y-9">
-              <div class="md:max-w-[1160px] md:mx-auto space-y-6 md:space-y-9">
+            <div class="px-5 py-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:pt-4 md:pb-14 space-y-8 md:space-y-12">
+              <div class="md:max-w-[1160px] md:mx-auto space-y-8 md:space-y-12">
               <!-- Vertical flow matching mobile layout -->
-              <div class="space-y-6 md:space-y-9">
+              <div class="space-y-8 md:space-y-12">
                 <!-- Approved Payout Card -->
                 <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
                   <div class="flex items-start justify-between gap-4">
@@ -1989,7 +2068,7 @@
                 </div>
 
                 <!-- Payout Destination -->
-                <div class="space-y-3 md:space-y-4">
+                <div class="space-y-4 md:space-y-5">
                   <div class="flex items-center gap-2 md:gap-3">
                     <svg class="w-5 h-5 md:w-6 md:h-6 text-[#0052cc]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
                     <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Payout Destination</h2>
@@ -2394,7 +2473,7 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-5 md:py-10 space-y-5 md:space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14 bg-white md:bg-[#fafbfd]">
+          <div class="px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 py-5 md:py-12 space-y-8 md:space-y-12 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14 bg-white md:bg-[#fafbfd]">
             <h1 class="text-[26px] md:text-[34px] font-extrabold text-[#0f172a] tracking-tight">Competitions</h1>
 
             <!-- Search Bar & Filter Toggle -->
@@ -2409,24 +2488,24 @@
             </div>
 
             <!-- Filter Controls (Visible on mobile, toggleable via dropdown button on desktop) -->
-            <div id="comp-filter-panel" class="space-y-2 md:hidden">
-              <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+            <div id="comp-filter-panel" class="space-y-3.5 md:hidden">
+              <div class="flex items-center gap-2.5 md:gap-3 overflow-x-auto no-scrollbar">
                 <button type="button" onclick="setDeadlineFilter('upcoming', this)" class="deadline-btn px-3 py-1.5 rounded-full text-xs font-bold bg-[#0c0d1c] text-white shrink-0">Upcoming Deadline</button>
                 <button type="button" onclick="setDeadlineFilter('past', this)" class="deadline-btn px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0">Past Deadline</button>
               </div>
-              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar text-[11px] text-slate-600 pt-1">
+              <div class="flex items-center gap-2.5 md:gap-3.5 overflow-x-auto no-scrollbar text-[11px] text-slate-600 pt-1">
                 <button type="button" onclick="filterDisciplineGrid('All', this)" class="stream-btn px-3 py-1 rounded-full bg-[#0052cc] text-white font-bold flex items-center justify-center shrink-0">All</button>
-                <button type="button" onclick="filterDisciplineGrid('Communication', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Communication Design</button>
-                <button type="button" onclick="filterDisciplineGrid('Product', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Product &amp; Industrial</button>
-                <button type="button" onclick="filterDisciplineGrid('Spatial', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Spatial &amp; Architecture</button>
-                <button type="button" onclick="filterDisciplineGrid('Interaction', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Interaction &amp; UX</button>
+                <button type="button" onclick="filterDisciplineGrid('Communication Design', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Communication Design</button>
+                <button type="button" onclick="filterDisciplineGrid('Environment Design', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Environment Design</button>
+                <button type="button" onclick="filterDisciplineGrid('Product Experience Design', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Product Experience Design</button>
+                <button type="button" onclick="filterDisciplineGrid('Service Design', this)" class="stream-btn px-2.5 py-1 rounded-full bg-slate-100 font-medium hover:bg-slate-200 shrink-0">Service Design</button>
               </div>
             </div>
 
             <!-- Competitions Grid (2 cols on mobile, 4 cols x 2 rows initially on desktop) -->
-            <div id="competitions-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 pt-1">
+            <div id="competitions-grid" class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-7 pt-2">
               <!-- Card 1: Red Dot Award -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('reddot')" data-comp-id="reddot" data-stream="Product" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('reddot')" data-comp-id="reddot" data-stream="Product Experience Design" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_reddot_desk_1794853918158.jpg" alt="Red Dot Award: Design Concept 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2442,12 +2521,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>15 Apr 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT DESIGN</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT EXPERIENCE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 2: iF Design Student Award -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('if-award')" data-comp-id="if-award" data-stream="Interaction" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('if-award')" data-comp-id="if-award" data-stream="Service Design" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_if_interaction_1794853918248.jpg" alt="iF Design Student Award 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2463,12 +2542,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>15 Apr 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">INTERACTION &amp; UX</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">SERVICE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 3: D&AD New Blood Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="dad-new-blood" data-stream="Communication" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="dad-new-blood" data-stream="Communication Design" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_dad_exhibition_1794853919326.jpg" alt="D&AD New Blood Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2489,7 +2568,7 @@
               </div>
 
               <!-- Card 4: IDEA -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="idea-2026" data-stream="Product">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="idea-2026" data-stream="Product Experience Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_idea_product_1794853918911.jpg" alt="IDEA (Intl Design Excellence Awards)" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2505,12 +2584,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>30 Jun 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">INDUSTRIAL DESIGN</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT EXPERIENCE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 5: Core77 Design Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="core77-2026" data-stream="Spatial">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="core77-2026" data-stream="Environment Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_core77_spatial_1794853920107.jpg" alt="Core77 Design Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2526,12 +2605,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>15 Jul 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">SPATIAL &amp; ENVIRONMENT</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">ENVIRONMENT DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 6: Braun Prize International -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="braun-2026" data-stream="Product">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="braun-2026" data-stream="Product Experience Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_braun_device_1794853920349.jpg" alt="Braun Prize International 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2547,12 +2626,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>10 Aug 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT DESIGN</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT EXPERIENCE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 7 (New #1, completes Desktop Row 2): DFA Design for Asia Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="dfa-asia-2026" data-stream="Product" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="dfa-asia-2026" data-stream="Service Design" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_dfa_asia_1794860502931.jpg" alt="DFA Design for Asia Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2568,12 +2647,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>28 Aug 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT DESIGN</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">SERVICE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 8 (New #2, completes Desktop Row 2): A&D Trophy Awards -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="ad-trophy-2026" data-stream="Spatial">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="ad-trophy-2026" data-stream="Environment Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_ad_trophy_1794860503419.jpg" alt="A&D Trophy Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2589,12 +2668,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>05 Sep 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">SPATIAL &amp; INTERIOR</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">ENVIRONMENT DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 9 (New #3, Expandable): Architecture MasterPrize -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="arch-master-2026" data-stream="Spatial">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="arch-master-2026" data-stream="Environment Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_arch_master_1794860504331.jpg" alt="Architecture MasterPrize 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2610,12 +2689,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>30 Sep 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">SPATIAL &amp; ARCHITECTURE</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">ENVIRONMENT DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 10 (New #4, Expandable): Good Design Award -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="good-design-2026" data-stream="Product">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="good-design-2026" data-stream="Product Experience Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_good_design_1794860503309.jpg" alt="Good Design Award (G-Mark) 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2631,12 +2710,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>12 Oct 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">INDUSTRIAL DESIGN</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">PRODUCT EXPERIENCE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 11 (New #5, Expandable): HKICT Awards -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="hkict-2026" data-stream="Interaction" data-past-eligible="true">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="hkict-2026" data-stream="Service Design" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_hkict_1794860506616.jpg" alt="HKICT Awards 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2652,12 +2731,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>20 Oct 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">INTERACTION &amp; UX</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">SERVICE DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 12 (New #6, Expandable): Digicon Asia -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="digicon-asia-2026" data-stream="Interaction">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="digicon-asia-2026" data-stream="Communication Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_digicon_asia_1794860505390.jpg" alt="Digicon Asia 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2673,12 +2752,12 @@
                     <svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                     <span>Deadline: <strong>31 Oct 2026</strong></span>
                   </div>
-                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">INTERACTION &amp; DIGITAL</span>
+                  <span class="inline-block bg-[#e0f2fe] text-[#0284c7] font-bold text-[9px] px-2 py-0.5 rounded-md">COMMUNICATION DESIGN</span>
                 </div>
               </div>
 
               <!-- Card 13 (New #7, Expandable): HK International Poster Triennial -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="hk-poster-2026" data-stream="Communication">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="hk-poster-2026" data-stream="Communication Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_hk_poster_1794860505965.jpg" alt="Hong Kong International Poster Triennial" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2699,7 +2778,7 @@
               </div>
 
               <!-- Card 14 (New #8, Expandable): Cannes Young Lions -->
-              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="cannes-lions-2026" data-stream="Communication">
+              <div class="grid-card extra-comp-card hidden space-y-2 cursor-pointer group" onclick="openCompetitionFromCard(this)" data-comp-id="cannes-lions-2026" data-stream="Communication Design">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/comp_cannes_lion_1794860506157.jpg" alt="Cannes Young Lions 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2733,8 +2812,8 @@
             </div>
 
             <!-- Three Steps to Claim Your Subsidy (3-Column Grid on Desktop) -->
-            <div class="space-y-3 pt-4">
-              <div class="space-y-1.5">
+            <div class="space-y-5 pt-4">
+              <div class="space-y-2">
                 <h2 class="text-[18px] md:text-[26px] font-extrabold text-[#0f172a] tracking-tight">Three Steps to Claim Your Subsidy</h2>
                 <a href="#handbook" onclick="event.preventDefault(); showToast('Opening Scheme Policy Handbook PDF');" class="text-xs font-semibold text-[#0052cc] hover:underline inline-flex items-center gap-1">
                   <span>Read Full Scheme Policy Handbook (PDF)</span>
@@ -2743,7 +2822,7 @@
               </div>
 
               <!-- 3 Steps Cards -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 md:gap-5 pt-2">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pt-2">
                 <div class="bg-slate-50 md:bg-white rounded-2xl p-4 md:p-6 border border-slate-100 md:shadow-xs space-y-2">
                   <span class="inline-block px-2.5 py-0.5 rounded-md bg-[#eff6ff] text-[#0052cc] font-extrabold text-xs">01</span>
                   <div class="text-[14px] md:text-[16px] font-extrabold text-[#0f172a]">Select &amp; Register</div>
@@ -2976,16 +3055,16 @@
               </div>
             </div>
 
-            <div class="px-5 py-5 md:px-0 md:pt-8 space-y-6">
+            <div class="px-5 py-6 md:px-0 md:pt-10 space-y-8 md:space-y-10">
               <!-- Competition Header Title -->
-              <div class="space-y-2">
+              <div class="space-y-2.5">
                 <h1 id="detail-title" class="text-[24px] font-extrabold text-[#0f172a] leading-tight">
                   Red Dot Award:<br />Design Concept 2026
                 </h1>
                 <p id="detail-organizer" class="text-[12px] text-slate-500 leading-snug">
                   Organized by Design Zentrum Nordrhein Westfalen • Endorsed under PolyU SD Subsidy Framework
                 </p>
-                <div class="pt-1 flex flex-wrap items-center gap-2">
+                <div class="pt-1 flex flex-wrap items-center gap-2.5">
                   <span id="detail-discipline-badge" class="inline-block bg-[#eff6ff] text-[#0052cc] font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
                     PRODUCT &amp; INDUSTRIAL DESIGN
                   </span>
@@ -2997,7 +3076,7 @@
               </div>
 
               <!-- Overview Section -->
-              <div class="space-y-3 pt-1">
+              <div class="space-y-4 pt-2">
                 <div class="flex items-center gap-2">
                   <div class="w-6 h-6 rounded-lg bg-[#eff6ff] text-[#0052cc] flex items-center justify-center">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -3007,9 +3086,9 @@
                 <p id="detail-overview" class="text-[12px] text-slate-600 leading-relaxed">
                   The Red Dot Award: Design Concept represents the premier international benchmark for discovering nascent design possibilities, imaginative student prototypes, and research grade physical innovations. Established in 2005 and headquartered in Singapore, the award acknowledges ideas that demonstrate exceptional foresight, ergonomic utility, ecological consciousness, and transformative technological integration.
                 </p>
-                <div class="space-y-1.5 pt-2">
+                <div class="space-y-2 pt-2">
                   <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">PRIORITY EVALUATION CATEGORIES</div>
-                  <div id="detail-categories" class="flex flex-wrap gap-2">
+                  <div id="detail-categories" class="flex flex-wrap gap-2.5">
                     <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">Mobility &amp; Autonomous Transportation</span>
                     <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">Consumer Technology &amp; Wearables</span>
                   </div>
@@ -3017,7 +3096,7 @@
               </div>
 
               <!-- Key Milestones & Timeline -->
-              <div class="space-y-3 pt-2">
+              <div class="space-y-4 pt-2">
                 <div class="flex items-center gap-2">
                   <div class="w-6 h-6 rounded-lg bg-[#eff6ff] text-[#0052cc] flex items-center justify-center">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -3057,7 +3136,7 @@
               </div>
 
               <!-- Metadata Table -->
-              <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 space-y-2.5 text-xs">
+              <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 space-y-3.5 text-xs">
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500">Final Deadline</span>
                   <span id="detail-meta-deadline" class="font-extrabold text-red-600">15 Apr 2026</span>
@@ -3220,29 +3299,33 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 space-y-5 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
-            <div class="md:max-w-[960px] md:mx-auto space-y-5">
+          <div class="p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-12 space-y-8 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-16">
+            <div class="md:max-w-[1240px] md:mx-auto space-y-8">
             <!-- Header Title -->
-            <div class="space-y-1.5">
+            <div class="space-y-2">
               <h1 class="text-2xl font-extrabold text-[#0f172a] tracking-tight">Recommend Competition</h1>
               <p class="text-xs text-slate-600 leading-relaxed">
                 Submit unlisted international or regional design competitions for faculty endorsement and fast-track subsidy eligibility review.
               </p>
             </div>
 
-            <!-- Proposal Intake Form Card Banner -->
-            <div class="bg-[#eff6ff] rounded-2xl p-4 flex items-center gap-3.5 border border-blue-100 shadow-sm">
-              <div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#0052cc] shrink-0 border border-blue-50">
-                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              </div>
-              <div>
-                <h2 class="text-sm font-extrabold text-[#0f172a]">Proposal Intake Form</h2>
-                <p class="text-[11px] text-slate-500">Official review within 5 academic working days</p>
-              </div>
-            </div>
+            <!-- Two Column Layout: Left Form (8 cols), Right Info Cards (4 cols) matching reference image -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <!-- Left Column: Form & Proposal Banner -->
+              <div class="lg:col-span-8 space-y-6">
+                <!-- Proposal Intake Form Card Banner -->
+                <div class="bg-[#eff6ff] rounded-2xl p-4 flex items-center gap-3.5 border border-blue-100 shadow-sm">
+                  <div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#0052cc] shrink-0 border border-blue-50">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  </div>
+                  <div>
+                    <h2 class="text-sm font-extrabold text-[#0f172a]">Proposal Intake Form</h2>
+                    <p class="text-[11px] text-slate-500">Official review within 5 academic working days</p>
+                  </div>
+                </div>
 
             <!-- Form Container -->
-            <form id="recommend-form" onsubmit="event.preventDefault(); handleRecommendSubmit();" class="space-y-4">
+            <form id="recommend-form" onsubmit="event.preventDefault(); handleRecommendSubmit();" class="space-y-6">
               <!-- Competition Name -->
               <div class="space-y-1.5">
                 <label for="rec-comp-name" class="block text-xs font-bold text-[#0f172a]">Competition Name <span class="text-red-500">*</span></label>
@@ -3262,11 +3345,10 @@
                 <div class="relative">
                   <select id="rec-category" required class="w-full text-xs px-3.5 py-3 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0052cc] text-[#0f172a] shadow-sm appearance-none cursor-pointer">
                     <option value="" disabled selected>Select relevant school stream</option>
-                    <option value="ixd">Interaction Design (IxD & Digital Media)</option>
-                    <option value="prod">Product Design (Industrial & Tech)</option>
-                    <option value="comm">Communication Design (Visual & Branding)</option>
-                    <option value="env">Environmental & Interior (Spatial Architecture)</option>
-                    <option value="media">Digital Media & Interactive Entertainment</option>
+                    <option value="comm">Communication Design</option>
+                    <option value="env">Environment Design</option>
+                    <option value="prod">Product Experience Design</option>
+                    <option value="serv">Service Design</option>
                   </select>
                   <div class="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
@@ -3345,6 +3427,88 @@
                 </button>
               </div>
             </form>
+              </div>
+              <!-- Right Column: Reference Info Boxes (Desktop only, hidden on mobile) -->
+              <div class="hidden lg:block lg:col-span-4 space-y-6">
+                <!-- 1. Standard SLA Card -->
+                <div class="bg-[#f1f5f9] rounded-3xl p-6 border border-slate-200/90 shadow-2xs space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#0052cc] flex items-center justify-center shadow-2xs">
+                      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <div>
+                      <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Standard SLA</div>
+                      <div class="text-xl font-black text-[#0f172a] tracking-tight">3-5 Working Days</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Evaluation Workflow Card -->
+                <div class="bg-[#f1f5f9] rounded-3xl p-6 border border-slate-200/90 shadow-2xs space-y-5">
+                  <div class="flex items-center gap-2.5 text-[#0f172a]">
+                    <svg class="w-5 h-5 text-[#0052cc]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    <h2 class="text-lg font-black tracking-tight">Evaluation Workflow</h2>
+                  </div>
+                  
+                  <div class="space-y-4 relative pl-2">
+                    <div class="absolute left-6 top-3 bottom-3 w-0.5 bg-slate-300"></div>
+                    
+                    <!-- Step 1 -->
+                    <div class="flex items-start gap-4 relative">
+                      <div class="w-8 h-8 rounded-full bg-[#0052cc] text-white font-extrabold text-xs flex items-center justify-center shrink-0 z-10 shadow-sm">1</div>
+                      <div class="space-y-0.5 pt-0.5">
+                        <div class="text-xs font-black text-[#0f172a]">Intake &amp; Verification</div>
+                        <div class="text-[11px] text-slate-600 font-medium">Instant automated integrity check</div>
+                      </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start gap-4 relative">
+                      <div class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 font-extrabold text-xs flex items-center justify-center shrink-0 z-10 shadow-sm">2</div>
+                      <div class="space-y-0.5 pt-0.5">
+                        <div class="text-xs font-black text-[#0f172a]">Academic Committee Review</div>
+                        <div class="text-[11px] text-slate-600 font-medium">3–5 university working days assessment</div>
+                      </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start gap-4 relative">
+                      <div class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 font-extrabold text-xs flex items-center justify-center shrink-0 z-10 shadow-sm">3</div>
+                      <div class="space-y-0.5 pt-0.5">
+                        <div class="text-xs font-black text-[#0f172a]">Catalog Registry &amp; Allocation</div>
+                        <div class="text-[11px] text-slate-600 font-medium">Grant cap assigned (up to HK$5,000/head)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Eligible Tier Criteria Card -->
+                <div class="bg-[#f1f5f9] rounded-3xl p-6 border border-slate-200/90 shadow-2xs space-y-4">
+                  <div class="flex items-center gap-2.5 text-[#0f172a]">
+                    <svg class="w-5 h-5 text-[#0052cc]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012-2m-6 9l2 2 4-4"/></svg>
+                    <h2 class="text-lg font-black tracking-tight">Eligible Tier Criteria</h2>
+                  </div>
+                  <p class="text-[11px] text-slate-600 leading-relaxed font-normal">
+                    Before submitting, verify that the awards scheme satisfies PolyU School of Design benchmark criteria:
+                  </p>
+                  
+                  <div class="space-y-3 pt-1">
+                    <div class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-[#0052cc] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      <div class="text-[11px] text-slate-700 font-medium leading-relaxed">Recognized regional or global design credibility with published archival winners.</div>
+                    </div>
+                    <div class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-[#0052cc] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      <div class="text-[11px] text-slate-700 font-medium leading-relaxed">Dedicated tertiary student category or emerging talent submission track.</div>
+                    </div>
+                    <div class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-[#0052cc] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      <div class="text-[11px] text-slate-700 font-medium leading-relaxed">Clear, transparent international jury panel with professional academic standing.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
 
@@ -3467,8 +3631,56 @@
           </header>
 
           <!-- Main Scrollable Area -->
-          <div class="p-4 sm:p-6 md:px-12 lg:px-20 xl:px-32 md:py-12 flex-1 overflow-y-auto overscroll-contain flex flex-col justify-start md:justify-center items-center pb-28 md:pb-12">
-            <div class="w-full max-w-sm bg-white rounded-3xl p-6 shadow-xl border border-slate-100 space-y-5">
+          <div class="p-4 sm:p-6 md:px-12 lg:px-20 xl:px-32 md:py-12 flex-1 overflow-y-auto overscroll-contain flex flex-col justify-start items-center pb-28 md:pb-14">
+            <div class="w-full max-w-sm md:max-w-[1040px] mx-auto md:my-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+              <!-- Desktop-Only Showcase Column (50% width, top-aligned with Login Box): PolyU Block V Image + ANNUAL CAP PER STUDENT + TIER-1 PRE-APPROVED -->
+              <div class="hidden md:flex flex-col gap-6 w-full">
+                <!-- 1. PolyU Block V Photo -->
+                <div class="relative rounded-3xl overflow-hidden shadow-md border border-slate-200/80 aspect-[16/10] bg-slate-900">
+                  <img src="/src/assets/images/polyu_block_v_tower_1794927338476.jpg" alt="Jockey Club Innovation Tower (Block V), PolyU School of Design" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
+                  <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(9,13,22,0.88)_0%,rgba(9,13,22,0.35)_45%,rgba(9,13,22,0.06)_100%)]"></div>
+                  <div class="absolute top-4 left-4">
+                    <span class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-[#0f172a] text-[10px] font-extrabold px-3 py-1 rounded-full shadow-xs uppercase tracking-wide">
+                      Jockey Club Innovation Tower (Block V)
+                    </span>
+                  </div>
+                  <div class="absolute bottom-4 left-5 right-5 space-y-0.5">
+                    <div class="text-[10px] font-bold uppercase tracking-widest text-blue-300">INSTITUTIONAL ENDORSEMENT</div>
+                    <div class="text-lg font-extrabold text-white leading-tight">PolyU School of Design Grant &amp; Award Portal</div>
+                  </div>
+                </div>
+
+                <!-- 2. ANNUAL CAP PER STUDENT (Stacked Above TIER-1 PRE-APPROVED) -->
+                <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs space-y-1.5">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">ANNUAL CAP PER STUDENT</div>
+                    <div class="w-8 h-8 rounded-lg bg-[#0f172a] text-white flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                  </div>
+                  <div class="text-[24px] font-extrabold text-[#0f172a] tracking-tight leading-none">HK$ 25,000</div>
+                  <div class="text-[11px] text-slate-500 leading-tight pt-0.5">Eligible for entry &amp; shipping • Cumulative</div>
+                </div>
+
+                <!-- 3. TIER-1 PRE-APPROVED (Stacked Below ANNUAL CAP PER STUDENT) -->
+                <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs space-y-1.5">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">TIER-1 PRE-APPROVED</div>
+                    <div class="w-8 h-8 rounded-lg bg-[#ede9fe] text-[#6d28d9] flex items-center justify-center shrink-0">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                  </div>
+                  <div class="text-[24px] font-extrabold text-[#0052cc] tracking-tight leading-none">48+ Awards</div>
+                  <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1.5">
+                    <div class="bg-[#0052cc] h-full w-[75%] rounded-full"></div>
+                  </div>
+                  <div class="text-[11px] text-slate-500 pt-0.5">Global coverage rate</div>
+                </div>
+              </div>
+
+              <!-- Login Card Column (50% width on desktop, top-aligned with Showcase Column) -->
+              <div class="w-full">
+                <div class="w-full bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-100 space-y-6">
               <!-- Card Top Row -->
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1.5 text-[#0052cc] text-[11px] font-bold">
@@ -3585,6 +3797,8 @@
                   <span>Need help logging in? Contact ITS Technical Helpdesk (24/7)</span>
                 </button>
               </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -3650,10 +3864,6 @@
                 </svg>
                 <span class="hidden md:inline text-xs font-bold">Logout</span>
               </button>
-              <div class="hidden md:block leading-tight text-left min-w-0">
-                <div class="text-[14px] font-extrabold text-[#0f172a] tracking-tight truncate">Grants Portal</div>
-                <div class="text-[10px] font-bold text-slate-500 tracking-wider">POLYU DESIGN</div>
-              </div>
             </div>
 
             <!-- Mobile Center Title -->
@@ -3721,14 +3931,17 @@
           </header>
 
           <!-- Main Scrollable Content -->
-          <div class="p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 space-y-6 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
-            <div class="md:max-w-[1160px] md:mx-auto space-y-6">
+          <div class="p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-12 space-y-8 md:space-y-12 flex-1 overflow-y-auto overscroll-contain pb-28 md:pb-14">
+            <div class="md:max-w-[1160px] md:mx-auto space-y-8 md:space-y-12">
             <!-- Greeting Row -->
             <div class="flex items-center justify-between pt-2">
               <div class="space-y-0.5">
                 <p class="text-sm font-medium text-slate-500">Good morning</p>
                 <h1 class="text-[32px] leading-tight font-black text-[#0f172a] tracking-tight">Chloe</h1>
-                <p class="text-sm font-bold text-[#0052cc] font-mono">#21049281D</p>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <p class="text-sm font-bold text-[#0052cc] font-mono">#21049281D</p>
+                  <span class="bg-blue-50 text-[#0052cc] text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-blue-200/70">BA Product Experience Design • Year 2</span>
+                </div>
               </div>
               <div class="w-14 h-14 rounded-full bg-[#0f172a] text-white flex items-center justify-center shadow-lg border-2 border-white">
                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -3738,7 +3951,7 @@
             </div>
 
             <!-- My Applications Section -->
-            <div class="space-y-4">
+            <div class="space-y-5 md:space-y-6">
               <h2 class="text-2xl font-black text-[#0f172a] tracking-tight">My Applications</h2>
 
               <!-- Application Card 1: Red Dot Award -->
@@ -3917,7 +4130,7 @@
             </div>
 
             <!-- Grant Watchlist Section -->
-            <div class="space-y-3 pt-2">
+            <div class="space-y-4 md:space-y-5 pt-2">
               <div class="flex items-center gap-2">
                 <svg class="w-5 h-5 text-slate-800 fill-none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                 <h2 class="text-2xl font-black text-[#0f172a] tracking-tight">Grant Watchlist</h2>
@@ -4094,7 +4307,7 @@
             </header>
 
             <!-- Main Scrollable Content -->
-            <div class="p-4 sm:p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 space-y-4 md:space-y-6 pb-28 md:pb-14 flex-1 overflow-y-auto overscroll-contain">
+            <div class="p-4 sm:p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-12 space-y-6 md:space-y-9 pb-28 md:pb-14 flex-1 overflow-y-auto overscroll-contain">
               <!-- Page Title -->
               <h1 class="text-2xl md:text-[32px] font-black text-[#0f172a] tracking-tight">Community Discussion</h1>
 
@@ -4118,7 +4331,7 @@
                   </div>
 
                   <!-- Filter Topics Floating Popover Menu (Multi-select with dynamic blue highlight) -->
-                  <div id="forum-filter-menu" role="group" aria-label="Filter discussions by topic" class="hidden absolute right-0 top-12 z-20 w-56 bg-slate-50/95 backdrop-blur-md rounded-2xl p-3 shadow-xl border border-slate-200/80 space-y-1.5 transition-all">
+                  <div id="forum-filter-menu" role="group" aria-label="Filter discussions by topic" class="hidden absolute right-0 top-12 z-20 w-56 bg-slate-50/95 backdrop-blur-md rounded-2xl p-3.5 shadow-xl border border-slate-200/80 space-y-2.5 transition-all">
                     <div>
                       <button type="button" data-topic-key="all" aria-pressed="true" onclick="selectForumTopic('all')" class="forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-bold bg-[#0052cc] text-white shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                         All Topics
@@ -4159,7 +4372,7 @@
               </div>
 
               <!-- Forum Threads List Container -->
-              <div id="forum-threads-list" class="space-y-3.5 pt-1">
+              <div id="forum-threads-list" class="space-y-5 pt-2">
                 
                 <!-- Dynamic Post by Chloe (Matches Image 4 & 5 Mockup, hidden initially until user posts) -->
                 <article id="chloe-forum-post-card" data-published="false" class="hidden forum-thread-card bg-white rounded-3xl p-5 shadow-xs border border-slate-200/80 space-y-3 transition-all hover:shadow-md animate-soft-pulse" data-topic="subsidy team" data-keywords="watch clock design competition hong kong chloe">
@@ -4170,7 +4383,7 @@
                     </div>
                     <div class="flex items-center gap-2 flex-wrap">
                       <span class="text-sm font-extrabold text-[#0f172a]" id="chloe-card-author">Chloe</span>
-                      <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2.5 py-0.5 rounded-md">BA Product Design '26</span>
+                      <span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2.5 py-0.5 rounded-md">BA Product Experience Design • Year 2</span>
                     </div>
                   </div>
 
@@ -4570,8 +4783,8 @@
             </header>
 
             <!-- Composer Body (Scrollable between header and bottom buttons) -->
-            <div class="p-4 sm:p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-10 pb-24 md:pb-12 flex-1 overflow-y-auto overscroll-contain">
-              <div class="md:max-w-[960px] md:mx-auto space-y-4">
+            <div class="p-4 sm:p-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 md:py-12 pb-24 md:pb-14 flex-1 overflow-y-auto overscroll-contain">
+              <div class="md:max-w-[960px] md:mx-auto space-y-6">
               <!-- New Post Subheader with Blue Plus Icon -->
               <div class="flex items-center gap-3 pt-2">
                 <div class="w-7 h-7 rounded-full bg-[#bfdbfe]/60 text-[#0052cc] flex items-center justify-center font-bold shadow-2xs">
@@ -4583,7 +4796,7 @@
               </div>
 
               <!-- Main White Card Container -->
-              <div class="bg-white rounded-[28px] p-5 border border-slate-200/90 shadow-2xs space-y-5">
+              <div class="bg-white rounded-[28px] p-5 md:p-6 border border-slate-200/90 shadow-2xs space-y-6">
                 <!-- Heading Field -->
                 <div>
                   <label for="composer-heading-input" class="block font-black text-[#0f172a] text-base mb-2">Heading</label>
@@ -5007,12 +5220,12 @@
           titleText: 'Red Dot: Design Concept 2026',
           titleHtml: 'Red Dot Award:<br />Design Concept 2026',
           organizer: 'Organized by Design Zentrum Nordrhein Westfalen • Endorsed under PolyU SD Subsidy Framework',
-          badge: 'PRODUCT & INDUSTRIAL DESIGN',
+          badge: 'PRODUCT EXPERIENCE DESIGN',
           subsidyCap: 'HK$ 5,000 Subsidy Cap • 100% Entry & Model Reimbursement',
           subsidyShort: 'Up to HK$ 5,000',
           daysLeftText: '18 Days Left',
           overview: 'The Red Dot Award: Design Concept represents the premier international benchmark for discovering nascent design possibilities, imaginative student prototypes, and research grade physical innovations. Established in 2005 and headquartered in Singapore, the award acknowledges ideas that demonstrate exceptional foresight, ergonomic utility, ecological consciousness, and transformative technological integration.',
-          categories: ['Mobility & Autonomous Transportation', 'Consumer Technology & Wearables'],
+          categories: ['Product Experience Design', 'Environment & Consumer Hardware'],
           timelineIntro: 'Please strictly adhere to both the global Red Dot submission deadlines and internal PolyU SD accounting cutoffs:',
           milestones: [
             { date: '28 Jan 2026', label: 'Early Submission Deadline', active: false },
@@ -5033,12 +5246,12 @@
           titleText: 'iF Student Design Award 2026',
           titleHtml: 'iF Student Design<br />Award 2026',
           organizer: 'Organized by iF International Forum Design GmbH • Endorsed under PolyU SD Subsidy Framework',
-          badge: 'SOCIAL IMPACT & INTERACTION',
+          badge: 'SERVICE DESIGN',
           subsidyCap: 'HK$ 5,000 Subsidy Cap • Zero Student Out-of-Pocket',
           subsidyShort: 'Up to HK$ 5,000',
           daysLeftText: '32 Days Left',
-          overview: 'The iF Student Design Award recognizes visionary concepts by design students and recent graduates addressing UN Sustainable Development Goals, social equity, and future-ready product & digital interaction systems. Jury fees are directly waived or covered under the PolyU SD institutional subsidy framework.',
-          categories: ['SDG & Social Impact Innovation', 'Human-Centered Digital & Service Design'],
+          overview: 'The iF Student Design Award recognizes visionary concepts by design students and recent graduates addressing UN Sustainable Development Goals, social equity, and future-ready product & service systems. Jury fees are directly waived or covered under the PolyU SD institutional subsidy framework.',
+          categories: ['Service Design & Social Impact', 'Product Experience Design'],
           timelineIntro: 'Please follow both the iF Student Design Award jury schedule and PolyU SD reimbursement cutoffs:',
           milestones: [
             { date: '12 Feb 2026', label: 'Early Concept Registration Open', active: false },
@@ -5059,12 +5272,12 @@
           titleText: 'Tokyo TDC Annual Awards',
           titleHtml: 'Tokyo TDC<br />Annual Awards 2026',
           organizer: 'Organized by Tokyo Type Directors Club • Endorsed under PolyU SD Subsidy Framework',
-          badge: 'VISUAL COMMUNICATION & TYPOGRAPHY',
+          badge: 'COMMUNICATION DESIGN',
           subsidyCap: 'HK$ 4,000 Subsidy Cap • Print & Entry Submission Fee',
           subsidyShort: 'Up to HK$ 4,000',
           daysLeftText: '45 Days Left',
           overview: 'The Tokyo TDC Annual Awards celebrate experimental typography, editorial layout, kinetic type, and visual communication excellence across Asia and internationally. PolyU Communication Design students receive subsidy coverage for registration, archival poster printing, and international courier dispatch to Tokyo.',
-          categories: ['Experimental & Editorial Typography', 'Motion & Kinetic Identity Systems'],
+          categories: ['Communication Design', 'Experimental & Editorial Typography'],
           timelineIntro: 'Please coordinate physical poster printing and Tokyo TDC entry cutoffs with the PolyU SD accounting desk:',
           milestones: [
             { date: '01 Mar 2026', label: 'Call for Entries & Digital Registration', active: false },
@@ -5586,27 +5799,27 @@
       // 7. Academic Status Card Selector
       function selectAcademicStatus(btn) {
         document.querySelectorAll('.academic-status-btn').forEach(b => {
-          b.className = "academic-status-btn p-4 md:p-6 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] text-center md:text-left flex flex-col items-center md:items-start justify-center md:justify-between min-h-[126px] md:min-h-[172px] hover:border-slate-200 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]";
+          b.className = "academic-status-btn p-3.5 sm:p-4 md:p-6 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] text-center md:text-left flex flex-col items-center md:items-start justify-start min-h-[126px] md:min-h-[172px] hover:border-slate-200 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]";
           const icon = b.querySelector('.acad-icon');
-          if (icon) icon.className = "acad-icon w-10 h-10 rounded-full bg-[#eef2f6] text-slate-500 flex items-center justify-center mb-2.5 md:mb-0";
+          if (icon) icon.className = "acad-icon w-10 h-10 rounded-full bg-[#eef2f6] text-slate-500 flex items-center justify-center mb-3 md:mb-5 shrink-0";
           const title = b.querySelector('.acad-title');
-          if (title) title.className = "acad-title text-[13px] md:text-[16px] font-bold text-slate-600 md:text-slate-700";
+          if (title) title.className = "acad-title text-[13px] md:text-[16px] font-bold text-slate-600 md:text-slate-700 leading-snug whitespace-nowrap";
           const sub = b.querySelector('.acad-sub');
-          if (sub) sub.className = "acad-sub text-[11px] md:text-[12px] font-medium text-slate-400 md:text-slate-500 mt-0.5";
+          if (sub) sub.className = "acad-sub text-[11px] md:text-[12px] font-medium text-slate-400 md:text-slate-500 mt-1 whitespace-nowrap";
         });
-        btn.className = "academic-status-btn p-4 md:p-6 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] text-center md:text-left flex flex-col items-center md:items-start justify-center md:justify-between min-h-[126px] md:min-h-[172px] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]";
+        btn.className = "academic-status-btn p-3.5 sm:p-4 md:p-6 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] text-center md:text-left flex flex-col items-center md:items-start justify-start min-h-[126px] md:min-h-[172px] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]";
         const icon = btn.querySelector('.acad-icon');
-        if (icon) icon.className = "acad-icon w-10 h-10 rounded-full bg-[#dbeafe] text-[#0052cc] flex items-center justify-center mb-2.5 md:mb-0";
+        if (icon) icon.className = "acad-icon w-10 h-10 rounded-full bg-[#dbeafe] text-[#0052cc] flex items-center justify-center mb-3 md:mb-5 shrink-0";
         const title = btn.querySelector('.acad-title');
-        if (title) title.className = "acad-title text-[13px] md:text-[16px] font-bold text-[#0f172a]";
+        if (title) title.className = "acad-title text-[13px] md:text-[16px] font-bold text-[#0f172a] leading-snug whitespace-nowrap";
         const sub = btn.querySelector('.acad-sub');
-        if (sub) sub.className = "acad-sub text-[11px] md:text-[12px] font-semibold text-[#0052cc] mt-0.5";
+        if (sub) sub.className = "acad-sub text-[11px] md:text-[12px] font-semibold text-[#0052cc] mt-1 whitespace-nowrap";
       }
 
       // 8. Discipline Selector
       function selectDiscipline(card) {
         document.querySelectorAll('.discipline-card').forEach(c => {
-          c.className = "discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[118px] md:min-h-[195px] relative hover:border-slate-200 transition-all";
+          c.className = "discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/80 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-start min-h-[126px] md:min-h-[195px] relative hover:border-slate-200 transition-all";
           const icon = c.querySelector('.disc-icon');
           if (icon) icon.className = "disc-icon w-9 h-9 rounded-xl bg-[#eef2f6] text-slate-600 flex items-center justify-center";
           const badge = c.querySelector('.check-badge');
@@ -5615,9 +5828,9 @@
             badge.textContent = "";
           }
           const sub = c.querySelector('.disc-sub');
-          if (sub) sub.className = "disc-sub text-[11px] text-slate-500 mt-0.5";
+          if (sub) sub.className = "disc-sub text-[11px] text-slate-500 mt-1 leading-snug min-h-[30px] sm:min-h-[16px] md:min-h-[32px] xl:min-h-[18px]";
         });
-        card.className = "discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-between min-h-[118px] md:min-h-[195px] relative transition-all";
+        card.className = "discipline-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-start min-h-[126px] md:min-h-[195px] relative transition-all";
         const icon = card.querySelector('.disc-icon');
         if (icon) icon.className = "disc-icon w-9 h-9 rounded-xl bg-[#dbeafe]/75 text-[#0052cc] flex items-center justify-center";
         const badge = card.querySelector('.check-badge');
@@ -5626,7 +5839,7 @@
           badge.textContent = "✓";
         }
         const sub = card.querySelector('.disc-sub');
-        if (sub) sub.className = "disc-sub text-[11px] font-semibold text-[#0052cc] mt-0.5";
+        if (sub) sub.className = "disc-sub text-[11px] font-semibold text-[#0052cc] mt-1 leading-snug min-h-[30px] sm:min-h-[16px] md:min-h-[32px] xl:min-h-[18px]";
       }
 
       // 9. Reimbursement Pathway Selector
@@ -6310,7 +6523,7 @@
               </div>
               <div class="flex items-center gap-2 flex-wrap">
                 <span class="text-sm font-extrabold text-[#0f172a]">Chloe</span>
-                <span class="bg-blue-50 text-[#0052cc] text-[10px] font-bold px-2.5 py-0.5 rounded-md">BA Interaction '26 (You)</span>
+                <span class="bg-blue-50 text-[#0052cc] text-[10px] font-bold px-2.5 py-0.5 rounded-md">BA Product Experience Design • Year 2 (You)</span>
               </div>
             </div>
             <h2 onclick="showThreadDetail(this.textContent.trim())" class="text-[17px] font-black text-[#0f172a] leading-snug cursor-pointer hover:text-[#0052cc] transition-colors">
