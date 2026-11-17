@@ -227,10 +227,10 @@
             <!-- Competition Cards (3-column grid on desktop matching Desktop_main_page.png) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               
-              <!-- Card 1: Red Dot (TARGET FOR USER TRANSITION: Clicking button of photo hides Screen 1 and reveals Screen 9) -->
+              <!-- Card 1: Red Dot (Direct to Red Dot Competition Detail) -->
               <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-category="product interaction">
-                <!-- Photo Container (Clicking photo button reveals Screen 9 Competitions) -->
-                <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" id="btn-reddot-photo" onclick="goToScreen(9)" title="Click photo to explore competitions">
+                <!-- Photo Container (Clicking photo opens Screen 10 Competition Detail directly) -->
+                <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" id="btn-reddot-photo" onclick="openCompetitionDetail('reddot')" title="Click to view Red Dot competition details">
                   <img src="/src/assets/images/comp_reddot_gallery_1794853915729.jpg" alt="Red Dot Design Concept Exhibition" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <!-- Overlay Badges -->
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
@@ -251,7 +251,7 @@
                 </div>
 
                 <!-- Card Details -->
-                <div class="p-4 space-y-2 cursor-pointer" onclick="goToScreen(9)">
+                <div class="p-4 space-y-2 cursor-pointer" onclick="openCompetitionDetail('reddot')">
                   <h3 class="text-[17px] font-extrabold text-[#0f172a] group-hover:text-[#0052cc] transition-colors">Red Dot: Design Concept 2026</h3>
                   <div class="flex items-center gap-2 text-xs">
                     <div class="flex items-center gap-0.5 text-[#0052cc]">
@@ -274,9 +274,9 @@
                 </div>
               </article>
 
-              <!-- Card 2: iF Student Design Award -->
+              <!-- Card 2: iF Student Design Award (Direct to iF Competition Detail) -->
               <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-category="product interaction">
-                <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="goToScreen(9)">
+                <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="openCompetitionDetail('if-award')" title="Click to view iF Student Design Award details">
                   <img src="/src/assets/images/comp_if_studio_1794853916789.jpg" alt="iF Student Design Award Workstation" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
                     <span class="bg-[#0f172a]/80 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-full">Tier 1 Global</span>
@@ -292,7 +292,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
                   </div>
                 </div>
-                <div class="p-4 space-y-2 cursor-pointer" onclick="goToScreen(9)">
+                <div class="p-4 space-y-2 cursor-pointer" onclick="openCompetitionDetail('if-award')">
                   <h3 class="text-[17px] font-extrabold text-[#0f172a] group-hover:text-[#0052cc] transition-colors">iF Student Design Award 2026</h3>
                   <div class="flex items-center gap-2 text-xs">
                     <div class="flex items-center gap-0.5 text-[#0052cc]">
@@ -313,9 +313,9 @@
                 </div>
               </article>
 
-              <!-- Card 3: Tokyo TDC Annual Awards -->
+              <!-- Card 3: Tokyo TDC Annual Awards (Direct to Tokyo TDC Competition Detail) -->
               <article class="competition-card group rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm transition-all hover:shadow-md" data-category="visual">
-                <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="goToScreen(9)">
+                <div class="relative w-full aspect-[16/9] bg-slate-900 overflow-hidden cursor-pointer" onclick="openCompetitionDetail('tokyo-tdc')" title="Click to view Tokyo TDC competition details">
                   <img src="/src/assets/images/comp_tdc_posters_1794853916546.jpg" alt="Tokyo TDC Typography Gallery" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="absolute top-3 left-3 flex items-center gap-1.5">
                     <span class="bg-[#0f172a]/80 backdrop-blur-md text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-full">Tier 1 Global</span>
@@ -331,7 +331,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>
                   </div>
                 </div>
-                <div class="p-4 space-y-2 cursor-pointer" onclick="goToScreen(9)">
+                <div class="p-4 space-y-2 cursor-pointer" onclick="openCompetitionDetail('tokyo-tdc')">
                   <h3 class="text-[17px] font-extrabold text-[#0f172a] group-hover:text-[#0052cc] transition-colors">Tokyo TDC Annual Awards</h3>
                   <div class="flex items-center gap-2 text-xs">
                     <div class="flex items-center gap-0.5 text-[#0052cc]">
@@ -967,83 +967,80 @@
             </div>
 
             <!-- Step 2 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-8">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-8">
-              <!-- Desktop 2-column grid for Pathway & Recognized Competition -->
-              <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-12 md:gap-6 md:items-start">
-                <!-- Reimbursement Pathway -->
-                <div class="space-y-3 md:space-y-4 md:col-span-5">
-                  <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Reimbursement Pathway</h2>
-                  <div class="grid grid-cols-2 gap-3 md:gap-4">
-                    <!-- Pathway 1: Registered & Paid (Selected) -->
-                    <div onclick="selectPathway(this)" class="pathway-card cursor-pointer p-3.5 md:p-5 rounded-2xl bg-white border-2 border-[#0052cc] shadow-sm flex flex-col justify-between h-[155px] md:h-[188px] relative">
-                      <div class="flex items-center justify-between">
-                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#eff6ff] text-[#0052cc] flex items-center justify-center">
-                          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
-                        </div>
-                        <span class="pathway-check w-5 h-5 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+              <!-- Reimbursement Pathway -->
+              <div class="space-y-3 md:space-y-4">
+                <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Reimbursement Pathway</h2>
+                <div class="grid grid-cols-2 gap-3 md:gap-6">
+                  <!-- Pathway 1: Registered & Paid (Selected) -->
+                  <div onclick="selectPathway(this)" class="pathway-card cursor-pointer p-4 md:p-6 rounded-2xl bg-white border-2 border-[#0052cc] shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-between min-h-[155px] md:min-h-[188px] relative transition-all">
+                    <div class="flex items-center justify-between">
+                      <div class="w-9 h-9 md:w-11 md:h-11 rounded-xl bg-[#eff6ff] text-[#0052cc] flex items-center justify-center">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
                       </div>
-                      <div class="space-y-1">
-                        <div class="text-[13px] md:text-[15px] font-bold text-[#0f172a] leading-tight">Registered &amp; Paid</div>
-                        <div class="text-[10px] md:text-[11px] text-slate-500 leading-snug">Direct FPS payout upon review approval</div>
-                        <div class="pt-1 text-[11px] font-extrabold text-[#0052cc] flex items-center gap-1">
-                          <span>⚡</span> Fast Disburse
-                        </div>
+                      <span class="pathway-check w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-[10px] md:text-xs font-bold">✓</span>
+                    </div>
+                    <div class="mt-3 md:mt-4 space-y-1 md:space-y-1.5">
+                      <div class="text-[13px] md:text-[16px] font-bold text-[#0f172a] leading-tight">Registered &amp; Paid</div>
+                      <div class="text-[10px] md:text-[12px] text-slate-500 leading-relaxed">Direct FPS payout upon review approval</div>
+                      <div class="pt-1 text-[11px] md:text-[12px] font-extrabold text-[#0052cc] flex items-center gap-1">
+                        <span>⚡</span> Fast Disburse
                       </div>
                     </div>
+                  </div>
 
-                    <!-- Pathway 2: Pre-Approval -->
-                    <div onclick="selectPathway(this)" class="pathway-card cursor-pointer p-3.5 md:p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between h-[155px] md:h-[188px] relative hover:border-slate-300">
-                      <div class="flex items-center justify-between">
-                        <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center">
-                          <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        </div>
-                        <span class="pathway-check w-5 h-5 rounded-full bg-slate-100 border border-slate-200"></span>
+                  <!-- Pathway 2: Pre-Approval -->
+                  <div onclick="selectPathway(this)" class="pathway-card cursor-pointer p-4 md:p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[155px] md:min-h-[188px] relative hover:border-slate-300 transition-all">
+                    <div class="flex items-center justify-between">
+                      <div class="w-9 h-9 md:w-11 md:h-11 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                       </div>
-                      <div class="space-y-1">
-                        <div class="text-[13px] md:text-[15px] font-bold text-slate-800 leading-tight">Pre-Approval</div>
-                        <div class="text-[10px] md:text-[11px] text-slate-500 leading-snug">Hold quota before entry payment</div>
-                        <div class="pt-1 text-[11px] font-medium text-slate-500 flex items-center gap-1">
-                          <span>⏱</span> 14d Hold Time
-                        </div>
+                      <span class="pathway-check w-5 h-5 md:w-6 md:h-6 rounded-full bg-slate-100 border border-slate-200"></span>
+                    </div>
+                    <div class="mt-3 md:mt-4 space-y-1 md:space-y-1.5">
+                      <div class="text-[13px] md:text-[16px] font-bold text-slate-800 leading-tight">Pre-Approval</div>
+                      <div class="text-[10px] md:text-[12px] text-slate-500 leading-relaxed">Hold quota before entry payment</div>
+                      <div class="pt-1 text-[11px] md:text-[12px] font-medium text-slate-500 flex items-center gap-1">
+                        <span>⏱</span> 14d Hold Time
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <!-- Recognized Competition List -->
-                <div class="space-y-3 md:space-y-4 md:col-span-7">
-                  <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Recognized Competition List</h2>
-                  <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 border border-slate-200/90 shadow-sm space-y-3 md:space-y-4 md:min-h-[188px] flex flex-col justify-between">
-                    <div class="flex items-start justify-between">
-                      <div class="flex items-center gap-3 md:gap-4">
-                        <div class="w-11 h-11 md:w-14 md:h-14 rounded-xl bg-slate-50 border border-slate-100 p-1 flex items-center justify-center overflow-hidden shrink-0">
-                          <img src="/src/assets/images/reddot_award_emblem_1794853922282.jpg" alt="Red Dot Logo" referrerpolicy="no-referrer" class="w-full h-full object-contain" />
-                        </div>
-                        <div>
-                          <h3 class="text-[14px] md:text-[18px] font-extrabold text-[#0f172a]">Red Dot: Design Concept 2026</h3>
-                          <div class="flex items-center gap-1.5 pt-1">
-                            <span class="bg-[#fee2e2] text-[#dc2626] font-bold text-[10px] px-2.5 py-0.5 rounded-full">Tier 1 Elite</span>
-                            <span class="bg-slate-100 text-slate-600 font-medium text-[10px] px-2.5 py-0.5 rounded-full">International</span>
-                          </div>
+              <!-- Recognized Competition List -->
+              <div class="space-y-3 md:space-y-4">
+                <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Recognized Competition List</h2>
+                <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3.5 md:space-y-6">
+                  <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-3.5 md:gap-6">
+                      <div class="w-11 h-11 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-slate-50 border border-slate-100 p-1.5 flex items-center justify-center overflow-hidden shrink-0">
+                        <img src="/src/assets/images/reddot_award_emblem_1794853922282.jpg" alt="Red Dot Logo" referrerpolicy="no-referrer" class="w-full h-full object-contain" />
+                      </div>
+                      <div class="space-y-1 md:space-y-1.5">
+                        <h3 class="text-[14px] md:text-[24px] font-extrabold text-[#0f172a] leading-tight">Red Dot: Design Concept 2026</h3>
+                        <div class="flex items-center gap-1.5 md:gap-2">
+                          <span class="bg-[#fee2e2] text-[#dc2626] font-bold text-[10px] md:text-xs px-2.5 md:px-3 py-0.5 md:py-1 rounded-full">Tier 1 Elite</span>
+                          <span class="bg-slate-100 text-slate-600 font-medium text-[10px] md:text-xs px-2.5 md:px-3 py-0.5 md:py-1 rounded-full">International</span>
                         </div>
                       </div>
-                      <div class="text-[11px] md:text-xs font-semibold text-slate-500 whitespace-nowrap">⏱ 18d left</div>
                     </div>
+                    <div class="text-[11px] md:text-sm font-semibold text-slate-500 whitespace-nowrap">⏱ 18d left</div>
+                  </div>
 
-                    <!-- Subsidy Rate Strip -->
-                    <div class="bg-slate-50 rounded-xl p-3 md:p-4 flex items-center justify-between border border-slate-100">
-                      <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 md:w-5 md:h-5 text-[#0284c7]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                        <div>
-                          <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">SUBSIDY CAP RATE</div>
-                          <div class="text-[12px] md:text-[14px] font-extrabold text-[#0f172a]">100% Registration Fee</div>
-                        </div>
+                  <!-- Subsidy Rate Strip -->
+                  <div class="bg-slate-50 rounded-xl md:rounded-2xl p-3 md:p-5 flex items-center justify-between border border-slate-100">
+                    <div class="flex items-center gap-2.5 md:gap-3.5">
+                      <svg class="w-4 h-4 md:w-5 md:h-5 text-[#0284c7] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                      <div>
+                        <div class="text-[9px] md:text-[11px] font-bold text-slate-400 uppercase tracking-wider">SUBSIDY CAP RATE</div>
+                        <div class="text-[12px] md:text-[16px] font-extrabold text-[#0f172a]">100% Registration Fee</div>
                       </div>
-                      <div class="text-right">
-                        <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">MAX SCHEME AID</div>
-                        <div class="text-[14px] md:text-[18px] font-extrabold text-[#0052cc]">HK$5,000</div>
-                      </div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-[9px] md:text-[11px] font-bold text-slate-400 uppercase tracking-wider">MAX SCHEME AID</div>
+                      <div class="text-[14px] md:text-[22px] font-extrabold text-[#0052cc]">HK$5,000</div>
                     </div>
                   </div>
                 </div>
@@ -1051,40 +1048,40 @@
 
               <!-- Proof of Payment -->
               <div class="space-y-3 md:space-y-4">
-                <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Proof of Payment</h2>
-                <div class="space-y-3 md:space-y-0 md:grid md:grid-cols-12 md:gap-4 md:items-stretch">
+                <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Proof of Payment</h2>
+                <div class="space-y-3 md:space-y-4">
                   <!-- Uploaded Slip Item -->
-                  <div id="step-2-slip-item" class="md:col-span-8 bg-white rounded-2xl p-3.5 md:p-5 border border-slate-200/90 shadow-sm flex items-center justify-between">
-                    <div class="flex items-center gap-3 md:gap-4">
-                      <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden shrink-0 flex items-center justify-center">
+                  <div id="step-2-slip-item" class="bg-white rounded-2xl md:rounded-3xl p-3.5 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center justify-between">
+                    <div class="flex items-center gap-3.5 md:gap-6">
+                      <div class="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-slate-100 border border-slate-200 overflow-hidden shrink-0 flex items-center justify-center">
                         <img src="/src/assets/images/receipt_invoice_doc_1794853920388.jpg" alt="Invoice PDF" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
                       </div>
-                      <div class="space-y-0.5">
-                        <div class="flex items-center gap-1.5">
-                          <span class="text-[13px] md:text-[15px] font-extrabold text-[#0f172a]">red_dot_reg_invoice.pdf</span>
-                          <svg class="w-4 h-4 text-[#0052cc]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                      <div class="space-y-0.5 md:space-y-1">
+                        <div class="flex items-center gap-1.5 md:gap-2">
+                          <span class="text-[13px] md:text-[18px] font-extrabold text-[#0f172a]">red_dot_reg_invoice.pdf</span>
+                          <svg class="w-4 h-4 md:w-5 md:h-5 text-[#0052cc]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         </div>
-                        <div class="text-[11px] md:text-xs text-slate-500">
+                        <div class="text-[11px] md:text-[14px] text-slate-500">
                           1.4 MB • <span class="text-[#0284c7] font-semibold">Verified by OCR</span>
                         </div>
                       </div>
                     </div>
-                    <button type="button" aria-label="Delete document" onclick="deleteStep2Slip()" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-slate-50 focus-visible:outline-none">
-                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                    <button type="button" aria-label="Delete document" onclick="deleteStep2Slip()" class="w-8 h-8 md:w-11 md:h-11 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-slate-50 focus-visible:outline-none">
+                      <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                     </button>
                   </div>
 
                   <!-- Add Item Button -->
-                  <button type="button" onclick="triggerMockUpload('step-2')" class="md:col-span-4 w-full py-3 md:py-4 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl text-[#0f172a] font-bold text-xs md:text-sm flex items-center justify-center gap-2 shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  <button type="button" onclick="triggerMockUpload('step-2')" class="w-full py-3 md:py-4 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl text-[#0f172a] font-bold text-xs md:text-sm flex items-center justify-center gap-2 shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                     <svg class="w-4 h-4 text-[#0052cc]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                     <span>Add Item</span>
                   </button>
-                </div>
 
-                <!-- Notice Information Box -->
-                <div class="p-3.5 md:p-4 bg-slate-50 border border-slate-200/80 rounded-xl md:rounded-2xl flex items-start gap-2.5 text-[11px] md:text-xs text-slate-600 leading-relaxed">
-                  <svg class="w-4 h-4 text-[#0052cc] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span>PolyU Scheme covers regular student entry tier rates. Any jury expedited critique add-ons require prior tutor endorsement.</span>
+                  <!-- Notice Information Box -->
+                  <div class="p-3.5 md:p-5 bg-slate-50 border border-slate-200/80 rounded-xl md:rounded-2xl flex items-start gap-2.5 md:gap-3 text-[11px] md:text-[13px] text-slate-600 leading-relaxed">
+                    <svg class="w-4 h-4 md:w-5 md:h-5 text-[#0052cc] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>PolyU Scheme covers regular student entry tier rates. Any jury expedited critique add-ons require prior tutor endorsement.</span>
+                  </div>
                 </div>
               </div>
 
@@ -1283,145 +1280,139 @@
             </div>
 
             <!-- Step 3 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-8">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-8">
-              <!-- Desktop 12-column split: Research Origin & Proof on left, Team Members on right -->
-              <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-12 md:gap-6 md:items-start">
-                <!-- Left Column: Research Origin & Proof -->
-                <div class="space-y-6 md:space-y-8 md:col-span-5">
-                  <!-- Research Origin -->
-                  <div class="space-y-3 md:space-y-4">
-                    <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Research Origin</h2>
-                    <div class="grid grid-cols-2 gap-3 md:gap-4">
-                      <!-- Independent -->
-                      <div onclick="selectOrigin(this, 'independent')" class="origin-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between h-[105px] md:h-[138px] relative hover:border-slate-300">
-                        <div class="flex items-center justify-between">
-                          <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center">
-                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-                          </div>
-                          <span class="origin-check w-5 h-5 rounded-full bg-slate-100 border border-slate-200"></span>
-                        </div>
-                        <div>
-                          <div class="text-[13px] md:text-[15px] font-bold text-slate-700">Independent</div>
-                          <p class="hidden md:block text-[11px] text-slate-500 mt-1 leading-snug">Self-initiated studio project</p>
-                        </div>
+            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+              <!-- Research Origin -->
+              <div class="space-y-3 md:space-y-4">
+                <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Research Origin</h2>
+                <div class="grid grid-cols-2 gap-3 md:gap-6">
+                  <!-- Independent -->
+                  <div onclick="selectOrigin(this, 'independent')" class="origin-card cursor-pointer p-4 md:p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_2px_10px_rgba(15,23,42,0.04)] flex flex-col justify-between min-h-[105px] md:min-h-[168px] relative hover:border-slate-300 transition-all">
+                    <div class="flex items-center justify-between">
+                      <div class="w-9 h-9 md:w-11 md:h-11 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                       </div>
-
-                      <!-- Coursework (Selected) -->
-                      <div onclick="selectOrigin(this, 'coursework')" class="origin-card cursor-pointer p-4 md:p-5 rounded-2xl bg-white border-2 border-[#0052cc] shadow-sm flex flex-col justify-between h-[105px] md:h-[138px] relative">
-                        <div class="flex items-center justify-between">
-                          <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#0052cc] text-white flex items-center justify-center">
-                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                          </div>
-                          <span class="origin-check w-5 h-5 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-[10px] font-bold">✓</span>
-                        </div>
-                        <div>
-                          <div class="text-[13px] md:text-[15px] font-bold text-[#0f172a]">Coursework</div>
-                          <p class="hidden md:block text-[11px] text-slate-500 mt-1 leading-snug">SD Studio / Capstone credit</p>
-                        </div>
-                      </div>
+                      <span class="origin-check w-5 h-5 md:w-6 md:h-6 rounded-full bg-slate-100 border border-slate-200"></span>
+                    </div>
+                    <div class="mt-3 md:mt-4">
+                      <div class="text-[13px] md:text-[16px] font-bold text-slate-700">Independent</div>
+                      <p class="hidden md:block text-[12px] text-slate-500 mt-1.5 leading-relaxed">Self-initiated studio project</p>
                     </div>
                   </div>
 
-                  <!-- Proof of Project Origin Section -->
-                  <div class="space-y-3 md:space-y-4">
-                    <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Proof</h2>
-                    <div id="step-3-board-item" class="bg-white rounded-2xl md:rounded-3xl p-3.5 md:p-5 border border-slate-200/90 shadow-sm flex items-center justify-between">
-                      <div class="flex items-center gap-3 md:gap-4">
-                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-red-50 text-red-500 border border-red-100 flex items-center justify-center font-bold text-xs shrink-0">
-                          PDF
-                        </div>
-                        <div>
-                          <div class="text-[13px] md:text-[15px] font-extrabold text-[#0f172a]">AuraSense_Board_A1.pdf</div>
-                          <div class="text-[11px] md:text-xs text-slate-500">
-                            8.4 MB • <span class="text-[#0284c7] font-semibold">✓ Verified</span>
-                          </div>
-                        </div>
+                  <!-- Coursework (Selected) -->
+                  <div onclick="selectOrigin(this, 'coursework')" class="origin-card cursor-pointer p-4 md:p-6 rounded-2xl bg-white border-2 border-[#0052cc] shadow-[0_6px_20px_rgba(15,23,42,0.06)] flex flex-col justify-between min-h-[105px] md:min-h-[168px] relative transition-all">
+                    <div class="flex items-center justify-between">
+                      <div class="w-9 h-9 md:w-11 md:h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                       </div>
-                      <div class="flex items-center gap-1 text-slate-400">
-                        <button type="button" title="View Board Preview" onclick="showToast('Viewing AuraSense_Board_A1.pdf preview')" class="w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center hover:text-slate-700 hover:bg-slate-100 focus-visible:outline-none">
-                          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                        </button>
-                        <button type="button" title="Delete Board" onclick="deleteStep3Proof()" class="w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center hover:text-red-500 hover:bg-slate-100 focus-visible:outline-none">
-                          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-                        </button>
-                      </div>
+                      <span class="origin-check w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#0052cc] text-white flex items-center justify-center text-[10px] md:text-xs font-bold">✓</span>
                     </div>
-
-                    <!-- Database registry verification notice -->
-                    <div class="p-3.5 md:p-4 bg-[#eff6ff] border border-[#dbeafe] rounded-xl md:rounded-2xl flex items-center gap-2.5 text-[11px] md:text-xs font-semibold text-[#1d4ed8]">
-                      <svg class="w-4 h-4 shrink-0 text-[#0052cc]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                      <span>All studio details verified with PolyU Academic Registry database.</span>
+                    <div class="mt-3 md:mt-4">
+                      <div class="text-[13px] md:text-[16px] font-bold text-[#0f172a]">Coursework</div>
+                      <p class="hidden md:block text-[12px] text-slate-500 mt-1.5 leading-relaxed">SD Studio / Capstone credit</p>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <!-- Right Column: Team Members Container -->
-                <div class="space-y-3 md:space-y-4 md:col-span-7">
-                  <h2 class="hidden md:block text-[22px] font-extrabold text-[#0f172a]">Team Members &amp; Co-Authors</h2>
-                  <div id="teammates-section" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 border border-slate-200/90 shadow-sm space-y-3 md:space-y-4">
-                    <!-- Lead Member -->
-                    <div class="bg-slate-50 rounded-xl p-3 md:p-4 flex items-center justify-between border border-slate-100">
-                      <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#0052cc] text-white font-bold text-xs flex items-center justify-center shadow-sm">
-                          CL
-                        </div>
-                        <div>
-                          <div class="flex items-center gap-2">
-                            <span class="text-[13px] md:text-[14px] font-extrabold text-[#0f172a]">Carol Lam</span>
-                            <span class="bg-[#dbeafe] text-[#1d4ed8] font-bold text-[10px] px-2 py-0.2 rounded-full">Lead</span>
-                          </div>
-                          <div class="text-[11px] text-slate-500 font-mono">Student ID: 21089423D</div>
-                        </div>
+              <!-- Proof of Project Origin Section -->
+              <div class="space-y-3 md:space-y-4">
+                <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Proof</h2>
+                <div id="step-3-board-item" class="bg-white rounded-2xl md:rounded-3xl p-3.5 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center justify-between">
+                  <div class="flex items-center gap-3.5 md:gap-6">
+                    <div class="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-red-50 text-red-500 border border-red-100 flex items-center justify-center font-bold text-xs md:text-sm shrink-0">
+                      PDF
+                    </div>
+                    <div class="space-y-0.5 md:space-y-1">
+                      <div class="text-[13px] md:text-[18px] font-extrabold text-[#0f172a]">AuraSense_Board_A1.pdf</div>
+                      <div class="text-[11px] md:text-[14px] text-slate-500">
+                        8.4 MB • <span class="text-[#0284c7] font-semibold">✓ Verified</span>
                       </div>
                     </div>
-
-                    <!-- Co-Author Teammate (Removable) -->
-                    <div id="teammate-eric" class="bg-slate-50 rounded-xl p-3 md:p-4 flex items-center justify-between border border-slate-100">
-                      <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center">
-                          ET
-                        </div>
-                        <div>
-                          <div class="flex items-center gap-2">
-                            <span class="text-[13px] md:text-[14px] font-extrabold text-[#0f172a]">Eric Tsang</span>
-                            <span class="bg-slate-200 text-slate-600 font-bold text-[10px] px-2 py-0.2 rounded-full">Co-author</span>
-                          </div>
-                          <div class="text-[11px] text-slate-500 font-mono">Student ID: 21094401D</div>
-                        </div>
-                      </div>
-                      <button type="button" aria-label="Remove Eric Tsang" onclick="removeTeammate('teammate-eric')" class="w-7 h-7 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-slate-200 focus-visible:outline-none">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-                      </button>
-                    </div>
-
-                    <!-- Dynamic Added Teammates will render here -->
-                    <div id="dynamic-teammates" class="space-y-2"></div>
-
-                    <!-- Add Member Input Form Box (Dashed) -->
-                    <div class="p-3 md:p-4 border-2 border-dashed border-slate-200 rounded-xl bg-slate-50/50 space-y-2.5">
-                      <div class="flex items-center justify-between text-[11px] font-bold text-[#0052cc]">
-                        <span class="flex items-center gap-1">
-                          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
-                          Add Member Details
-                        </span>
-                        <span class="text-slate-400 font-normal">PolyU NetID / Student ID</span>
-                      </div>
-                      <div class="flex items-center gap-2">
-                        <input type="text" id="input-team-id" placeholder="Student ID (e.g. 2109...)" class="flex-1 bg-white border border-slate-200 rounded-lg px-3 py-2 md:py-2.5 text-xs font-mono text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
-                        <input type="text" id="input-team-name" placeholder="Full Name" class="flex-1 bg-white border border-slate-200 rounded-lg px-3 py-2 md:py-2.5 text-xs text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
-                        <button type="button" aria-label="Clear inputs" onclick="clearTeammateInputs()" class="p-2 text-slate-400 hover:text-slate-600">
-                          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
-                        </button>
-                      </div>
-                    </div>
-
-                    <!-- Add Teammate Action Button -->
-                    <button type="button" onclick="handleAddTeammate()" class="w-full py-2.5 md:py-3 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-xl font-bold text-xs md:text-sm flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
-                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
-                      <span>Add Teammate</span>
+                  </div>
+                  <div class="flex items-center gap-1 md:gap-2 text-slate-400">
+                    <button type="button" title="View Board Preview" onclick="showToast('Viewing AuraSense_Board_A1.pdf preview')" class="w-7 h-7 md:w-11 md:h-11 rounded-full flex items-center justify-center hover:text-slate-700 hover:bg-slate-100 focus-visible:outline-none">
+                      <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    </button>
+                    <button type="button" title="Delete Board" onclick="deleteStep3Proof()" class="w-7 h-7 md:w-11 md:h-11 rounded-full flex items-center justify-center hover:text-red-500 hover:bg-slate-100 focus-visible:outline-none">
+                      <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                     </button>
                   </div>
+                </div>
+
+                <!-- Database registry verification notice -->
+                <div class="p-3.5 md:p-5 bg-[#eff6ff] border border-[#dbeafe] rounded-xl md:rounded-2xl flex items-center gap-2.5 md:gap-3 text-[11px] md:text-[13px] font-semibold text-[#1d4ed8]">
+                  <svg class="w-4 h-4 md:w-5 md:h-5 shrink-0 text-[#0052cc]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  <span>All studio details verified with PolyU Academic Registry database.</span>
+                </div>
+              </div>
+
+              <!-- Team Members Container -->
+              <div class="space-y-3 md:space-y-4">
+                <h2 class="hidden md:block text-[24px] font-extrabold text-[#0f172a] tracking-tight">Team Members &amp; Co-Authors</h2>
+                <div id="teammates-section" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
+                  <!-- Lead Member -->
+                  <div class="bg-slate-50 rounded-xl md:rounded-2xl p-3 md:p-5 flex items-center justify-between border border-slate-100">
+                    <div class="flex items-center gap-3 md:gap-5">
+                      <div class="w-9 h-9 md:w-12 md:h-12 rounded-full bg-[#0052cc] text-white font-bold text-xs md:text-sm flex items-center justify-center shadow-sm">
+                        CL
+                      </div>
+                      <div class="space-y-0.5">
+                        <div class="flex items-center gap-2 md:gap-2.5">
+                          <span class="text-[13px] md:text-[16px] font-extrabold text-[#0f172a]">Carol Lam</span>
+                          <span class="bg-[#dbeafe] text-[#1d4ed8] font-bold text-[10px] md:text-xs px-2 md:px-2.5 py-0.5 rounded-full">Lead</span>
+                        </div>
+                        <div class="text-[11px] md:text-[13px] text-slate-500 font-mono">Student ID: 21089423D</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Co-Author Teammate (Removable) -->
+                  <div id="teammate-eric" class="bg-slate-50 rounded-xl md:rounded-2xl p-3 md:p-5 flex items-center justify-between border border-slate-100">
+                    <div class="flex items-center gap-3 md:gap-5">
+                      <div class="w-9 h-9 md:w-12 md:h-12 rounded-full bg-slate-200 text-slate-700 font-bold text-xs md:text-sm flex items-center justify-center">
+                        ET
+                      </div>
+                      <div class="space-y-0.5">
+                        <div class="flex items-center gap-2 md:gap-2.5">
+                          <span class="text-[13px] md:text-[16px] font-extrabold text-[#0f172a]">Eric Tsang</span>
+                          <span class="bg-slate-200 text-slate-600 font-bold text-[10px] md:text-xs px-2 md:px-2.5 py-0.5 rounded-full">Co-author</span>
+                        </div>
+                        <div class="text-[11px] md:text-[13px] text-slate-500 font-mono">Student ID: 21094401D</div>
+                      </div>
+                    </div>
+                    <button type="button" aria-label="Remove Eric Tsang" onclick="removeTeammate('teammate-eric')" class="w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-slate-200 focus-visible:outline-none">
+                      <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Dynamic Added Teammates will render here -->
+                  <div id="dynamic-teammates" class="space-y-2 md:space-y-3"></div>
+
+                  <!-- Add Member Input Form Box (Dashed) -->
+                  <div class="p-3 md:p-5 border-2 border-dashed border-slate-200 rounded-xl md:rounded-2xl bg-slate-50/50 space-y-2.5 md:space-y-3.5">
+                    <div class="flex items-center justify-between text-[11px] md:text-xs font-bold text-[#0052cc]">
+                      <span class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+                        Add Member Details
+                      </span>
+                      <span class="text-slate-400 font-normal">PolyU NetID / Student ID</span>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3">
+                      <input type="text" id="input-team-id" placeholder="Student ID (e.g. 2109...)" class="flex-1 bg-white border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-mono text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
+                      <input type="text" id="input-team-name" placeholder="Full Name" class="flex-1 bg-white border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
+                      <button type="button" aria-label="Clear inputs" onclick="clearTeammateInputs()" class="p-2 md:p-3 text-slate-400 hover:text-slate-600">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Add Teammate Action Button -->
+                  <button type="button" onclick="handleAddTeammate()" class="w-full py-2.5 md:py-4 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-xl md:rounded-2xl font-bold text-xs md:text-sm flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+                    <span>Add Teammate</span>
+                  </button>
                 </div>
               </div>
 
@@ -1620,128 +1611,128 @@
             </div>
 
             <!-- Step 4 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-8">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-8">
-              <!-- Mobile vertical stack; Desktop 12-col split placing Grant Quota + Total Claimed on left (4 cols) and Verified Slips on right (8 cols) -->
-              <div class="flex flex-col gap-6 md:grid md:grid-cols-12 md:gap-6 md:items-start">
+            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+              <!-- Vertical flow matching mobile layout -->
+              <div class="flex flex-col gap-6 md:gap-9">
                 <!-- Grant Subsidy Quota Box -->
-                <div class="order-1 md:col-span-4 md:col-start-1 md:row-start-1 space-y-3 md:space-y-4">
-                  <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Grant Subsidy Quota</h2>
-                  <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 border border-slate-200/90 shadow-sm flex items-center gap-3 md:gap-4">
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#eff6ff] text-[#0052cc] flex items-center justify-center shrink-0">
-                      <svg class="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                <div class="space-y-3 md:space-y-4">
+                  <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Grant Subsidy Quota</h2>
+                  <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm flex items-center gap-3.5 md:gap-6">
+                    <div class="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#eff6ff] text-[#0052cc] flex items-center justify-center shrink-0">
+                      <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
                     </div>
-                    <div>
-                      <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Claim</div>
-                      <div class="flex items-baseline gap-1.5 flex-wrap">
-                        <span id="quota-claim-display" class="text-[22px] md:text-[26px] font-extrabold text-[#0052cc]">HK$ 1,850</span>
-                        <span class="text-xs text-slate-400 font-medium">/ Max HK$ 5,000</span>
+                    <div class="space-y-0.5 md:space-y-1">
+                      <div class="text-[11px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Claim</div>
+                      <div class="flex items-baseline gap-1.5 md:gap-2.5 flex-wrap">
+                        <span id="quota-claim-display" class="text-[22px] md:text-[30px] font-extrabold text-[#0052cc] leading-tight">HK$ 1,850</span>
+                        <span class="text-xs md:text-[16px] text-slate-400 font-medium">/ Max HK$ 5,000</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Verified Slips Section -->
-                <div class="order-2 md:col-span-8 md:col-start-5 md:row-start-1 md:row-span-2 space-y-3 md:space-y-4">
+                <div class="space-y-3 md:space-y-4">
                   <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                      <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Verified Slips</h2>
-                      <span id="verified-slips-count" class="w-5 h-5 md:w-6 md:h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center">2</span>
+                    <div class="flex items-center gap-2 md:gap-3">
+                      <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Verified Slips</h2>
+                      <span id="verified-slips-count" class="w-5 h-5 md:w-7 md:h-7 rounded-full bg-slate-200 text-slate-700 text-xs md:text-sm font-bold flex items-center justify-center">2</span>
                     </div>
                   </div>
 
                   <!-- List of Slips -->
                   <div id="slips-container" class="space-y-3 md:space-y-4">
                     <!-- Slip 1: Red Dot Student Entry -->
-                    <div id="slip-item-1" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-5 border border-slate-200/90 shadow-sm space-y-3">
-                      <div class="flex items-start justify-between">
-                        <div class="flex items-center gap-3">
-                          <div class="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <div id="slip-item-1" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
+                      <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3 md:gap-5">
+                          <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                           </div>
                           <div>
-                            <div class="text-[14px] md:text-[15px] font-extrabold text-[#0f172a]">Red Dot Student Entry</div>
+                            <div class="text-[14px] md:text-[18px] font-extrabold text-[#0f172a]">Red Dot Student Entry</div>
                           </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                          <span class="text-[14px] md:text-[16px] font-extrabold text-[#0f172a]">HK$ 1,173.00</span>
-                          <button type="button" aria-label="Delete slip 1" onclick="deleteExpenseSlip('slip-item-1', 1173)" class="text-slate-400 hover:text-red-500">
-                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        <div class="flex items-center gap-2 md:gap-3">
+                          <span class="text-[14px] md:text-[20px] font-extrabold text-[#0f172a]">HK$ 1,173.00</span>
+                          <button type="button" aria-label="Delete slip 1" onclick="deleteExpenseSlip('slip-item-1', 1173)" class="text-slate-400 hover:text-red-500 p-1">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                           </button>
                         </div>
                       </div>
-                      <div class="bg-slate-50 rounded-xl p-2.5 md:p-3 flex items-center justify-between text-xs border border-slate-100">
-                        <div class="flex items-center gap-2 text-slate-600 font-mono text-[11px]">
-                          <svg class="w-3.5 h-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A1 1 0 0111.293 2.707l4 4A1 1 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
+                      <div class="bg-slate-50 rounded-xl md:rounded-2xl p-2.5 md:p-4 flex items-center justify-between text-xs md:text-sm border border-slate-100">
+                        <div class="flex items-center gap-2 md:gap-3 text-slate-600 font-mono text-[11px] md:text-[13px]">
+                          <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A1 1 0 0111.293 2.707l4 4A1 1 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
                           <span>reddot_invoice.pdf</span>
                           <span class="text-slate-400 font-sans">1.4 MB</span>
                         </div>
-                        <span class="text-[#0284c7] font-semibold text-[11px] flex items-center gap-1">✓ Validated</span>
+                        <span class="text-[#0284c7] font-semibold text-[11px] md:text-[13px] flex items-center gap-1">✓ Validated</span>
                       </div>
                     </div>
 
                     <!-- Slip 2: 3D Printed Prototype & Boards -->
-                    <div id="slip-item-2" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-5 border border-slate-200/90 shadow-sm space-y-3">
-                      <div class="flex items-start justify-between">
-                        <div class="flex items-center gap-3">
-                          <div class="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    <div id="slip-item-2" class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
+                      <div class="flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3 md:gap-5">
+                          <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                           </div>
                           <div>
-                            <div class="text-[14px] md:text-[15px] font-extrabold text-[#0f172a]">3D Printed Prototype &amp; Boards</div>
+                            <div class="text-[14px] md:text-[18px] font-extrabold text-[#0f172a]">3D Printed Prototype &amp; Boards</div>
                           </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                          <span class="text-[14px] md:text-[16px] font-extrabold text-[#0f172a]">HK$ 677.00</span>
-                          <button type="button" aria-label="Delete slip 2" onclick="deleteExpenseSlip('slip-item-2', 677)" class="text-slate-400 hover:text-red-500">
-                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        <div class="flex items-center gap-2 md:gap-3">
+                          <span class="text-[14px] md:text-[20px] font-extrabold text-[#0f172a]">HK$ 677.00</span>
+                          <button type="button" aria-label="Delete slip 2" onclick="deleteExpenseSlip('slip-item-2', 677)" class="text-slate-400 hover:text-red-500 p-1">
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                           </button>
                         </div>
                       </div>
-                      <div class="bg-slate-50 rounded-xl p-2.5 md:p-3 flex items-center justify-between text-xs border border-slate-100">
-                        <div class="flex items-center gap-2 text-slate-600 font-mono text-[11px]">
-                          <svg class="w-3.5 h-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A1 1 0 0111.293 2.707l4 4A1 1 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
+                      <div class="bg-slate-50 rounded-xl md:rounded-2xl p-2.5 md:p-4 flex items-center justify-between text-xs md:text-sm border border-slate-100">
+                        <div class="flex items-center gap-2 md:gap-3 text-slate-600 font-mono text-[11px] md:text-[13px]">
+                          <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A1 1 0 0111.293 2.707l4 4A1 1 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
                           <span>maker_lab_0381.pdf</span>
                           <span class="text-slate-400 font-sans">620 KB</span>
                         </div>
-                        <span class="text-[#0284c7] font-semibold text-[11px] flex items-center gap-1">✓ Validated</span>
+                        <span class="text-[#0284c7] font-semibold text-[11px] md:text-[13px] flex items-center gap-1">✓ Validated</span>
                       </div>
                     </div>
                   </div>
 
                   <!-- Add Expense Item Trigger (Toggle button from 5_Application_Form_Step4) -->
-                  <button type="button" id="toggle-expense-form-btn" onclick="toggleExpenseForm()" class="w-full py-3 md:py-3.5 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl text-[#0f172a] font-bold text-xs md:text-sm flex items-center justify-center gap-2 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  <button type="button" id="toggle-expense-form-btn" onclick="toggleExpenseForm()" class="w-full py-3 md:py-4 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl md:rounded-2xl text-[#0f172a] font-bold text-xs md:text-sm flex items-center justify-center gap-2 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                     <svg class="w-4 h-4 text-[#0052cc]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                     <span>Add Expense Item</span>
                   </button>
 
                   <!-- Expandable Form Container (Screen 4.1 - 6_Application_Form_Step4.1) -->
-                  <div id="expense-form-drawer" class="hidden bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 border border-slate-200/90 shadow-md space-y-4">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                      <div class="text-[14px] md:text-[15px] font-extrabold text-[#0f172a] flex items-center gap-2">
+                  <div id="expense-form-drawer" class="hidden bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-200/90 shadow-md space-y-4 md:space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-2 md:pb-3">
+                      <div class="text-[14px] md:text-[18px] font-extrabold text-[#0f172a] flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-[#0052cc]"></span>
                         <span>Add Expense Item</span>
                       </div>
-                      <button type="button" onclick="toggleExpenseForm()" class="text-slate-400 hover:text-slate-600 text-xs">Close</button>
+                      <button type="button" onclick="toggleExpenseForm()" class="text-slate-400 hover:text-slate-600 text-xs md:text-sm">Close</button>
                     </div>
 
                     <!-- CATEGORY -->
-                    <div class="space-y-1.5">
-                      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">CATEGORY</div>
-                      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 rounded-xl text-xs font-bold bg-[#0052cc] text-white text-center">Registration Fee</button>
-                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 text-center">Courier / Shipping</button>
-                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 text-center">Prototyping</button>
-                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 text-center">Visa &amp; Travel</button>
+                    <div class="space-y-1.5 md:space-y-2.5">
+                      <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">CATEGORY</div>
+                      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-bold bg-[#0052cc] text-white text-center">Registration Fee</button>
+                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 text-center">Courier / Shipping</button>
+                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 text-center">Prototyping</button>
+                        <button type="button" onclick="selectExpenseCategory(this)" class="exp-cat-btn px-3 py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 text-center">Visa &amp; Travel</button>
                       </div>
                     </div>
 
                     <!-- CURRENCY & AMOUNT -->
-                    <div class="space-y-1.5">
-                      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">CURRENCY</div>
-                      <div class="flex items-center gap-2">
-                        <div class="relative w-28">
-                          <select id="expense-currency" onchange="calculateConvertedExpense()" class="w-full bg-slate-100 rounded-xl px-3 py-3 text-xs font-bold text-[#0f172a] appearance-none focus-visible:outline-none">
+                    <div class="space-y-1.5 md:space-y-2.5">
+                      <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">CURRENCY</div>
+                      <div class="flex items-center gap-2 md:gap-3">
+                        <div class="relative w-28 md:w-36">
+                          <select id="expense-currency" onchange="calculateConvertedExpense()" class="w-full bg-slate-100 rounded-xl px-3 md:px-4 py-3 text-xs md:text-sm font-bold text-[#0f172a] appearance-none focus-visible:outline-none">
                             <option value="USD">USD ↕</option>
                             <option value="HKD">HKD ↕</option>
                             <option value="EUR">EUR ↕</option>
@@ -1751,25 +1742,25 @@
                             <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                           </div>
                         </div>
-                        <input type="number" id="expense-amount-input" step="0.01" placeholder="$0.00" oninput="calculateConvertedExpense()" class="flex-1 bg-slate-100 rounded-xl px-4 py-3 text-sm font-bold text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
+                        <input type="number" id="expense-amount-input" step="0.01" placeholder="$0.00" oninput="calculateConvertedExpense()" class="flex-1 bg-slate-100 rounded-xl px-4 py-3 text-sm md:text-base font-bold text-[#0f172a] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#0052cc]" />
                       </div>
-                      <div class="flex items-center justify-between text-xs font-semibold pt-1">
+                      <div class="flex items-center justify-between text-xs md:text-sm font-semibold pt-1">
                         <span class="text-slate-500">Converted Subtotal:</span>
                         <span id="converted-subtotal-display" class="text-[#0f172a] font-bold font-mono">HK$ 0.00</span>
                       </div>
                     </div>
 
                     <!-- PROOF OF PAYMENT UPLOAD -->
-                    <div class="space-y-1.5">
-                      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">PROOF OF PAYMENT</div>
-                      <div onclick="document.getElementById('receipt-file-picker').click()" class="cursor-pointer border-2 border-dashed border-slate-200 hover:border-[#0052cc] rounded-2xl p-4 bg-slate-50/60 flex items-center justify-between transition-colors">
-                        <div class="flex items-center gap-3">
-                          <div class="w-10 h-10 rounded-full bg-[#eff6ff] text-[#0052cc] flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                    <div class="space-y-1.5 md:space-y-2.5">
+                      <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">PROOF OF PAYMENT</div>
+                      <div onclick="document.getElementById('receipt-file-picker').click()" class="cursor-pointer border-2 border-dashed border-slate-200 hover:border-[#0052cc] rounded-2xl p-4 md:p-5 bg-slate-50/60 flex items-center justify-between transition-colors">
+                        <div class="flex items-center gap-3 md:gap-4">
+                          <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#eff6ff] text-[#0052cc] flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
                           </div>
                           <div>
-                            <div id="receipt-upload-label" class="text-[13px] font-bold text-[#0f172a]">Attach Receipt Slip (PDF/JPG)</div>
-                            <div class="text-[10px] text-slate-500">Official vendor receipt or card statement</div>
+                            <div id="receipt-upload-label" class="text-[13px] md:text-[15px] font-bold text-[#0f172a]">Attach Receipt Slip (PDF/JPG)</div>
+                            <div class="text-[10px] md:text-xs text-slate-500">Official vendor receipt or card statement</div>
                           </div>
                         </div>
                         <svg class="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
@@ -1778,7 +1769,7 @@
                     </div>
 
                     <!-- Submit new item button -->
-                    <button type="button" onclick="submitNewExpenseItem()" class="w-full py-3 bg-[#eff6ff] hover:bg-[#dbeafe] text-[#0052cc] rounded-xl font-bold text-xs md:text-sm flex items-center justify-center gap-1.5 border border-[#bfdbfe] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <button type="button" onclick="submitNewExpenseItem()" class="w-full py-3 md:py-4 bg-[#eff6ff] hover:bg-[#dbeafe] text-[#0052cc] rounded-xl md:rounded-2xl font-bold text-xs md:text-sm flex items-center justify-center gap-1.5 border border-[#bfdbfe] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                       <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                       <span>+ Add Expense Item</span>
                     </button>
@@ -1786,14 +1777,14 @@
                 </div>
 
                 <!-- Total Claimed Card (Dark Banner) -->
-                <div class="order-3 md:col-span-4 md:col-start-1 md:row-start-2 bg-[#181829] rounded-2xl md:rounded-3xl p-4 md:p-6 flex items-center justify-between text-white shadow-lg">
-                  <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-slate-700/80 text-white flex items-center justify-center">
-                      <svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <div class="bg-[#181829] rounded-2xl md:rounded-3xl p-4 md:p-8 flex items-center justify-between text-white shadow-lg">
+                  <div class="flex items-center gap-3 md:gap-5">
+                    <div class="w-9 h-9 md:w-12 md:h-12 rounded-full bg-slate-700/80 text-white flex items-center justify-center">
+                      <svg class="w-5 h-5 md:w-6 md:h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                     </div>
-                    <div class="text-[14px] md:text-[15px] font-bold text-slate-200">Total Claimed</div>
+                    <div class="text-[14px] md:text-[20px] font-bold text-slate-200">Total Claimed</div>
                   </div>
-                  <div id="total-claimed-amount" class="text-[19px] md:text-[22px] font-extrabold text-white tracking-tight font-mono">
+                  <div id="total-claimed-amount" class="text-[19px] md:text-[30px] font-extrabold text-white tracking-tight font-mono">
                     HK$1,850.00
                   </div>
                 </div>
@@ -1994,109 +1985,104 @@
             </div>
 
             <!-- Step 5 Content -->
-            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-8">
-              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-8">
-              <!-- Desktop 12-column split: Approved Payout + Payout Destination on left (6 cols), E-Signature TrustKey on right (6 cols) -->
-              <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-12 md:gap-6 md:items-start">
-                <!-- Left Column: Payout Summary & Destination -->
-                <div class="space-y-6 md:col-span-6">
-                  <!-- Approved Payout Card -->
-                  <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 border border-slate-200/90 shadow-sm space-y-3 md:space-y-4">
-                    <div class="flex items-start justify-between">
-                      <div>
-                        <div class="text-[10px] md:text-[11px] font-bold text-slate-400 uppercase tracking-wider">APPROVED PAYOUT</div>
-                        <div class="flex items-baseline gap-1 mt-0.5">
-                          <span class="text-[26px] md:text-[32px] font-extrabold text-[#0f172a] tracking-tight">HK$ 1,850</span>
-                          <span class="text-sm md:text-base font-bold text-slate-500">.00</span>
-                        </div>
-                      </div>
-                      <div class="flex items-center gap-1 text-[11px] font-bold text-slate-700 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-full">
-                        <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                        <span>Direct FPS</span>
+            <div class="px-5 py-5 md:px-10 md:pt-2 md:pb-12 space-y-6 md:space-y-9">
+              <div class="md:max-w-[1060px] md:mx-auto space-y-6 md:space-y-9">
+              <!-- Vertical flow matching mobile layout -->
+              <div class="space-y-6 md:space-y-9">
+                <!-- Approved Payout Card -->
+                <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
+                  <div class="flex items-start justify-between gap-4">
+                    <div class="space-y-0.5 md:space-y-1">
+                      <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">APPROVED PAYOUT</div>
+                      <div class="flex items-baseline gap-1 md:gap-1.5">
+                        <span class="text-[26px] md:text-[32px] font-extrabold text-[#0f172a] tracking-tight leading-tight">HK$ 1,850</span>
+                        <span class="text-sm md:text-lg font-bold text-slate-500">.00</span>
                       </div>
                     </div>
-                    <div class="pt-2 md:pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-slate-600 font-medium">
-                      <div class="w-6 h-6 rounded-full bg-[#eff6ff] text-[#0052cc] flex items-center justify-center">
-                        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/></svg>
-                      </div>
-                      <span>Batch REF: <strong class="font-mono text-[#0f172a]">SD-DES-84920</strong></span>
+                    <div class="flex items-center gap-1.5 text-[11px] md:text-xs font-bold text-slate-700 bg-slate-50 border border-slate-200 px-2.5 md:px-3.5 py-1 md:py-1.5 rounded-full">
+                      <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                      <span>Direct FPS</span>
                     </div>
                   </div>
-
-                  <!-- Payout Destination -->
-                  <div class="space-y-3 md:space-y-4">
-                    <div class="flex items-center gap-2">
-                      <svg class="w-5 h-5 text-[#0052cc]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-                      <h2 class="text-[18px] md:text-[22px] font-extrabold text-[#0f172a]">Payout Destination</h2>
+                  <div class="pt-2 md:pt-4 border-t border-slate-100 flex items-center gap-2 md:gap-3 text-xs md:text-sm text-slate-600 font-medium">
+                    <div class="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#eff6ff] text-[#0052cc] flex items-center justify-center shrink-0">
+                      <svg class="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/></svg>
                     </div>
-                    <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-6 border border-slate-200/90 shadow-sm space-y-3 md:space-y-4">
-                      <div class="flex items-start justify-between">
-                        <div class="flex items-center gap-3 md:gap-4">
-                          <div class="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-slate-100 text-[#0052cc] flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 10h3v7H4zM10.5 10h3v7h-3zM2 19h20v3H2zM17 10h3v7h-3zM12 1L2 6v2h20V6z"/></svg>
-                          </div>
-                          <div>
-                            <div class="text-[14px] md:text-[16px] font-extrabold text-[#0f172a]">HSBC Hong Kong</div>
-                            <div class="text-xs font-medium text-slate-500 font-mono">•••• 4092 • Savings</div>
-                          </div>
+                    <span>Batch REF: <strong class="font-mono text-[#0f172a]">SD-DES-84920</strong></span>
+                  </div>
+                </div>
+
+                <!-- Payout Destination -->
+                <div class="space-y-3 md:space-y-4">
+                  <div class="flex items-center gap-2 md:gap-3">
+                    <svg class="w-5 h-5 md:w-6 md:h-6 text-[#0052cc]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                    <h2 class="text-[18px] md:text-[24px] font-extrabold text-[#0f172a] tracking-tight">Payout Destination</h2>
+                  </div>
+                  <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5">
+                    <div class="flex items-start justify-between gap-4">
+                      <div class="flex items-center gap-3.5 md:gap-6">
+                        <div class="w-11 h-11 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-slate-100 text-[#0052cc] flex items-center justify-center shrink-0">
+                          <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4 10h3v7H4zM10.5 10h3v7h-3zM2 19h20v3H2zM17 10h3v7h-3zM12 1L2 6v2h20V6z"/></svg>
                         </div>
-                        <span class="text-[11px] font-bold text-slate-700 bg-slate-50 border border-slate-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                          Instant
-                        </span>
+                        <div class="space-y-0.5 md:space-y-1">
+                          <div class="text-[14px] md:text-[20px] font-extrabold text-[#0f172a]">HSBC Hong Kong</div>
+                          <div class="text-xs md:text-[15px] font-medium text-slate-500 font-mono">•••• 4092 • Savings</div>
+                        </div>
                       </div>
-                      <div class="pt-2 md:pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                        <span class="font-bold text-slate-800">Carol LAM</span>
-                        <span class="text-[#0052cc] font-mono font-bold">FPS ID: 10492810</span>
-                      </div>
+                      <span class="text-[11px] md:text-xs font-bold text-slate-700 bg-slate-50 border border-slate-200 px-2.5 md:px-3.5 py-0.5 md:py-1 rounded-full flex items-center gap-1">
+                        <svg class="w-3 h-3 md:w-3.5 md:h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                        Instant
+                      </span>
+                    </div>
+                    <div class="pt-2 md:pt-4 border-t border-slate-100 flex items-center justify-between text-xs md:text-sm">
+                      <span class="font-bold text-slate-800">Carol LAM</span>
+                      <span class="text-[#0052cc] font-mono font-bold">FPS ID: 10492810</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- Right Column: E-Signature Seal & NetID TrustKey (Dark Block) -->
-                <div class="md:col-span-6">
-                  <div class="bg-[#0c0d1c] rounded-2xl md:rounded-3xl p-4 md:p-7 text-white shadow-xl space-y-4 md:space-y-5 border border-slate-800">
-                    <div class="flex items-center justify-between">
-                      <div class="flex items-center gap-2.5 md:gap-3">
-                        <div class="w-9 h-9 md:w-11 md:h-11 rounded-full bg-[#181829] text-cyan-400 flex items-center justify-center border border-slate-700">
-                          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11a8.01 8.01 0 00.99 3.868"/></svg>
-                        </div>
-                        <div>
-                          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">E-SIGNATURE SEAL</div>
-                          <div class="text-[14px] md:text-[16px] font-extrabold text-white">PolyU NetID TrustKey</div>
-                        </div>
+                <!-- E-Signature Seal & NetID TrustKey (Dark Block) -->
+                <div class="bg-[#0c0d1c] rounded-2xl md:rounded-3xl p-4 md:p-8 text-white shadow-xl space-y-4 md:space-y-6 border border-slate-800">
+                  <div class="flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-3 md:gap-5">
+                      <div class="w-9 h-9 md:w-14 md:h-14 rounded-full bg-[#181829] text-cyan-400 flex items-center justify-center border border-slate-700 shrink-0">
+                        <svg class="w-5 h-5 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11a8.01 8.01 0 00.99 3.868"/></svg>
                       </div>
-                      <span class="bg-[#1e1e38] text-[#818cf8] text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border border-indigo-500/30 flex items-center gap-1">
-                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
-                        SHA-256
-                      </span>
-                    </div>
-
-                    <!-- Inner Hash Credentials Box -->
-                    <div class="bg-[#15162a] rounded-xl md:rounded-2xl p-3.5 md:p-5 space-y-2 md:space-y-2.5 text-xs border border-slate-800/80">
-                      <div class="font-extrabold text-[14px] md:text-[15px] text-white">Carol LAM</div>
-                      <div class="flex items-center justify-between text-slate-400">
-                        <span>Student ID:</span>
-                        <span class="text-white font-mono font-medium">21049281D</span>
-                      </div>
-                      <div class="flex items-center justify-between text-slate-400">
-                        <span>Signature Hash:</span>
-                        <span class="text-white font-mono font-medium text-[11px]">8f2a93c041e8...d90b</span>
-                      </div>
-                      <div class="flex items-center justify-between text-slate-400">
-                        <span>Timestamp:</span>
-                        <span id="live-trustkey-time" class="text-white font-mono font-medium text-[11px]">2026-10-29 09:41 HKT</span>
+                      <div class="space-y-0.5">
+                        <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">E-SIGNATURE SEAL</div>
+                        <div class="text-[14px] md:text-[20px] font-extrabold text-white">PolyU NetID TrustKey</div>
                       </div>
                     </div>
-
-                    <!-- Declaration Checkbox -->
-                    <label class="flex items-start gap-2.5 text-[11px] md:text-xs text-slate-300 cursor-pointer pt-1 leading-snug">
-                      <input type="checkbox" id="declaration-check" checked class="mt-0.5 w-4 h-4 rounded border-slate-700 bg-slate-900 text-[#0052cc] focus:ring-0 focus:ring-offset-0 cursor-pointer" />
-                      <span>
-                        I declare all reimbursement receipts, project authorship splits, and award credentials are fully genuine in compliance with the <a href="#code" onclick="event.preventDefault(); showToast('PolyU Research Code of Conduct v4.2 verified');" class="underline text-slate-100 font-semibold hover:text-white">PolyU Research Code of Conduct</a>.
-                      </span>
-                    </label>
+                    <span class="bg-[#1e1e38] text-[#818cf8] text-[10px] md:text-xs font-mono font-semibold px-2.5 md:px-3.5 py-0.5 md:py-1 rounded-full border border-indigo-500/30 flex items-center gap-1.5">
+                      <svg class="w-3 h-3 md:w-3.5 md:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                      SHA-256
+                    </span>
                   </div>
+
+                  <!-- Inner Hash Credentials Box -->
+                  <div class="bg-[#15162a] rounded-xl md:rounded-2xl p-3.5 md:p-6 space-y-2 md:space-y-3 text-xs md:text-sm border border-slate-800/80">
+                    <div class="font-extrabold text-[14px] md:text-[18px] text-white">Carol LAM</div>
+                    <div class="flex items-center justify-between text-slate-400">
+                      <span>Student ID:</span>
+                      <span class="text-white font-mono font-medium">21049281D</span>
+                    </div>
+                    <div class="flex items-center justify-between text-slate-400">
+                      <span>Signature Hash:</span>
+                      <span class="text-white font-mono font-medium text-[11px] md:text-[13px]">8f2a93c041e8...d90b</span>
+                    </div>
+                    <div class="flex items-center justify-between text-slate-400">
+                      <span>Timestamp:</span>
+                      <span id="live-trustkey-time" class="text-white font-mono font-medium text-[11px] md:text-[13px]">2026-10-29 09:41 HKT</span>
+                    </div>
+                  </div>
+
+                  <!-- Declaration Checkbox -->
+                  <label class="flex items-start gap-2.5 md:gap-3.5 text-[11px] md:text-[13px] text-slate-300 cursor-pointer pt-1 leading-relaxed">
+                    <input type="checkbox" id="declaration-check" checked class="mt-0.5 md:mt-1 w-4 h-4 rounded border-slate-700 bg-slate-900 text-[#0052cc] focus:ring-0 focus:ring-offset-0 cursor-pointer" />
+                    <span>
+                      I declare all reimbursement receipts, project authorship splits, and award credentials are fully genuine in compliance with the <a href="#code" onclick="event.preventDefault(); showToast('PolyU Research Code of Conduct v4.2 verified');" class="underline text-slate-100 font-semibold hover:text-white">PolyU Research Code of Conduct</a>.
+                    </span>
+                  </label>
                 </div>
               </div>
 
@@ -2464,7 +2450,7 @@
             <!-- Competitions Grid (2 cols on mobile, 4 cols x 2 rows initially on desktop) -->
             <div id="competitions-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 pt-1">
               <!-- Card 1: Red Dot Award -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="goToScreen(10)" data-stream="Product" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('reddot')" data-stream="Product" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_reddot_desk_1794853918158.jpg" alt="Red Dot Award: Design Concept 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2485,7 +2471,7 @@
               </div>
 
               <!-- Card 2: iF Design Student Award -->
-              <div class="grid-card space-y-2 cursor-pointer group" onclick="goToScreen(10)" data-stream="Interaction" data-past-eligible="true">
+              <div class="grid-card space-y-2 cursor-pointer group" onclick="openCompetitionDetail('if-award')" data-stream="Interaction" data-past-eligible="true">
                 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900">
                   <img src="/src/assets/images/grid_if_interaction_1794853918248.jpg" alt="iF Design Student Award 2026" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(30,35,45,0.88)_0%,rgba(45,52,64,0.48)_45%,rgba(45,52,64,0)_75%)]"></div>
@@ -2933,7 +2919,7 @@
           <!-- Top Header (Stay in place, matching Desktop_main_page.png layout) -->
           <header class="shrink-0 px-5 md:px-6 lg:px-8 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
             <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="goToScreen(9)" aria-label="Back to Competitions" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none shrink-0">
+              <button type="button" onclick="goBackFromDetail()" aria-label="Go Back" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none shrink-0">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
               </button>
               <div class="leading-tight text-left min-w-0">
@@ -2999,7 +2985,7 @@
           <div class="flex-1 overflow-y-auto overscroll-contain pb-28">
             <!-- Hero Architecture Gallery Image with Actions -->
             <div class="relative w-full aspect-[4/3] bg-slate-900 overflow-hidden">
-              <img src="/src/assets/images/detail_hero_exhibition_1794853920185.jpg" alt="Exhibition Gallery" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
+              <img id="detail-hero-img" src="/src/assets/images/detail_hero_exhibition_1794853920185.jpg" alt="Exhibition Gallery" referrerpolicy="no-referrer" class="w-full h-full object-cover" />
               <!-- Floating Action Buttons: Apply for Subsidy (hides Screen 10, reveals Screen 12) -->
               <div class="absolute bottom-4 left-4 right-4 flex items-center gap-2.5">
                 <button type="button" id="btn-apply-subsidy" onclick="applySubsidyFromDetail()" class="flex-1 py-3 px-4 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-full font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 focus-visible:outline-none">
@@ -3016,20 +3002,20 @@
             <div class="px-5 py-5 space-y-6">
               <!-- Competition Header Title -->
               <div class="space-y-2">
-                <h1 class="text-[24px] font-extrabold text-[#0f172a] leading-tight">
+                <h1 id="detail-title" class="text-[24px] font-extrabold text-[#0f172a] leading-tight">
                   Red Dot Award:<br />Design Concept 2026
                 </h1>
-                <p class="text-[12px] text-slate-500 leading-snug">
+                <p id="detail-organizer" class="text-[12px] text-slate-500 leading-snug">
                   Organized by Design Zentrum Nordrhein Westfalen • Endorsed under PolyU SD Subsidy Framework
                 </p>
                 <div class="pt-1 flex flex-wrap items-center gap-2">
-                  <span class="inline-block bg-[#eff6ff] text-[#0052cc] font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
+                  <span id="detail-discipline-badge" class="inline-block bg-[#eff6ff] text-[#0052cc] font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider">
                     PRODUCT &amp; INDUSTRIAL DESIGN
                   </span>
                 </div>
                 <div class="flex items-center gap-1.5 text-[11px] font-semibold text-[#0284c7] pt-1">
                   <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                  <span>HK$ 5,000 Subsidy Cap • 100% Entry &amp; Model Reimbursement</span>
+                  <span id="detail-subsidy-cap">HK$ 5,000 Subsidy Cap • 100% Entry &amp; Model Reimbursement</span>
                 </div>
               </div>
 
@@ -3041,12 +3027,12 @@
                   </div>
                   <h2 class="text-[18px] font-extrabold text-[#0f172a]">Overview</h2>
                 </div>
-                <p class="text-[12px] text-slate-600 leading-relaxed">
+                <p id="detail-overview" class="text-[12px] text-slate-600 leading-relaxed">
                   The Red Dot Award: Design Concept represents the premier international benchmark for discovering nascent design possibilities, imaginative student prototypes, and research grade physical innovations. Established in 2005 and headquartered in Singapore, the award acknowledges ideas that demonstrate exceptional foresight, ergonomic utility, ecological consciousness, and transformative technological integration.
                 </p>
                 <div class="space-y-1.5 pt-2">
                   <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">PRIORITY EVALUATION CATEGORIES</div>
-                  <div class="flex flex-wrap gap-2">
+                  <div id="detail-categories" class="flex flex-wrap gap-2">
                     <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">Mobility &amp; Autonomous Transportation</span>
                     <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">Consumer Technology &amp; Wearables</span>
                   </div>
@@ -3061,12 +3047,12 @@
                   </div>
                   <h2 class="text-[18px] font-extrabold text-[#0f172a]">Key Milestones &amp; Timeline</h2>
                 </div>
-                <p class="text-[12px] text-slate-600 leading-relaxed">
+                <p id="detail-timeline-intro" class="text-[12px] text-slate-600 leading-relaxed">
                   Please strictly adhere to both the global Red Dot submission deadlines and internal PolyU SD accounting cutoffs:
                 </p>
 
                 <!-- Timeline Visualizer -->
-                <div class="relative pl-6 space-y-4 border-l-2 border-slate-200 ml-2">
+                <div id="detail-timeline-list" class="relative pl-6 space-y-4 border-l-2 border-slate-200 ml-2">
                   <div class="relative">
                     <span class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-slate-300"></span>
                     <div class="text-[11px] text-slate-500">28 Jan 2026</div>
@@ -3097,23 +3083,23 @@
               <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 space-y-2.5 text-xs">
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500">Final Deadline</span>
-                  <span class="font-extrabold text-red-600">15 Apr 2026</span>
+                  <span id="detail-meta-deadline" class="font-extrabold text-red-600">15 Apr 2026</span>
                 </div>
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500">Eligible Subsidies</span>
-                  <span class="font-bold text-slate-800">100% Entry Fee</span>
+                  <span id="detail-meta-subsidies" class="font-bold text-slate-800">100% Entry Fee</span>
                 </div>
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500">Endorsement Status</span>
-                  <span class="font-bold text-[#0052cc]">Tier-1 Apex Endorsed</span>
+                  <span id="detail-meta-endorsement" class="font-bold text-[#0052cc]">Tier-1 Apex Endorsed</span>
                 </div>
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500">Eligible Students</span>
-                  <span class="font-bold text-slate-800">Full-time BA / MDes / PhD</span>
+                  <span id="detail-meta-students" class="font-bold text-slate-800">Full-time BA / MDes / PhD</span>
                 </div>
                 <div class="flex items-center justify-between">
                   <span class="text-slate-500">Required Proofs</span>
-                  <span class="font-medium text-slate-700">Official Tax Invoice &amp; Entry PDF</span>
+                  <span id="detail-meta-proofs" class="font-medium text-slate-700">Official Tax Invoice &amp; Entry PDF</span>
                 </div>
                 <div class="flex items-center justify-between pt-1 border-t border-slate-200">
                   <span class="text-slate-500 flex items-center gap-1">
@@ -4131,44 +4117,50 @@
 
               <!-- Search, Filter Bar & Desktop New Post Button -->
               <div class="flex items-center justify-between gap-4">
-                <div class="relative flex-1 md:flex-none md:w-[540px]">
+                <div id="forum-filter-container" class="relative flex-1 md:flex-none md:w-[540px]">
                   <div class="flex items-center gap-2 md:gap-3">
                     <!-- Search Input -->
                     <div class="flex-1 bg-white border border-slate-200 rounded-full px-4 py-2.5 flex items-center gap-2 shadow-2xs focus-within:ring-2 focus-within:ring-[#0052cc] focus-within:border-transparent">
                       <svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                       </svg>
-                      <input type="text" id="forum-search-input" oninput="filterForumThreads(this.value)" placeholder="Search discussions, competitions..." class="bg-transparent border-none text-xs text-[#0f172a] placeholder:text-slate-400 focus:outline-none w-full" />
+                      <input type="text" id="forum-search-input" oninput="filterForumThreads(this.value)" placeholder="Search discussions, competitions..." aria-label="Search discussions and competitions" class="bg-transparent border-none text-xs text-[#0f172a] placeholder:text-slate-400 focus:outline-none w-full" />
                     </div>
                     <!-- Dropdown Trigger Button (Image 1 & 2) -->
-                    <button type="button" id="forum-filter-toggle" onclick="toggleForumFilters()" aria-label="Toggle Topic Filter Menu" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors shadow-2xs shrink-0 focus-visible:outline-none">
+                    <button type="button" id="forum-filter-toggle" onclick="toggleForumFilters()" aria-expanded="false" aria-label="Toggle Topic Filter Menu" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors shadow-2xs shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                       <svg id="forum-filter-chevron" class="w-4 h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
                       </svg>
                     </button>
                   </div>
 
-                  <!-- Filter Topics Floating Popover Menu (Matching Image 2 Mockup) -->
-                  <div id="forum-filter-menu" class="hidden absolute right-0 top-12 z-20 w-52 bg-slate-50/95 backdrop-blur-md rounded-2xl p-3 shadow-xl border border-slate-200/80 space-y-1.5 transition-all">
-                    <button type="button" onclick="selectForumTopic('all', this)" class="forum-topic-item w-full text-left px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors">
-                      All Topics
-                    </button>
-                    <div class="pt-0.5">
-                      <button type="button" onclick="selectForumTopic('subsidy', this)" class="forum-topic-item inline-block px-3 py-1 bg-[#0052cc] text-white rounded-full text-xs font-bold shadow-2xs">
+                  <!-- Filter Topics Floating Popover Menu (Multi-select with dynamic blue highlight) -->
+                  <div id="forum-filter-menu" role="group" aria-label="Filter discussions by topic" class="hidden absolute right-0 top-12 z-20 w-56 bg-slate-50/95 backdrop-blur-md rounded-2xl p-3 shadow-xl border border-slate-200/80 space-y-1.5 transition-all">
+                    <div>
+                      <button type="button" data-topic-key="all" aria-pressed="true" onclick="selectForumTopic('all')" class="forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-bold bg-[#0052cc] text-white shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                        All Topics
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" data-topic-key="subsidy" aria-pressed="false" onclick="selectForumTopic('subsidy')" class="forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                         Subsidy Questions
                       </button>
                     </div>
-                    <button type="button" onclick="selectForumTopic('team', this)" class="forum-topic-item w-full text-left px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors">
-                      Team Up
-                    </button>
-                    <div class="pt-0.5">
-                      <button type="button" onclick="selectForumTopic('showcase', this)" class="forum-topic-item inline-block px-3 py-1 bg-[#0052cc] text-white rounded-full text-xs font-bold shadow-2xs">
+                    <div>
+                      <button type="button" data-topic-key="team" aria-pressed="false" onclick="selectForumTopic('team')" class="forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                        Team Up
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" data-topic-key="showcase" aria-pressed="false" onclick="selectForumTopic('showcase')" class="forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                         Showcase
                       </button>
                     </div>
-                    <button type="button" onclick="selectForumTopic('advisor', this)" class="forum-topic-item w-full text-left px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors">
-                      Advisor Endorsement
-                    </button>
+                    <div>
+                      <button type="button" data-topic-key="advisor" aria-pressed="false" onclick="selectForumTopic('advisor')" class="forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                        Advisor Endorsement
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -4403,6 +4395,13 @@
                     </button>
                   </div>
                 </article>
+              </div>
+
+              <div id="forum-empty-state" class="hidden bg-white rounded-3xl p-8 border border-slate-200/80 text-center space-y-3">
+                <p class="text-sm font-bold text-[#0f172a]">No discussions match the selected categories or search query.</p>
+                <button type="button" onclick="selectForumTopic('all')" class="px-4 py-2 rounded-full bg-[#0052cc] text-white text-xs font-bold hover:bg-[#0047b3] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                  Reset to All Topics
+                </button>
               </div>
 
               <!-- Desktop Footer (Hidden on Mobile, Matching Desktop_14_Discussion_Forum _1.png) -->
@@ -4886,6 +4885,7 @@
     <script>
       // Current active screen tracker
       let currentScreen = 1;
+      let detailReturnScreen = 9;
       let totalClaimedHKD = 1850;
       let loginDestination = 2; // Default: Screen 2 (Step 1)
       let isLoggedIn = false;   // User login session state tracker
@@ -4953,8 +4953,137 @@
         }
       }
 
+      const COMPETITION_DETAILS = {
+        reddot: {
+          heroImg: '/src/assets/images/detail_hero_exhibition_1794853920185.jpg',
+          heroAlt: 'Red Dot Design Concept Exhibition Gallery',
+          titleHtml: 'Red Dot Award:<br />Design Concept 2026',
+          organizer: 'Organized by Design Zentrum Nordrhein Westfalen • Endorsed under PolyU SD Subsidy Framework',
+          badge: 'PRODUCT & INDUSTRIAL DESIGN',
+          subsidyCap: 'HK$ 5,000 Subsidy Cap • 100% Entry & Model Reimbursement',
+          overview: 'The Red Dot Award: Design Concept represents the premier international benchmark for discovering nascent design possibilities, imaginative student prototypes, and research grade physical innovations. Established in 2005 and headquartered in Singapore, the award acknowledges ideas that demonstrate exceptional foresight, ergonomic utility, ecological consciousness, and transformative technological integration.',
+          categories: ['Mobility & Autonomous Transportation', 'Consumer Technology & Wearables'],
+          timelineIntro: 'Please strictly adhere to both the global Red Dot submission deadlines and internal PolyU SD accounting cutoffs:',
+          milestones: [
+            { date: '28 Jan 2026', label: 'Early Submission Deadline', active: false },
+            { date: '18 Mar 2026', label: 'Standard Entry Deadline', active: false },
+            { date: '15 Apr 2026', label: 'Final Submission & Subsidy Application Cutoff', active: true },
+            { date: '28 June 2026', label: 'Jury Adjudication & PolyU Results Notification', active: false }
+          ],
+          deadline: '15 Apr 2026',
+          subsidies: '100% Entry Fee',
+          endorsement: 'Tier-1 Apex Endorsed',
+          students: 'Full-time BA / MDes / PhD',
+          proofs: 'Official Tax Invoice & Entry PDF'
+        },
+        'if-award': {
+          heroImg: '/src/assets/images/comp_if_studio_1794853916789.jpg',
+          heroAlt: 'iF Student Design Award Workstation',
+          titleHtml: 'iF Student Design<br />Award 2026',
+          organizer: 'Organized by iF International Forum Design GmbH • Endorsed under PolyU SD Subsidy Framework',
+          badge: 'SOCIAL IMPACT & INTERACTION',
+          subsidyCap: 'HK$ 5,000 Subsidy Cap • Zero Student Out-of-Pocket',
+          overview: 'The iF Student Design Award recognizes visionary concepts by design students and recent graduates addressing UN Sustainable Development Goals, social equity, and future-ready product & digital interaction systems. Jury fees are directly waived or covered under the PolyU SD institutional subsidy framework.',
+          categories: ['SDG & Social Impact Innovation', 'Human-Centered Digital & Service Design'],
+          timelineIntro: 'Please follow both the iF Student Design Award jury schedule and PolyU SD reimbursement cutoffs:',
+          milestones: [
+            { date: '12 Feb 2026', label: 'Early Concept Registration Open', active: false },
+            { date: '24 Mar 2026', label: 'Preliminary Digital Jury Pre-Selection', active: false },
+            { date: '29 Apr 2026', label: 'Final Submission & Subsidy Application Cutoff', active: true },
+            { date: '18 Jun 2026', label: 'International Winner Showcase & Results', active: false }
+          ],
+          deadline: '29 Apr 2026',
+          subsidies: '100% Entry & Jury Fee',
+          endorsement: 'Tier-1 Apex Endorsed',
+          students: 'Full-time BA / MDes / PhD',
+          proofs: 'iF Portal Receipt & Entry Deck PDF'
+        },
+        'tokyo-tdc': {
+          heroImg: '/src/assets/images/comp_tdc_posters_1794853916546.jpg',
+          heroAlt: 'Tokyo TDC Typography Gallery',
+          titleHtml: 'Tokyo TDC<br />Annual Awards 2026',
+          organizer: 'Organized by Tokyo Type Directors Club • Endorsed under PolyU SD Subsidy Framework',
+          badge: 'VISUAL COMMUNICATION & TYPOGRAPHY',
+          subsidyCap: 'HK$ 4,000 Subsidy Cap • Print & Entry Submission Fee',
+          overview: 'The Tokyo TDC Annual Awards celebrate experimental typography, editorial layout, kinetic type, and visual communication excellence across Asia and internationally. PolyU Communication Design students receive subsidy coverage for registration, archival poster printing, and international courier dispatch to Tokyo.',
+          categories: ['Experimental & Editorial Typography', 'Motion & Kinetic Identity Systems'],
+          timelineIntro: 'Please coordinate physical poster printing and Tokyo TDC entry cutoffs with the PolyU SD accounting desk:',
+          milestones: [
+            { date: '01 Mar 2026', label: 'Call for Entries & Digital Registration', active: false },
+            { date: '28 Apr 2026', label: 'Archival Poster Print & Courier Cutoff', active: false },
+            { date: '12 May 2026', label: 'Final Submission & Subsidy Application Cutoff', active: true },
+            { date: '10 Aug 2026', label: 'Tokyo TDC Annual Book & Exhibition Notice', active: false }
+          ],
+          deadline: '12 May 2026',
+          subsidies: 'Up to HK$ 4,000 (Entry + Print)',
+          endorsement: 'Tier-1 Apex Endorsed',
+          students: 'Full-time BA / MDes / PhD',
+          proofs: 'TDC Entry Invoice & Print Receipt'
+        }
+      };
+
+      function openCompetitionDetail(compKey) {
+        const data = COMPETITION_DETAILS[compKey] || COMPETITION_DETAILS.reddot;
+        detailReturnScreen = currentScreen === 10 ? detailReturnScreen : currentScreen;
+
+        const heroImg = document.getElementById('detail-hero-img');
+        if (heroImg) {
+          heroImg.src = data.heroImg;
+          heroImg.alt = data.heroAlt;
+        }
+        const titleEl = document.getElementById('detail-title');
+        if (titleEl) titleEl.innerHTML = data.titleHtml;
+        const orgEl = document.getElementById('detail-organizer');
+        if (orgEl) orgEl.textContent = data.organizer;
+        const badgeEl = document.getElementById('detail-discipline-badge');
+        if (badgeEl) badgeEl.textContent = data.badge;
+        const capEl = document.getElementById('detail-subsidy-cap');
+        if (capEl) capEl.textContent = data.subsidyCap;
+        const overviewEl = document.getElementById('detail-overview');
+        if (overviewEl) overviewEl.textContent = data.overview;
+        const catEl = document.getElementById('detail-categories');
+        if (catEl) {
+          catEl.innerHTML = data.categories
+            .map(c => `<span class="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">${c}</span>`)
+            .join('');
+        }
+        const tlIntro = document.getElementById('detail-timeline-intro');
+        if (tlIntro) tlIntro.textContent = data.timelineIntro;
+        const tlList = document.getElementById('detail-timeline-list');
+        if (tlList) {
+          tlList.innerHTML = data.milestones.map(m => m.active ? `
+            <div class="relative">
+              <span class="absolute -left-[33px] top-2 w-4 h-4 rounded-full bg-[#0052cc] ring-4 ring-blue-100"></span>
+              <div class="bg-blue-50/70 border border-blue-200 rounded-xl p-3 space-y-0.5">
+                <div class="text-[11px] font-extrabold text-[#0052cc]">${m.date}</div>
+                <div class="text-[13px] font-extrabold text-[#0f172a]">${m.label}</div>
+              </div>
+            </div>` : `
+            <div class="relative">
+              <span class="absolute -left-[31px] top-1 w-3 h-3 rounded-full bg-slate-300"></span>
+              <div class="text-[11px] text-slate-500">${m.date}</div>
+              <div class="text-[13px] font-bold text-slate-800">${m.label}</div>
+            </div>`).join('');
+        }
+        const setElText = (id, val) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = val;
+        };
+        setElText('detail-meta-deadline', data.deadline);
+        setElText('detail-meta-subsidies', data.subsidies);
+        setElText('detail-meta-endorsement', data.endorsement);
+        setElText('detail-meta-students', data.students);
+        setElText('detail-meta-proofs', data.proofs);
+
+        goToScreen(10);
+      }
+
+      function goBackFromDetail() {
+        goToScreen(detailReturnScreen || 9);
+      }
+
       function loginFromPhoto() {
-        goToScreen(9);
+        openCompetitionDetail('reddot');
       }
 
       /**
@@ -4979,6 +5108,9 @@
        */
       function goToScreen(screenNumber) {
         const prevScreen = currentScreen;
+        if (screenNumber === 10 && prevScreen !== 10) {
+          detailReturnScreen = prevScreen;
+        }
         if (isLoggedIn && (screenNumber === 1 || screenNumber === 12)) {
           screenNumber = 13;
         }
@@ -5238,22 +5370,22 @@
 
         const row = document.createElement('div');
         row.id = elemId;
-        row.className = "bg-slate-50 rounded-xl p-3 flex items-center justify-between border border-slate-100";
+        row.className = "bg-slate-50 rounded-xl md:rounded-2xl p-3 md:p-5 flex items-center justify-between border border-slate-100";
         row.innerHTML = `
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center">
+          <div class="flex items-center gap-3 md:gap-5">
+            <div class="w-9 h-9 md:w-12 md:h-12 rounded-full bg-slate-200 text-slate-700 font-bold text-xs md:text-sm flex items-center justify-center">
               ${initials}
             </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-[13px] font-extrabold text-[#0f172a]">${nameVal}</span>
-                <span class="bg-slate-200 text-slate-600 font-bold text-[10px] px-2 py-0.2 rounded-full">Co-author</span>
+            <div class="space-y-0.5">
+              <div class="flex items-center gap-2 md:gap-2.5">
+                <span class="text-[13px] md:text-[16px] font-extrabold text-[#0f172a]">${nameVal}</span>
+                <span class="bg-slate-200 text-slate-600 font-bold text-[10px] md:text-xs px-2 md:px-2.5 py-0.5 rounded-full">Co-author</span>
               </div>
-              <div class="text-[11px] text-slate-500 font-mono">Student ID: ${idVal}</div>
+              <div class="text-[11px] md:text-[13px] text-slate-500 font-mono">Student ID: ${idVal}</div>
             </div>
           </div>
-          <button type="button" onclick="removeTeammate('${elemId}')" class="w-7 h-7 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-slate-200">
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          <button type="button" onclick="removeTeammate('${elemId}')" class="w-7 h-7 md:w-9 md:h-9 rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-slate-200">
+            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         `;
         container.appendChild(row);
@@ -5360,30 +5492,30 @@
         const newSlipId = 'slip-' + Date.now();
         const slip = document.createElement('div');
         slip.id = newSlipId;
-        slip.className = "bg-white rounded-2xl p-4 border border-slate-200/90 shadow-sm space-y-3";
+        slip.className = "bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 border border-slate-100 md:border-slate-200/80 shadow-[0_2px_14px_rgba(15,23,42,0.05)] md:shadow-sm space-y-3 md:space-y-5";
         slip.innerHTML = `
-          <div class="flex items-start justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-center gap-3 md:gap-5">
+              <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               </div>
               <div>
-                <div class="text-[14px] font-extrabold text-[#0f172a]">${activeCat}</div>
+                <div class="text-[14px] md:text-[18px] font-extrabold text-[#0f172a]">${activeCat}</div>
               </div>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[14px] font-extrabold text-[#0f172a]">HK$ ${hkdVal.toLocaleString()}.00</span>
-              <button type="button" onclick="deleteExpenseSlip('${newSlipId}', ${hkdVal})" class="text-slate-400 hover:text-red-500">
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            <div class="flex items-center gap-2 md:gap-3">
+              <span class="text-[14px] md:text-[20px] font-extrabold text-[#0f172a]">HK$ ${hkdVal.toLocaleString()}.00</span>
+              <button type="button" onclick="deleteExpenseSlip('${newSlipId}', ${hkdVal})" class="text-slate-400 hover:text-red-500 p-1">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
               </button>
             </div>
           </div>
-          <div class="bg-slate-50 rounded-xl p-2.5 flex items-center justify-between text-xs border border-slate-100">
-            <div class="flex items-center gap-2 text-slate-600 font-mono text-[11px]">
-              <svg class="w-3.5 h-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A1 1 0 0111.293 2.707l4 4A1 1 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
+          <div class="bg-slate-50 rounded-xl md:rounded-2xl p-2.5 md:p-4 flex items-center justify-between text-xs md:text-sm border border-slate-100">
+            <div class="flex items-center gap-2 md:gap-3 text-slate-600 font-mono text-[11px] md:text-[13px]">
+              <svg class="w-3.5 h-3.5 md:w-4 md:h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A1 1 0 0111.293 2.707l4 4A1 1 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/></svg>
               <span>receipt_upload_${Math.floor(Math.random()*9000)+1000}.pdf</span>
             </div>
-            <span class="text-[#0284c7] font-semibold text-[11px] flex items-center gap-1">✓ Validated</span>
+            <span class="text-[#0284c7] font-semibold text-[11px] md:text-[13px] flex items-center gap-1">✓ Validated</span>
           </div>
         `;
         container.appendChild(slip);
@@ -5606,34 +5738,78 @@
         showToast('Post published to Community Discussion!');
       }
 
+      let selectedForumTopics = new Set();
+      let forumSearchQuery = '';
+
       function toggleForumFilters() {
         const menu = document.getElementById('forum-filter-menu');
         const chevron = document.getElementById('forum-filter-chevron');
+        const btn = document.getElementById('forum-filter-toggle');
         if (!menu) return;
+        const willShow = menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
-        if (chevron) chevron.classList.toggle('rotate-180');
+        if (chevron) chevron.classList.toggle('rotate-180', willShow);
+        if (btn) btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
       }
 
-      function selectForumTopic(topic, btn) {
-        const menu = document.getElementById('forum-filter-menu');
-        if (menu) menu.classList.add('hidden');
-        const chevron = document.getElementById('forum-filter-chevron');
-        if (chevron) chevron.classList.remove('rotate-180');
+      function updateForumTopicMenuUI() {
+        const items = document.querySelectorAll('#forum-filter-menu .forum-topic-item');
+        const isAllSelected = selectedForumTopics.size === 0;
+        const activeClasses = 'forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-bold bg-[#0052cc] text-white shadow-2xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]';
+        const inactiveClasses = 'forum-topic-item inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:bg-slate-200/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]';
 
+        items.forEach(item => {
+          const key = item.getAttribute('data-topic-key');
+          const isSelected = key === 'all' ? isAllSelected : selectedForumTopics.has(key);
+          item.className = isSelected ? activeClasses : inactiveClasses;
+          item.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+        });
+      }
+
+      function applyForumFilters() {
         const cards = document.querySelectorAll('.forum-thread-card');
+        const isAll = selectedForumTopics.size === 0;
         let matchCount = 0;
+
         cards.forEach(card => {
           if (card.getAttribute('data-published') === 'false') {
             card.classList.add('hidden');
             return;
           }
-          if (topic === 'all' || card.getAttribute('data-topic') === topic) {
+          const cardTopics = (card.getAttribute('data-topic') || '').split(/\s+/).filter(Boolean);
+          const topicMatch = isAll || cardTopics.some(t => selectedForumTopics.has(t));
+          const text = card.textContent.toLowerCase();
+          const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+          const queryMatch = !forumSearchQuery || text.includes(forumSearchQuery) || keywords.includes(forumSearchQuery);
+
+          if (topicMatch && queryMatch) {
             card.classList.remove('hidden');
             matchCount++;
           } else {
             card.classList.add('hidden');
           }
         });
+
+        const emptyState = document.getElementById('forum-empty-state');
+        if (emptyState) {
+          emptyState.classList.toggle('hidden', matchCount > 0);
+        }
+        return matchCount;
+      }
+
+      function selectForumTopic(topic) {
+        if (topic === 'all') {
+          selectedForumTopics.clear();
+        } else {
+          if (selectedForumTopics.has(topic)) {
+            selectedForumTopics.delete(topic);
+          } else {
+            selectedForumTopics.add(topic);
+          }
+        }
+
+        updateForumTopicMenuUI();
+        const matchCount = applyForumFilters();
 
         const activeLabels = {
           all: 'All Topics',
@@ -5642,26 +5818,30 @@
           showcase: 'Showcase',
           advisor: 'Advisor Endorsement'
         };
-        showToast(`Filtered by: ${activeLabels[topic] || topic} (${matchCount} threads)`);
+        if (selectedForumTopics.size === 0) {
+          showToast(`Showing: All Topics (${matchCount} threads)`);
+        } else {
+          const labels = Array.from(selectedForumTopics).map(t => activeLabels[t] || t).join(', ');
+          showToast(`Filtered by: ${labels} (${matchCount} threads)`);
+        }
       }
 
       function filterForumThreads(query) {
-        const q = (query || '').toLowerCase().trim();
-        const cards = document.querySelectorAll('.forum-thread-card');
-        cards.forEach(card => {
-          if (card.getAttribute('data-published') === 'false') {
-            card.classList.add('hidden');
-            return;
-          }
-          const text = card.textContent.toLowerCase();
-          const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
-          if (!q || text.includes(q) || keywords.includes(q)) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
-        });
+        forumSearchQuery = (query || '').toLowerCase().trim();
+        applyForumFilters();
       }
+
+      document.addEventListener('click', (event) => {
+        const menu = document.getElementById('forum-filter-menu');
+        const container = document.getElementById('forum-filter-container');
+        if (menu && !menu.classList.contains('hidden') && container && !container.contains(event.target)) {
+          menu.classList.add('hidden');
+          const chevron = document.getElementById('forum-filter-chevron');
+          const btn = document.getElementById('forum-filter-toggle');
+          if (chevron) chevron.classList.remove('rotate-180');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
 
       function toggleUpvote(btn, baseCount) {
         const countEl = btn.querySelector('.upvote-count');
@@ -5926,15 +6106,16 @@
         const chevron = document.getElementById('comp-filters-chevron');
         const btn = document.getElementById('btn-toggle-comp-filters');
         if (!panel) return;
-        const isCurrentlyHiddenOnDesktop = panel.classList.contains('md:hidden');
-        if (isCurrentlyHiddenOnDesktop) {
-          panel.classList.remove('md:hidden', 'hidden');
-          if (chevron) chevron.classList.add('rotate-180');
-          if (btn) btn.setAttribute('aria-expanded', 'true');
-        } else {
-          panel.classList.add('md:hidden');
-          if (chevron) chevron.classList.remove('rotate-180');
+        const isCurrentlyVisible = window.getComputedStyle(panel).display !== 'none';
+        if (isCurrentlyVisible) {
+          panel.classList.add('hidden', 'md:hidden');
           if (btn) btn.setAttribute('aria-expanded', 'false');
+        } else {
+          panel.classList.remove('hidden', 'md:hidden');
+          if (btn) btn.setAttribute('aria-expanded', 'true');
+        }
+        if (chevron) {
+          chevron.classList.toggle('rotate-180');
         }
       }
 
