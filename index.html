@@ -253,19 +253,8 @@
 
             <!-- Competitions Header & Filter Tabs -->
             <div class="space-y-4 md:space-y-5 pt-2">
-              <div class="flex items-center justify-between">
+              <div>
                 <h2 class="text-[20px] font-bold text-[#0f172a]">Competitions</h2>
-                <div class="relative">
-                  <button type="button" id="sort-dropdown-btn" onclick="toggleSortDropdown()" class="text-[12px] font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1 focus-visible:outline-none">
-                    <span id="current-sort-label">Best Value</span>
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                  </button>
-                  <div id="sort-dropdown-menu" class="hidden absolute right-0 mt-1 w-36 bg-white border border-slate-200 rounded-xl shadow-lg py-1 z-40 text-xs">
-                    <button type="button" onclick="setSort('Best Value')" class="w-full text-left px-3 py-1.5 hover:bg-slate-100 font-medium text-slate-700">Best Value</button>
-                    <button type="button" onclick="setSort('Deadline Soonest')" class="w-full text-left px-3 py-1.5 hover:bg-slate-100 font-medium text-slate-700">Deadline Soonest</button>
-                    <button type="button" onclick="setSort('Highest Cap')" class="w-full text-left px-3 py-1.5 hover:bg-slate-100 font-medium text-slate-700">Highest Cap</button>
-                  </div>
-                </div>
               </div>
 
               <!-- Filter Tabs (Official PolyU School of Design Subjects) -->
@@ -408,10 +397,12 @@
             </div>
 
             <!-- View All Button -->
-            <button type="button" onclick="goToScreen(9)" class="w-full py-3.5 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-xl font-bold text-center text-sm flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
-              <span>View All 48+ Competitions</span>
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
+            <div class="flex justify-center w-full pt-1 xl:pt-4 xl:pb-1">
+              <button type="button" onclick="goToScreen(9)" class="group w-full sm:w-auto md:w-auto md:min-w-[280px] py-3.5 px-6 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-xl font-bold text-center text-sm flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] xl:w-auto xl:min-w-0 xl:p-0 xl:bg-transparent xl:hover:bg-transparent xl:text-[#0052cc] xl:hover:text-[#0047b3] xl:hover:underline xl:shadow-none xl:rounded-none xl:text-[16px] xl:font-bold xl:active:scale-100">
+                <span>View All 48+ Competitions</span>
+                <svg class="w-4 h-4 transition-transform duration-200 xl:group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
 
             <!-- Unlisted Exhibition Recommendation Card (Wide banner matching Desktop_main_page.png) -->
             <div class="rounded-2xl p-6 md:p-8 bg-gradient-to-r from-[#f8fafc] via-[#eff6ff] to-[#e0f2fe] border border-[#dbeafe] md:flex md:items-center md:justify-between md:gap-8 space-y-4 md:space-y-0 shadow-xs">
@@ -575,76 +566,22 @@
         <!-- ========================================== -->
         <section id="screen-2" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
-            <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+            <div class="flex items-center gap-2.5">
+              <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
               </button>
-              <div class="hidden md:flex items-center gap-1.5 leading-tight text-left">
-                <div>
-                  <div class="text-[14px] font-black text-[#0f172a] tracking-tight">POLYU SD</div>
-                  <div class="text-[10px] font-bold text-slate-500 tracking-wider flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#0052cc] inline-block"></span>
-                    <span>GRANTS</span>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <!-- Mobile Center Title -->
-            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex md:hidden items-center gap-1.5">
+            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex items-center gap-1.5">
               <span>POLYU SD</span>
               <span class="text-[#0052cc]">•</span>
               <span class="text-slate-500 font-semibold">GRANTS</span>
             </div>
-
-            <!-- Desktop Center Capsule Navigation Bar (Matching Desktop_2_Application_Form_Step1.png - Home Active) -->
-            <nav aria-label="Desktop Top Navigation" class="hidden md:flex md:justify-self-center items-center gap-3 lg:gap-6 bg-white border border-slate-200/90 px-4 lg:px-6 py-1.5 rounded-full shadow-xs">
-              <!-- 1. Home (Active Blue) -->
-              <button type="button" onclick="goToScreen(1)" aria-label="Home" class="inline-flex items-center gap-1.5 px-1.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full transition-colors text-[#0052cc]">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 12.5L14 4L24 12.5V23.5C24 24.05 23.55 24.5 23 24.5H5C4.45 24.5 4 24.05 4 23.5V12.5Z" />
-                  <path d="M10.5 24.5V14.5H17.5V24.5" />
-                </svg>
-                <span class="text-xs font-bold whitespace-nowrap">Home</span>
-              </button>
-              <!-- 2. Competitions (Trophy) -->
-              <button type="button" onclick="goToScreen(9)" aria-label="Competitions Directory" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 5H21V12C21 16 18 19 14 19C10 19 7 16 7 12V5Z" />
-                  <path d="M7 7H4.5C3.67 7 3 7.67 3 8.5C3 10.7 4.8 12.5 7 12.5" />
-                  <path d="M21 7H23.5C24.33 7 25 7.67 25 8.5C25 10.7 23.2 12.5 21 12.5" />
-                  <path d="M14 19V22.5" />
-                  <path d="M9 24.5H19" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Competition</span>
-              </button>
-              <!-- 3. Discussion Forum -->
-              <button type="button" onclick="goToScreen(14)" aria-label="Community Forum" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11.5" cy="15.5" r="6" />
-                  <path d="M6 19.5l-2 3.5 4-1" />
-                  <path d="M14 9.5a5.5 5.5 0 0 1 8.5 4.5c0 .9-.2 1.8-.7 2.5l1.2 2.5-2.8-.8" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Forum</span>
-              </button>
-              <!-- 4. Recommend Competition -->
-              <button type="button" onclick="goToScreen(11)" aria-label="Recommend Competition" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M8 12.5V23H5C4.45 23 4 22.55 4 22V13.5C4 12.95 4.45 12.5 5 12.5H8Z" />
-                  <path d="M8 13.5L13.5 4C14.3 4 15 4.7 15 5.5V11H21C22.1 11 23 11.9 23 13L21.5 20.5C21.3 21.4 20.5 22 19.5 22H8" />
-                  <circle cx="21" cy="7" r="4.5" fill="white" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M21 5V9M19 7H23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Recommend</span>
-              </button>
-            </nav>
-
-            <div class="flex items-center gap-2.5 md:justify-self-end">
+            <div class="flex items-center gap-2.5">
               <button type="button" onclick="showToast('Application progress saved to bookmarks')" aria-label="Bookmark" class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-full focus-visible:outline-none">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-8 h-8 md:w-7 md:h-7 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-8 h-8 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               </button>
             </div>
@@ -839,7 +776,7 @@
             </div>
 
             <!-- Desktop Footer (Hidden on Mobile, Matching Desktop_2_Application_Form_Step1.png) -->
-            <footer class="hidden md:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+            <footer class="hidden xl:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
               <div class="max-w-[1060px] mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
@@ -907,76 +844,22 @@
         <!-- ========================================== -->
         <section id="screen-3" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
-            <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="goToScreen(2)" aria-label="Back to Step 1" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+            <div class="flex items-center gap-2.5">
+              <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
               </button>
-              <div class="hidden md:flex items-center gap-1.5 leading-tight text-left">
-                <div>
-                  <div class="text-[14px] font-black text-[#0f172a] tracking-tight">POLYU SD</div>
-                  <div class="text-[10px] font-bold text-slate-500 tracking-wider flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#0052cc] inline-block"></span>
-                    <span>GRANTS</span>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <!-- Mobile Center Title -->
-            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex md:hidden items-center gap-1.5">
+            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex items-center gap-1.5">
               <span>POLYU SD</span>
-              <span class="text-slate-400">•</span>
+              <span class="text-[#0052cc]">•</span>
               <span class="text-slate-500 font-semibold">GRANTS</span>
             </div>
-
-            <!-- Desktop Center Capsule Navigation Bar (Matching Desktop_2_Application_Form_Step1.png - Home Active) -->
-            <nav aria-label="Desktop Top Navigation" class="hidden md:flex md:justify-self-center items-center gap-3 lg:gap-6 bg-white border border-slate-200/90 px-4 lg:px-6 py-1.5 rounded-full shadow-xs">
-              <!-- 1. Home (Active Blue) -->
-              <button type="button" onclick="goToScreen(1)" aria-label="Home" class="inline-flex items-center gap-1.5 px-1.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full transition-colors text-[#0052cc]">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 12.5L14 4L24 12.5V23.5C24 24.05 23.55 24.5 23 24.5H5C4.45 24.5 4 24.05 4 23.5V12.5Z" />
-                  <path d="M10.5 24.5V14.5H17.5V24.5" />
-                </svg>
-                <span class="text-xs font-bold whitespace-nowrap">Home</span>
-              </button>
-              <!-- 2. Competitions (Trophy) -->
-              <button type="button" onclick="goToScreen(9)" aria-label="Competitions Directory" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 5H21V12C21 16 18 19 14 19C10 19 7 16 7 12V5Z" />
-                  <path d="M7 7H4.5C3.67 7 3 7.67 3 8.5C3 10.7 4.8 12.5 7 12.5" />
-                  <path d="M21 7H23.5C24.33 7 25 7.67 25 8.5C25 10.7 23.2 12.5 21 12.5" />
-                  <path d="M14 19V22.5" />
-                  <path d="M9 24.5H19" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Competition</span>
-              </button>
-              <!-- 3. Discussion Forum -->
-              <button type="button" onclick="goToScreen(14)" aria-label="Community Forum" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11.5" cy="15.5" r="6" />
-                  <path d="M6 19.5l-2 3.5 4-1" />
-                  <path d="M14 9.5a5.5 5.5 0 0 1 8.5 4.5c0 .9-.2 1.8-.7 2.5l1.2 2.5-2.8-.8" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Forum</span>
-              </button>
-              <!-- 4. Recommend Competition -->
-              <button type="button" onclick="goToScreen(11)" aria-label="Recommend Competition" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M8 12.5V23H5C4.45 23 4 22.55 4 22V13.5C4 12.95 4.45 12.5 5 12.5H8Z" />
-                  <path d="M8 13.5L13.5 4C14.3 4 15 4.7 15 5.5V11H21C22.1 11 23 11.9 23 13L21.5 20.5C21.3 21.4 20.5 22 19.5 22H8" />
-                  <circle cx="21" cy="7" r="4.5" fill="white" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M21 5V9M19 7H23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Recommend</span>
-              </button>
-            </nav>
-
-            <div class="flex items-center gap-2 md:justify-self-end">
+            <div class="flex items-center gap-2.5">
               <button type="button" onclick="showToast('Application progress saved to bookmarks')" aria-label="Bookmark" class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-full focus-visible:outline-none">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-7 h-7 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-8 h-8 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               </button>
             </div>
@@ -1152,7 +1035,7 @@
             </div>
 
             <!-- Desktop Footer -->
-            <footer class="hidden md:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+            <footer class="hidden xl:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
               <div class="max-w-[1060px] mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
@@ -1220,76 +1103,22 @@
         <!-- ========================================== -->
         <section id="screen-4" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
-            <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="goToScreen(3)" aria-label="Back to Step 2" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+            <div class="flex items-center gap-2.5">
+              <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
               </button>
-              <div class="hidden md:flex items-center gap-1.5 leading-tight text-left">
-                <div>
-                  <div class="text-[14px] font-black text-[#0f172a] tracking-tight">POLYU SD</div>
-                  <div class="text-[10px] font-bold text-slate-500 tracking-wider flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#0052cc] inline-block"></span>
-                    <span>GRANTS</span>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <!-- Mobile Center Title -->
-            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex md:hidden items-center gap-1.5">
+            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex items-center gap-1.5">
               <span>POLYU SD</span>
-              <span class="text-slate-400">•</span>
+              <span class="text-[#0052cc]">•</span>
               <span class="text-slate-500 font-semibold">GRANTS</span>
             </div>
-
-            <!-- Desktop Center Capsule Navigation Bar (Matching Desktop_2_Application_Form_Step1.png - Home Active) -->
-            <nav aria-label="Desktop Top Navigation" class="hidden md:flex md:justify-self-center items-center gap-3 lg:gap-6 bg-white border border-slate-200/90 px-4 lg:px-6 py-1.5 rounded-full shadow-xs">
-              <!-- 1. Home (Active Blue) -->
-              <button type="button" onclick="goToScreen(1)" aria-label="Home" class="inline-flex items-center gap-1.5 px-1.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full transition-colors text-[#0052cc]">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 12.5L14 4L24 12.5V23.5C24 24.05 23.55 24.5 23 24.5H5C4.45 24.5 4 24.05 4 23.5V12.5Z" />
-                  <path d="M10.5 24.5V14.5H17.5V24.5" />
-                </svg>
-                <span class="text-xs font-bold whitespace-nowrap">Home</span>
-              </button>
-              <!-- 2. Competitions (Trophy) -->
-              <button type="button" onclick="goToScreen(9)" aria-label="Competitions Directory" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 5H21V12C21 16 18 19 14 19C10 19 7 16 7 12V5Z" />
-                  <path d="M7 7H4.5C3.67 7 3 7.67 3 8.5C3 10.7 4.8 12.5 7 12.5" />
-                  <path d="M21 7H23.5C24.33 7 25 7.67 25 8.5C25 10.7 23.2 12.5 21 12.5" />
-                  <path d="M14 19V22.5" />
-                  <path d="M9 24.5H19" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Competition</span>
-              </button>
-              <!-- 3. Discussion Forum -->
-              <button type="button" onclick="goToScreen(14)" aria-label="Community Forum" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11.5" cy="15.5" r="6" />
-                  <path d="M6 19.5l-2 3.5 4-1" />
-                  <path d="M14 9.5a5.5 5.5 0 0 1 8.5 4.5c0 .9-.2 1.8-.7 2.5l1.2 2.5-2.8-.8" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Forum</span>
-              </button>
-              <!-- 4. Recommend Competition -->
-              <button type="button" onclick="goToScreen(11)" aria-label="Recommend Competition" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M8 12.5V23H5C4.45 23 4 22.55 4 22V13.5C4 12.95 4.45 12.5 5 12.5H8Z" />
-                  <path d="M8 13.5L13.5 4C14.3 4 15 4.7 15 5.5V11H21C22.1 11 23 11.9 23 13L21.5 20.5C21.3 21.4 20.5 22 19.5 22H8" />
-                  <circle cx="21" cy="7" r="4.5" fill="white" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M21 5V9M19 7H23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Recommend</span>
-              </button>
-            </nav>
-
-            <div class="flex items-center gap-2 md:justify-self-end">
+            <div class="flex items-center gap-2.5">
               <button type="button" onclick="showToast('Application progress saved to bookmarks')" aria-label="Bookmark" class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-full focus-visible:outline-none">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-7 h-7 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-8 h-8 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               </button>
             </div>
@@ -1484,7 +1313,7 @@
             </div>
 
             <!-- Desktop Footer -->
-            <footer class="hidden md:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+            <footer class="hidden xl:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
               <div class="max-w-[1060px] mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
@@ -1552,76 +1381,22 @@
         <!-- ========================================== -->
         <section id="screen-5" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
-            <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="goToScreen(4)" aria-label="Back to Step 3" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+            <div class="flex items-center gap-2.5">
+              <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
               </button>
-              <div class="hidden md:flex items-center gap-1.5 leading-tight text-left">
-                <div>
-                  <div class="text-[14px] font-black text-[#0f172a] tracking-tight">POLYU SD</div>
-                  <div class="text-[10px] font-bold text-slate-500 tracking-wider flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#0052cc] inline-block"></span>
-                    <span>GRANTS</span>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <!-- Mobile Center Title -->
-            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex md:hidden items-center gap-1.5">
+            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex items-center gap-1.5">
               <span>POLYU SD</span>
-              <span class="text-slate-400">•</span>
+              <span class="text-[#0052cc]">•</span>
               <span class="text-slate-500 font-semibold">GRANTS</span>
             </div>
-
-            <!-- Desktop Center Capsule Navigation Bar (Matching Desktop_2_Application_Form_Step1.png - Home Active) -->
-            <nav aria-label="Desktop Top Navigation" class="hidden md:flex md:justify-self-center items-center gap-3 lg:gap-6 bg-white border border-slate-200/90 px-4 lg:px-6 py-1.5 rounded-full shadow-xs">
-              <!-- 1. Home (Active Blue) -->
-              <button type="button" onclick="goToScreen(1)" aria-label="Home" class="inline-flex items-center gap-1.5 px-1.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full transition-colors text-[#0052cc]">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 12.5L14 4L24 12.5V23.5C24 24.05 23.55 24.5 23 24.5H5C4.45 24.5 4 24.05 4 23.5V12.5Z" />
-                  <path d="M10.5 24.5V14.5H17.5V24.5" />
-                </svg>
-                <span class="text-xs font-bold whitespace-nowrap">Home</span>
-              </button>
-              <!-- 2. Competitions (Trophy) -->
-              <button type="button" onclick="goToScreen(9)" aria-label="Competitions Directory" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 5H21V12C21 16 18 19 14 19C10 19 7 16 7 12V5Z" />
-                  <path d="M7 7H4.5C3.67 7 3 7.67 3 8.5C3 10.7 4.8 12.5 7 12.5" />
-                  <path d="M21 7H23.5C24.33 7 25 7.67 25 8.5C25 10.7 23.2 12.5 21 12.5" />
-                  <path d="M14 19V22.5" />
-                  <path d="M9 24.5H19" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Competition</span>
-              </button>
-              <!-- 3. Discussion Forum -->
-              <button type="button" onclick="goToScreen(14)" aria-label="Community Forum" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11.5" cy="15.5" r="6" />
-                  <path d="M6 19.5l-2 3.5 4-1" />
-                  <path d="M14 9.5a5.5 5.5 0 0 1 8.5 4.5c0 .9-.2 1.8-.7 2.5l1.2 2.5-2.8-.8" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Forum</span>
-              </button>
-              <!-- 4. Recommend Competition -->
-              <button type="button" onclick="goToScreen(11)" aria-label="Recommend Competition" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M8 12.5V23H5C4.45 23 4 22.55 4 22V13.5C4 12.95 4.45 12.5 5 12.5H8Z" />
-                  <path d="M8 13.5L13.5 4C14.3 4 15 4.7 15 5.5V11H21C22.1 11 23 11.9 23 13L21.5 20.5C21.3 21.4 20.5 22 19.5 22H8" />
-                  <circle cx="21" cy="7" r="4.5" fill="white" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M21 5V9M19 7H23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Recommend</span>
-              </button>
-            </nav>
-
-            <div class="flex items-center gap-2 md:justify-self-end">
+            <div class="flex items-center gap-2.5">
               <button type="button" onclick="showToast('Application progress saved to bookmarks')" aria-label="Bookmark" class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-full focus-visible:outline-none">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-7 h-7 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-8 h-8 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               </button>
             </div>
@@ -1858,7 +1633,7 @@
             </div>
 
             <!-- Desktop Footer -->
-            <footer class="hidden md:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+            <footer class="hidden xl:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
               <div class="max-w-[1060px] mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
@@ -1926,76 +1701,22 @@
         <!-- ========================================== -->
         <section id="screen-6" class="screen-container hidden h-full flex-1 flex flex-col overflow-hidden relative bg-[#f8fafc]">
           <!-- Top App Header (Stay in place, matching Desktop_2_Application_Form_Step1.png on desktop while preserving mobile) -->
-          <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-3 border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
-            <div class="flex items-center gap-2.5 min-w-0 md:justify-self-start">
-              <button type="button" onclick="goToScreen(5)" aria-label="Back to Step 4" class="w-8 h-8 flex md:hidden items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+                    <header class="shrink-0 px-5 md:px-12 lg:px-20 xl:px-32 2xl:px-48 pt-4 pb-3 flex items-center justify-between border-b border-slate-100 bg-white/95 backdrop-blur-sm z-30">
+            <div class="flex items-center gap-2.5">
+              <button type="button" onclick="goToScreen(1)" aria-label="Cancel and return to home" class="w-8 h-8 flex items-center justify-center text-slate-800 hover:bg-slate-100 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
               </button>
-              <div class="hidden md:flex items-center gap-1.5 leading-tight text-left">
-                <div>
-                  <div class="text-[14px] font-black text-[#0f172a] tracking-tight">POLYU SD</div>
-                  <div class="text-[10px] font-bold text-slate-500 tracking-wider flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#0052cc] inline-block"></span>
-                    <span>GRANTS</span>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <!-- Mobile Center Title -->
-            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex md:hidden items-center gap-1.5">
+            <div class="text-[13px] font-extrabold tracking-wider text-[#0f172a] flex items-center gap-1.5">
               <span>POLYU SD</span>
-              <span class="text-slate-400">•</span>
+              <span class="text-[#0052cc]">•</span>
               <span class="text-slate-500 font-semibold">GRANTS</span>
             </div>
-
-            <!-- Desktop Center Capsule Navigation Bar (Matching Desktop_2_Application_Form_Step1.png - Home Active) -->
-            <nav aria-label="Desktop Top Navigation" class="hidden md:flex md:justify-self-center items-center gap-3 lg:gap-6 bg-white border border-slate-200/90 px-4 lg:px-6 py-1.5 rounded-full shadow-xs">
-              <!-- 1. Home (Active Blue) -->
-              <button type="button" onclick="goToScreen(1)" aria-label="Home" class="inline-flex items-center gap-1.5 px-1.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full transition-colors text-[#0052cc]">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 12.5L14 4L24 12.5V23.5C24 24.05 23.55 24.5 23 24.5H5C4.45 24.5 4 24.05 4 23.5V12.5Z" />
-                  <path d="M10.5 24.5V14.5H17.5V24.5" />
-                </svg>
-                <span class="text-xs font-bold whitespace-nowrap">Home</span>
-              </button>
-              <!-- 2. Competitions (Trophy) -->
-              <button type="button" onclick="goToScreen(9)" aria-label="Competitions Directory" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 5H21V12C21 16 18 19 14 19C10 19 7 16 7 12V5Z" />
-                  <path d="M7 7H4.5C3.67 7 3 7.67 3 8.5C3 10.7 4.8 12.5 7 12.5" />
-                  <path d="M21 7H23.5C24.33 7 25 7.67 25 8.5C25 10.7 23.2 12.5 21 12.5" />
-                  <path d="M14 19V22.5" />
-                  <path d="M9 24.5H19" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Competition</span>
-              </button>
-              <!-- 3. Discussion Forum -->
-              <button type="button" onclick="goToScreen(14)" aria-label="Community Forum" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11.5" cy="15.5" r="6" />
-                  <path d="M6 19.5l-2 3.5 4-1" />
-                  <path d="M14 9.5a5.5 5.5 0 0 1 8.5 4.5c0 .9-.2 1.8-.7 2.5l1.2 2.5-2.8-.8" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Forum</span>
-              </button>
-              <!-- 4. Recommend Competition -->
-              <button type="button" onclick="goToScreen(11)" aria-label="Recommend Competition" class="inline-flex items-center gap-1.5 px-1.5 py-1 text-slate-500 hover:text-slate-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] rounded-full">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M8 12.5V23H5C4.45 23 4 22.55 4 22V13.5C4 12.95 4.45 12.5 5 12.5H8Z" />
-                  <path d="M8 13.5L13.5 4C14.3 4 15 4.7 15 5.5V11H21C22.1 11 23 11.9 23 13L21.5 20.5C21.3 21.4 20.5 22 19.5 22H8" />
-                  <circle cx="21" cy="7" r="4.5" fill="white" stroke="currentColor" stroke-width="1.6" />
-                  <path d="M21 5V9M19 7H23" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-                <span class="text-xs font-semibold whitespace-nowrap">Recommend</span>
-              </button>
-            </nav>
-
-            <div class="flex items-center gap-2 md:justify-self-end">
+            <div class="flex items-center gap-2.5">
               <button type="button" onclick="showToast('Application progress saved to bookmarks')" aria-label="Bookmark" class="w-8 h-8 flex items-center justify-center text-slate-700 hover:bg-slate-100 rounded-full focus-visible:outline-none">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               </button>
-              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-7 h-7 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+              <button type="button" onclick="goToScreen(12)" aria-label="User Profile" class="w-8 h-8 rounded-full bg-[#0f172a] hover:bg-slate-800 text-white flex items-center justify-center text-xs font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               </button>
             </div>
@@ -2154,7 +1875,7 @@
             </div>
 
             <!-- Desktop Footer -->
-            <footer class="hidden md:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+            <footer class="hidden xl:block pt-10 mt-6 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
               <div class="max-w-[1060px] mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
@@ -2337,7 +2058,7 @@
             </div>
 
             <!-- Desktop Footer -->
-            <footer class="hidden md:block pt-10 mt-10 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+            <footer class="hidden xl:block pt-10 mt-10 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
               <div class="max-w-[1060px] mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
@@ -2803,11 +2524,11 @@
               No competitions match your current search or filter.
             </div>
 
-            <!-- Load More / Expand Competitions Button (Matching Desktop_9_Competitions_list) -->
-            <div id="load-more-comp-wrap" class="flex justify-center pt-1">
-              <button type="button" id="btn-load-more-comp" onclick="toggleMoreCompetitions()" aria-expanded="false" class="w-full md:w-auto py-3 md:py-2.5 md:px-6 bg-white md:bg-transparent hover:bg-slate-50 md:hover:bg-blue-50/70 border border-slate-200 md:border-transparent rounded-xl text-xs md:text-[15px] font-semibold md:font-bold text-slate-700 md:text-[#0052cc] flex items-center justify-center gap-2 shadow-sm md:shadow-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc]">
+            <!-- Load More / Expand Competitions Button (Blue button on Mobile & Tablet, Text link on Desktop) -->
+            <div id="load-more-comp-wrap" class="flex justify-center pt-1 xl:pt-4 xl:pb-1 w-full">
+              <button type="button" id="btn-load-more-comp" onclick="toggleMoreCompetitions()" aria-expanded="false" class="group w-full sm:w-auto md:w-auto md:min-w-[280px] py-3.5 px-6 bg-[#0052cc] hover:bg-[#0047b3] text-white rounded-xl font-bold text-center text-sm flex items-center justify-center gap-2 transition-all shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0052cc] xl:w-auto xl:min-w-0 xl:p-0 xl:bg-transparent xl:hover:bg-transparent xl:text-[#0052cc] xl:hover:text-[#0047b3] xl:hover:underline xl:shadow-none xl:rounded-none xl:text-[16px] xl:font-bold xl:active:scale-100">
                 <span id="load-more-comp-label">Load More Competitions (Showing 8 of 14)</span>
-                <svg id="load-more-comp-chevron" class="w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <svg id="load-more-comp-chevron" class="w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-200 xl:group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
               </button>
             </div>
 
@@ -3312,7 +3033,7 @@
             <!-- Two Column Layout: Left Form (8 cols), Right Info Cards (4 cols) matching reference image -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <!-- Left Column: Form & Proposal Banner -->
-              <div class="lg:col-span-8 space-y-6">
+              <div class="lg:col-span-12 xl:col-span-8 space-y-6">
                 <!-- Proposal Intake Form Card Banner -->
                 <div class="bg-[#eff6ff] rounded-2xl p-4 flex items-center gap-3.5 border border-blue-100 shadow-sm">
                   <div class="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#0052cc] shrink-0 border border-blue-50">
@@ -3428,8 +3149,8 @@
               </div>
             </form>
               </div>
-              <!-- Right Column: Reference Info Boxes (Desktop only, hidden on mobile) -->
-              <div class="hidden lg:block lg:col-span-4 space-y-6">
+              <!-- Right Column: Reference Info Boxes (Desktop only, hidden on mobile & tablet) -->
+              <div class="hidden xl:block xl:col-span-4 space-y-6">
                 <!-- 1. Standard SLA Card -->
                 <div class="bg-[#f1f5f9] rounded-3xl p-6 border border-slate-200/90 shadow-2xs space-y-3">
                   <div class="flex items-center gap-3">
@@ -4601,7 +4322,7 @@
               </div>
 
               <!-- Desktop Footer (Hidden on Mobile, Matching Desktop_14_Discussion_Forum _1.png) -->
-              <footer class="hidden md:block pt-8 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
+              <footer class="hidden xl:block pt-8 border-t border-slate-200/80 text-slate-500 text-xs space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div class="md:col-span-2 space-y-2.5">
                     <div class="flex items-center gap-2 text-[#0f172a] font-extrabold text-sm">
@@ -5785,14 +5506,16 @@
         });
       }
 
-      // 6. Sort Dropdown
+      // 6. Sort Dropdown (optional)
       function toggleSortDropdown() {
         const menu = document.getElementById('sort-dropdown-menu');
-        menu.classList.toggle('hidden');
+        if (menu) menu.classList.toggle('hidden');
       }
       function setSort(label) {
-        document.getElementById('current-sort-label').textContent = label;
-        document.getElementById('sort-dropdown-menu').classList.add('hidden');
+        const lbl = document.getElementById('current-sort-label');
+        if (lbl) lbl.textContent = label;
+        const menu = document.getElementById('sort-dropdown-menu');
+        if (menu) menu.classList.add('hidden');
         showToast('Sorted by ' + label);
       }
 
